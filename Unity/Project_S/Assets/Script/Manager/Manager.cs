@@ -39,7 +39,7 @@ public class Manager : MonoBehaviour
     }
     void Start()
     {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("InGame");
     }
 
     // Update is called once per frame

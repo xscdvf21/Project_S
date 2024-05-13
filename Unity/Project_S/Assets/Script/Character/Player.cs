@@ -5,22 +5,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Player_AbilityData ability;
+    public Player_SkillData skill;
+    public Player_BoneData bone;
 
-
-    [SerializeField] List<Skill> list_Skill;
     // Start is called before the first frame update
     private void Awake()
     {
         InitSkill();
 
-        foreach (var item in list_Skill)
-            item.skill.OnAwakeState();
     }
 
     private void OnEnable()
     {
-        foreach (var item in list_Skill)
-            item.skill.OnEnterState();
+
     }
     void Start()
     {
@@ -31,53 +29,105 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        foreach (var item in list_Skill)
-            item.skill.OnUpdateState();
     }
 
     private void FixedUpdate()
     {
 
-        foreach (var item in list_Skill)
-            item.skill.OnFixedUpdateState();
+
     }
 
     private void OnDisable()
     {
-        foreach (var item in list_Skill)
-            item.skill.OnExitState();
+
 
     }
     void InitSkill()
     {
-        list_Skill = new List<Skill>();
-        list_Skill.Add(Add_Skill(PLAYER_SKILL.GUIDED_ARROW));
+         
        
     }
 
-    Skill Add_Skill(PLAYER_SKILL _type)
+    public void Add_Skill(PLAYER_SKILL _type)
     {
+        if (skill == null)
+            skill = new Player_SkillData();
+
         GameObject clone = Instantiate(Skill_Mgr.Instance.player_Skill.GetSkill(_type).gameObject);
         clone.transform.SetParent(this.transform.Find("Skill"), false);
-        
-        Skill result = new Skill(_type, clone.GetComponent<BaseSkill>());
-        return result;
+
+        skill.AddSkill(_type, clone.GetComponent<BaseSkill>());
+
     }
 
     /// <summary>
     /// 현재 적용되어있는 스킬
     /// </summary>
+    /// 같은것은 하나만 가능
     [Serializable]
-    public class Skill
+    public class Player_SkillData
     {
-        public PLAYER_SKILL skillType;
-        public BaseSkill skill;
 
-        public Skill(PLAYER_SKILL _type, BaseSkill _skill)
+        public List<Skill> list_Skill;
+
+        public void AddSkill(PLAYER_SKILL _type, BaseSkill _skill)
         {
-            skillType = _type;
-            skill = _skill;
+            for(int i = 0; i < list_Skill.Count; ++i)
+            {
+                if (list_Skill[i].skillType == _type)
+                    return;
+            }
+
+            Skill skill = new Skill();
+
+            skill.skillType = _type;
+            skill.skill = _skill;
+
+            list_Skill.Add(skill);
+        }
+
+        public void RemoveSkill(PLAYER_SKILL _type)
+        {
+            for (int i = 0; i < list_Skill.Count; ++i)
+            {
+                if (list_Skill[i].skillType == _type)
+                {
+                    list_Skill.RemoveAt(i);
+                    return;
+                }
+            }
+
+        }
+
+
+        [Serializable]
+        public class Skill
+        {
+            public PLAYER_SKILL skillType;
+            public BaseSkill skill;
         }
     }
 
+
+
+    [Serializable]
+    public class Player_AbilityData
+    {
+        public int attack;
+        public int hp;
+        public int maxHp;
+        public int mana;
+        public int maxMana;
+        public float moveSpeed;
+    }
+
+
+    [Serializable]
+    public class Player_BoneData
+    {
+        public List<SpriteRenderer> itemBones;
+        
+
+       
+    }
 }
