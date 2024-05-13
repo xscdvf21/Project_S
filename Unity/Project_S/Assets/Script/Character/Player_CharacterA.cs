@@ -16,5 +16,10 @@ public class Player_CharacterA : Player
         
     }
 
+    private void FixedUpdate()
+    {
+        OnFixedUpdate();
+    }
+
 
 }

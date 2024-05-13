@@ -8,11 +8,12 @@ public class Player : MonoBehaviour
     public Player_AbilityData ability;
     public Player_SkillData skill;
     public Player_BoneData bone;
-
+    public Player_KeyInput keyInput;
     // Start is called before the first frame update
     private void Awake()
     {
-        InitSkill();
+        keyInput = new Player_KeyInput();
+        Init();
 
     }
 
@@ -26,11 +27,15 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void OnUpdate()
     {
-
+    
     }
 
+    public void OnFixedUpdate()
+    {
+        keyInput.KeyCheck();
+    }
     private void FixedUpdate()
     {
 
@@ -42,11 +47,12 @@ public class Player : MonoBehaviour
 
 
     }
-    void InitSkill()
+    void Init()
     {
-         
-       
+
+        bone.SetItem();
     }
+
 
     public void Add_Skill(PLAYER_SKILL _type)
     {
@@ -126,8 +132,47 @@ public class Player : MonoBehaviour
     public class Player_BoneData
     {
         public List<SpriteRenderer> itemBones;
-        
-
        
+        public void SetItem()
+        {
+
+        }
+       
+    }
+
+    public class Player_Animation
+    {
+
+    }
+    public class Player_KeyInput
+    {
+        public float moveDelay = 0.2f;
+        public void KeyCheck()
+        {
+            
+            //¿À¸¥ÂÊÀ¸·Î °È±â
+            if(Input.GetKey(KeyCode.RightArrow))
+            {
+                Object_Mgr.Instance.mainPlayer.transform.Translate(Vector3.right *1f * Time.deltaTime);
+            }
+            //¿ÞÂÊ °È±â
+            if(Input.GetKey(KeyCode.LeftArrow))
+            {
+                Object_Mgr.Instance.mainPlayer.transform.Translate(Vector3.left * 1f * Time.deltaTime);
+
+            }
+            //À§·Î°È±â
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                Object_Mgr.Instance.mainPlayer.transform.Translate(Vector3.up * 1f * Time.deltaTime);
+
+            }
+            //¾Æ·¡·Î°È±â
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                Object_Mgr.Instance.mainPlayer.transform.Translate(Vector3.down * 1f * Time.deltaTime);
+
+            }
+        }
     }
 }
