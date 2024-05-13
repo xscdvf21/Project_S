@@ -5,6 +5,18 @@ public enum PLAYER_SKILL
     END,
 }
 
+public enum PLAYER_STATE
+{
+    NONE = -1,
+    IDLE,
+    RUN,
+    ATTACK,
+    DEAD,
+    SKILL,
+    END,
+
+}
+
 
 public enum CHARACTER_SPRITE
 {

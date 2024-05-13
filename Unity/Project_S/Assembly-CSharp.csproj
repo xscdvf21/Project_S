@@ -86,6 +86,7 @@
     <Compile Include="Assets\SPUM\Script\SPUM_AnimationController.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
     <Compile Include="Assets\Script\Skill\Player\Player_Skill.cs" />
+    <Compile Include="Assets\Script\Character\State\StateMachine.cs" />
     <Compile Include="Assets\Script\Character\State\BaseState.cs" />
     <Compile Include="Assets\Script\Manager\Object_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PreviewItem.cs" />
