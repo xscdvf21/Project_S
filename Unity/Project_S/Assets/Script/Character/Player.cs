@@ -12,8 +12,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        keyInput = new Player_KeyInput();
-        Init();
+
 
     }
 
@@ -47,9 +46,9 @@ public class Player : MonoBehaviour
 
 
     }
-    void Init()
+    public void Init()
     {
-
+        keyInput = new Player_KeyInput();
         bone.SetItem();
     }
 

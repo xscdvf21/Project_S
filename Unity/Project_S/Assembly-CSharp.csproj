@@ -65,14 +65,17 @@
     <Compile Include="Assets\SPUM\SoonsoonData\SoonsoonData.cs" />
     <Compile Include="Assets\Script\Skill\Monster\Monster_Skill.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Recorder.cs" />
+    <Compile Include="Assets\Script\Character\State\SKILL_State.cs" />
     <Compile Include="Assets\Script\Skill\BaseSkill.cs" />
     <Compile Include="Assets\Script\Character\Player.cs" />
     <Compile Include="Assets\Script\Skill\Player\Player_Skill_GuidedArrow.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifEncoder.cs" />
     <Compile Include="Assets\Script\Manager\Sprite_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifFrame.cs" />
+    <Compile Include="Assets\Script\Character\State\DEAD_State.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\ReflectionUtils.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_Manager.cs" />
+    <Compile Include="Assets\Script\Character\State\ATTACK_State.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_SpriteList.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteEyeSync.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
@@ -87,6 +90,7 @@
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
     <Compile Include="Assets\Script\Skill\Player\Player_Skill.cs" />
     <Compile Include="Assets\Script\Character\State\StateMachine.cs" />
+    <Compile Include="Assets\Script\Character\State\RUN_State.cs" />
     <Compile Include="Assets\Script\Character\State\BaseState.cs" />
     <Compile Include="Assets\Script\Manager\Object_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PreviewItem.cs" />
@@ -96,6 +100,7 @@
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SPUM_SpriteEditManager.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_SpriteButtonST.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PackageButton.cs" />
+    <Compile Include="Assets\Script\Character\State\IDLE_State.cs" />
     <Compile Include="Assets\SPUM\Script\Ect\ColorSelect.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerObj.cs" />
