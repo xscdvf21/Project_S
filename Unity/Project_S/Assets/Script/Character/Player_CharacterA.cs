@@ -39,7 +39,6 @@ public class Player_CharacterA : Player
         stateMachine = new StateMachine(PLAYER_STATE.IDLE, new IDLE_State());
         stateMachine.AddState(PLAYER_STATE.RUN, new RUN_State());
         stateMachine.AddState(PLAYER_STATE.ATTACK, new ATTACK_State());
-        stateMachine.AddState(PLAYER_STATE.SKILL, new SKILL_State());
         stateMachine.AddState(PLAYER_STATE.DEAD, new DEAD_State());
     }
 

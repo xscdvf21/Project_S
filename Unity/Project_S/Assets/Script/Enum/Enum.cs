@@ -11,7 +11,6 @@ public enum PLAYER_STATE
     IDLE,
     RUN,
     ATTACK,
-    SKILL,
     DEAD,
     END,
 

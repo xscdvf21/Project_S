@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
     }
     public void Init()
     {
-        keyInput = new Player_KeyInput();
+        //keyInput = new Player_KeyInput();
         bone.SetItem();
     }
 
@@ -149,8 +149,8 @@ public class Player : MonoBehaviour
         {
             isKey = true;
 
-            InputKey_Mgr.Instance.keyAction -= KeyCheck;
-            InputKey_Mgr.Instance.keyAction += KeyCheck;
+            //InputKey_Mgr.Instance.keyAction -= KeyCheck;
+            //InputKey_Mgr.Instance.keyAction += KeyCheck;
         }
 
         void KeyCheck()
