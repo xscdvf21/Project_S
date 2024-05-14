@@ -13,6 +13,7 @@ public class InputKey_Mgr : MonoBehaviour
     }
 
     public Action keyAction = null;
+
     private void Awake()
     {
         instance = this;

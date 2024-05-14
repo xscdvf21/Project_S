@@ -766,7 +766,7 @@ Animator:
   m_GameObject: {fileID: 1807828725140256137}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c2fc0aafc4ba14749a6cc196ffeb52b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4504123b3192cb94eb8fd2a96df69e2d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1201,6 +1201,11 @@ MonoBehaviour:
     - {fileID: 1270755330118121289}
     - {fileID: 6626315952711894591}
     - {fileID: 7532555447056121473}
+  keyInput:
+    isKey: 1
+    moveDelay: 0.2
+  animator: {fileID: 4938855975200813604}
+  state: 0
 --- !u!1 &2668035314150143496
 GameObject:
   m_ObjectHideFlags: 0

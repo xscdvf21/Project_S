@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Player_CharacterA : Player
 {
+
     [SerializeField] PLAYER_STATE state;
     StateMachine stateMachine;
+
+
+
 
     private void Awake()
     {
@@ -15,8 +19,7 @@ public class Player_CharacterA : Player
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+              
     }
 
     // Update is called once per frame
