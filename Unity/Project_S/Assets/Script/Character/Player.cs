@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     public Player_AbilityData ability;
     public Player_SkillData skill;
     public Player_BoneData bone;
-    public Player_KeyInput keyInput;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -139,51 +138,6 @@ public class Player : MonoBehaviour
        
     }
 
-    [Serializable]
-    public class Player_KeyInput
-    {
-        public bool isKey;
-        public float moveDelay = 0.2f;
 
-        public Player_KeyInput()
-        {
-            isKey = true;
-
-            //InputKey_Mgr.Instance.keyAction -= KeyCheck;
-            //InputKey_Mgr.Instance.keyAction += KeyCheck;
-        }
-
-        void KeyCheck()
-        {
-            if (!isKey)
-                return;
-
-            //¿À¸¥ÂÊÀ¸·Î °È±â
-            if(Input.GetKey(KeyCode.RightArrow))
-            {
-                Object_Mgr.Instance.mainPlayer.SetState(PLAYER_STATE.RUN);
-                Object_Mgr.Instance.mainPlayer.transform.Translate(Vector3.right *1f * Time.deltaTime);
-            }
-            //¿ÞÂÊ °È±â
-            if(Input.GetKey(KeyCode.LeftArrow))
-            {
-                Object_Mgr.Instance.mainPlayer.SetState(PLAYER_STATE.RUN);
-                Object_Mgr.Instance.mainPlayer.transform.Translate(Vector3.left * 1f * Time.deltaTime);
-            }
-            //À§·Î°È±â
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                Object_Mgr.Instance.mainPlayer.SetState(PLAYER_STATE.RUN);
-                Object_Mgr.Instance.mainPlayer.transform.Translate(Vector3.up * 1f * Time.deltaTime);
-            }
-            //¾Æ·¡·Î°È±â
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                Object_Mgr.Instance.mainPlayer.SetState(PLAYER_STATE.RUN);
-                Object_Mgr.Instance.mainPlayer.transform.Translate(Vector3.down * 1f * Time.deltaTime);
-            }
-
-
-        }
-    }
+  
 }

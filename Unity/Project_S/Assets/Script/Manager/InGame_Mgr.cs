@@ -41,8 +41,9 @@ public class InGame_Mgr : MonoBehaviour
         if (!Object_Mgr.Instance)
             return;
 
-        GameObject Player = Instantiate(Resources.Load("Prefabs/Player/Player_A", typeof(GameObject)) as GameObject);
-        Object_Mgr.Instance.mainPlayer = Player.GetComponent<Player_CharacterA>();
+        GameObject player = Instantiate(Resources.Load("Prefabs/Player/Player_A", typeof(GameObject)) as GameObject);
+        player.transform.SetParent(this.transform, false);
+        Object_Mgr.Instance.mainPlayer = player.GetComponent<Player>();
      }
 }
 

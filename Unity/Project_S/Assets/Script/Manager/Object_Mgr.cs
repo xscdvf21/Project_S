@@ -20,7 +20,7 @@ public class Object_Mgr : MonoBehaviour
         }
     }
 
-    public Player_CharacterA mainPlayer;
+    public Player mainPlayer;
 
     private void Awake()
     {
