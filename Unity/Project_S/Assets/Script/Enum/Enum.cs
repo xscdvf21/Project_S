@@ -188,3 +188,26 @@ public enum ITEM
     END,
 }
 
+public enum ITEM_RANK
+{
+    NONE = -1,
+    D,
+    C,
+    B,
+    A,
+    S,
+    SS,
+    SSS,
+
+    END,
+}
+
+public enum WEAPON_TYPE
+{
+    NONE = -1,
+    MELEE,
+    RANGER,
+    END
+}
+
+

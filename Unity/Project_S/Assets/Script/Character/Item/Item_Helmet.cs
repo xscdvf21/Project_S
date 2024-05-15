@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class Item_Helmet : Item
 {
+    [Header("치명타 확률")]
+    public float CRI_Chance;
+    [Header("치명타 데미지")]
+    public float Damage_CRI;
+
+
     // Start is called before the first frame update
     void Start()
     {

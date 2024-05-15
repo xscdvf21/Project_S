@@ -6,7 +6,11 @@ using UnityEngine;
 
 public class Item_Armor : Item
 {
+    [Header("최대 HP")]
+    public int maxHp;
 
+    [Header("최대 MP")]
+    public int maxMp;
     // Start is called before the first frame update
     void Start()
     {

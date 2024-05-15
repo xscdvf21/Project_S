@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Item_Foot : Item
 {
+    [Header("이동속도")]
+    public float Move_Speed;
     // Start is called before the first frame update
     void Start()
     {
