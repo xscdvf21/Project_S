@@ -10,16 +10,12 @@ public class Item_Helmet : Item
     [Header("치명타 데미지")]
     public float Damage_CRI;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void Add_ItemAbility(ref Player _player)
     {
-        
-    }
+        if (_player == null)
+            return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _player.ability.cri_Chance += CRI_Chance;
+        _player.ability.damage_CRI += Damage_CRI;
     }
 }

@@ -12,14 +12,12 @@ public class Item_Armor : Item
     [Header("√÷¥Î MP")]
     public int maxMp;
     // Start is called before the first frame update
-    void Start()
+    public void Add_ItemAbility(ref Player _player)
     {
-        
-    }
+        if (_player == null)
+            return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _player.ability.maxHp += maxHp;
+        _player.ability.maxMp += maxMp;
     }
 }

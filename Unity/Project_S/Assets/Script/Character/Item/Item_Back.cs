@@ -10,15 +10,12 @@ public class Item_Back : Item
     public float Atk_Speed;
     [Header("이동 속도")]
     public float Move_Speed;
-    // Start is called before the first frame update
-    void Start()
+    public void Add_ItemAbility(ref Player _player)
     {
-        
-    }
+        if (_player == null)
+            return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _player.ability.atk_Speed += Atk_Speed;
+        _player.ability.move_Speed += Move_Speed;
     }
 }

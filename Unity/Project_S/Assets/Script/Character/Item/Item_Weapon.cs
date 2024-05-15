@@ -10,16 +10,12 @@ public class Item_Weapon : Item
     public WEAPON_TYPE _type;
     [Header("µ¥¹ÌÁö")]
     public int atk;
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void Add_ItemAbility(ref Player _player)
     {
-        
+        if (_player == null)
+            return;
+
+        _player.ability.atk += atk;
     }
 }

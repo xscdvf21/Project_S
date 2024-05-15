@@ -22,7 +22,8 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-        
+        items.Init();
+        bone.Init();
     }
 
     // Update is called once per frame
@@ -45,11 +46,6 @@ public class Player : MonoBehaviour
     {
 
 
-    }
-    public void Init()
-    {
-        //keyInput = new Player_KeyInput();
-        bone.SetItem();
     }
 
 
@@ -113,15 +109,13 @@ public class Player : MonoBehaviour
         }
     }
 
-
-
     [Serializable]
     public class Player_AbilityData
     {
         int level;
 
-        public int damage;
-        public float attackSpeed;
+        public int atk;
+        public float atk_Speed;
 
         public int exp;
         public int maxExp;
@@ -129,10 +123,13 @@ public class Player : MonoBehaviour
         public int hp;
         public int maxHp;
 
-        public int mana;
-        public int maxMana;
+        public int mp;
+        public int maxMp;
 
-        public float moveSpeed;
+        public float move_Speed;
+
+        public float cri_Chance;
+        public float damage_CRI;
 
         public void AddExp(int _exp)
         {
@@ -154,19 +151,21 @@ public class Player : MonoBehaviour
 
     }
 
-
     [Serializable]
     public class Player_BoneData
     {
         public List<SpriteRenderer> itemBones;
        
+        public void Init()
+        {
+            SetItem();
+        }
         public void SetItem()
         {
 
         }
        
     }
-
 
     [Serializable]
     public class Player_ItemData
@@ -177,6 +176,29 @@ public class Player : MonoBehaviour
         public Item_Back back;
         public Item_Gloves gloves;
         public Item_Foot foot;
+
+
+        public void Init()
+        {
+            Add_ItemAbility();
+        }
+
+        void Add_ItemAbility()
+        {
+            Player player = Game_Mgr.Instance.mainPlayer;
+
+            if (player == null)
+                return;
+
+            weapon.Add_ItemAbility(ref player);
+            helmet.Add_ItemAbility(ref player);
+            armor.Add_ItemAbility(ref player);
+            back.Add_ItemAbility(ref player);
+            gloves.Add_ItemAbility(ref player);
+            foot.Add_ItemAbility(ref player);
+
+
+        }
     }
   
 }
