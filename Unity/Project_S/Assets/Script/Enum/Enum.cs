@@ -32,6 +32,12 @@ public enum CHARACTER_SPRITE
     END,
 }
 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/// <summary>
+/// 캐릭 스프라이트
+/// </summary>
 public enum HAIR
 {
     NONE = -1,
@@ -151,7 +157,7 @@ public enum EYE
     EYE_1,
     END,
 }
-
+/////////////////////////////////////////////////////////////////////////////////////////
 public enum MONSTER_TYPE
 {
     NONE = -1,
@@ -168,3 +174,17 @@ public enum MONSTER_KIND
     SLIME_GREEN,
     END,
 }
+
+
+public enum ITEM
+{
+    NONE = -1,
+    WEAPON,
+    HELMET,
+    ARMOR,
+    GLOVE,
+    FOOT,
+    BACK,
+    END,
+}
+

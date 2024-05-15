@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Player_ItemData items;
     public Player_AbilityData ability;
     public Player_SkillData skill;
     public Player_BoneData bone;
@@ -167,5 +168,15 @@ public class Player : MonoBehaviour
     }
 
 
+    [Serializable]
+    public class Player_ItemData
+    {
+        public Item_Weapon weapon;
+        public Item_Helmet helmet;
+        public Item_Armor armor;
+        public Item_Back back;
+        public Item_Gloves gloves;
+        public Item_Foot foot;
+    }
   
 }

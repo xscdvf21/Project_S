@@ -12,7 +12,6 @@ public  class PlayerControler : MonoBehaviour
 
     public string[] stateNames;
 
-
     [SerializeField] Rigidbody2D rb;
     //움직임에 대한, 변수 및 불
     private bool isMove = false;

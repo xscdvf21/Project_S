@@ -61,12 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SPUM\Script\Editor\SPUM_SpriteEditor.cs" />
-    <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\Editor\SPUM_Eye.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\Editor\SPUM_SpriteEdit.cs" />
+    <Compile Include="Assets\SPUM\Sprite_SheetExporter(Beta)\Script\Editor\SetGameSizeWindow.cs" />
+    <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\Editor\SPUM_Eye.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\Editor\SPUM_Sync.cs" />
     <Compile Include="Assets\SPUM\Script\Editor\SPUM_Editor.cs" />
     <Compile Include="Assets\SPUM\Sprite_SheetExporter(Beta)\Script\Editor\SPUM_Exporter.cs" />
-    <Compile Include="Assets\SPUM\Sprite_SheetExporter(Beta)\Script\Editor\SetGameSizeWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
