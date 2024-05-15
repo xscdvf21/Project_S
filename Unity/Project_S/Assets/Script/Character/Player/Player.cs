@@ -117,12 +117,40 @@ public class Player : MonoBehaviour
     [Serializable]
     public class Player_AbilityData
     {
+        int level;
+
         public int damage;
+        public float attackSpeed;
+
+        public int exp;
+        public int maxExp;
+
         public int hp;
         public int maxHp;
+
         public int mana;
         public int maxMana;
+
         public float moveSpeed;
+
+        public void AddExp(int _exp)
+        {
+            exp += _exp;
+
+            if (exp >= maxExp)
+                LevelUp();
+         
+        }
+
+        public void LevelUp()
+        {
+            if (exp < maxExp)
+                return;
+
+            level++;
+            exp -= maxExp;
+        }
+
     }
 
 

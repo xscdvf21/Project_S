@@ -25,8 +25,17 @@ public class Monster : MonoBehaviour
     public class Monster_AbilityData
     {
         public int dagame;
+        public int attackSpeed;
+
+        
+        [Header("플레이어에게 줄 경험치량")]
+        public int exp;
+
+        [Space(30)]
         public int hp;
         public int maxHp;
+
         public int moveSpeed;
+
     }
 }
