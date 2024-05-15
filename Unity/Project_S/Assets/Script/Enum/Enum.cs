@@ -77,7 +77,6 @@ public enum CLOTH
     
     END
 }
-
 public enum PANT
 {
     NONE = -1,
@@ -150,5 +149,22 @@ public enum EYE
 {
     NONE = -1,
     EYE_1,
+    END,
+}
+
+public enum MONSTER_TYPE
+{
+    NONE = -1,
+    DEFAULT,
+    BOSS,
+    END
+}
+
+public enum MONSTER_KIND
+{
+    NONE = -1,
+    SLIME_RED,
+    SLIME_BLUE,
+    SLIME_GREEN,
     END,
 }

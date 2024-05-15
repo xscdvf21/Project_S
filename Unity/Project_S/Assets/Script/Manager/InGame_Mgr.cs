@@ -20,6 +20,9 @@ public class InGame_Mgr : MonoBehaviour
         }
     }
 
+    public InGame_Map       map;
+    public InGame_Player    player;
+    public InGame_Monster   monster;
     private void Awake()
     {
         if(instance != null)
@@ -33,17 +36,12 @@ public class InGame_Mgr : MonoBehaviour
 
     private void Start()
     {
-        CreatePlayer();
+        map.Init();
+        player.Init();
+        monster.Init();
     }
 
-    private void CreatePlayer()
-    {
-        if (!Object_Mgr.Instance)
-            return;
 
-        GameObject player = Instantiate(Resources.Load("Prefabs/Player/Player_A", typeof(GameObject)) as GameObject);
-        player.transform.SetParent(this.transform, false);
-        Object_Mgr.Instance.mainPlayer = player.GetComponent<Player>();
-     }
+
 }
 

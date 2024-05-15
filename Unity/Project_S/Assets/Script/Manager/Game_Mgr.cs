@@ -10,7 +10,7 @@ public class Game_Mgr : MonoBehaviour
 {
     private static Game_Mgr instance = null;
 
-    public static Game_Mgr Instacne
+    public static Game_Mgr Instance
     {
         get
         {
@@ -18,6 +18,9 @@ public class Game_Mgr : MonoBehaviour
         }
     }
 
+    public Player mainPlayer;
+
+    public List<Monster> list_Monster;
     private void Awake()
     {
         instance = this;
@@ -35,4 +38,11 @@ public class Game_Mgr : MonoBehaviour
     {
         
     }
+
+    public void MonsterAdd(Monster _monster)
+    {
+        list_Monster.Add(_monster);
+    }
+
+
 }

@@ -183,7 +183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a4a71e896ea714d82582eaffa2d405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainPlayer: {fileID: 0}
+  playerPrefab: {fileID: -1014558474559170962, guid: 448e305f663125242bac0569d2de668b,
+    type: 3}
+  monsterPrefabs:
+  - {fileID: -7846402721813895612, guid: 3a66a940f6b1dda4f840372889b6117e, type: 3}
+  - {fileID: -6327251963675206396, guid: 003c531d9a8669c44b1a94b33176c03d, type: 3}
+  - {fileID: 1203121713557645420, guid: 856643b740534824f81dd9223cb40cd0, type: 3}
 --- !u!1 &4399168194898675233
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ee3e41a874357449fc416c75ddd5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainPlayer: {fileID: 0}
+  list_Monster: []
 --- !u!1 &8415191721072692919
 GameObject:
   m_ObjectHideFlags: 0

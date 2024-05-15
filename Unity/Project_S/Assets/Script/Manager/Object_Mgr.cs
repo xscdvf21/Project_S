@@ -20,11 +20,32 @@ public class Object_Mgr : MonoBehaviour
         }
     }
 
-    public Player mainPlayer;
+
+    public Player playerPrefab;
+    public Monster[] monsterPrefabs;
 
     private void Awake()
     {
         instance = this;
     }
+
+    public GameObject CreatePlayer(Vector2 _vPos)
+    {
+        if (playerPrefab == null)
+            return null;
+
+        GameObject player = Instantiate(playerPrefab.gameObject);
+        player.transform.position = _vPos;
+        return player;
+    }
+
+    public GameObject CreateMonster(MONSTER_KIND _kind, Vector2 _vPos)
+    {
+        GameObject monster = Instantiate(monsterPrefabs[(int)_kind].gameObject);
+        monster.transform.position = _vPos;
+        return monster;
+    }
+
+    
 }
 

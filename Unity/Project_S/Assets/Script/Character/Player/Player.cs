@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
     [Serializable]
     public class Player_AbilityData
     {
-        public int attack;
+        public int damage;
         public int hp;
         public int maxHp;
         public int mana;
