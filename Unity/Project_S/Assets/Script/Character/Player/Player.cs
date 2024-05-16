@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
 
     }
 
-
     public void Add_Skill(PLAYER_SKILL _type)
     {
         if (skill == null)
@@ -114,6 +113,7 @@ public class Player : MonoBehaviour
         int level;
 
         public int atk;
+        public float atk_Dis;
         public float atk_Speed;
 
         public int exp;

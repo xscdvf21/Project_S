@@ -126,8 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   ability:
-    dagame: 1
-    attackSpeed: 0
+    atk: 1
+    atk_Dis: 1
+    attackSpeed: 1
     exp: 0
     hp: 100
     maxHp: 100
@@ -144,6 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5692e40ba396f4aaa6d03cd125ef4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  me: {fileID: -5539578114810440510}
+  playerDis: 0
 --- !u!210 &604920454953382611
 SortingGroup:
   m_ObjectHideFlags: 0

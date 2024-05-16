@@ -38,7 +38,7 @@ public class InGame_Monster : MonoBehaviour
             for (int i = 0; i < _count; ++i)
             {
                 int iIndex = i;
-                Object_Mgr.Instance.monster_Mgr.CreateMonster(_result, _kind, new Vector2(iIndex, iIndex));
+                Object_Mgr.Instance.monster_Mgr.CreateMonster(_result, _kind, new Vector2(UnityEngine.Random.Range(-100f, 100f), UnityEngine.Random.Range(-100f, 100f)));
             }
         }
 

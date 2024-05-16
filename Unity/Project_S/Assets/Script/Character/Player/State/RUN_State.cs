@@ -2,6 +2,9 @@
 
 public class RUN_State : BaseState
 {
+    Player player;
+    PlayerControler controler;
+
     [SerializeField] string aniName;
     [SerializeField] Animator animator;
 
@@ -10,8 +13,10 @@ public class RUN_State : BaseState
 
     }
 
-    public RUN_State(Animator _animator, string _aniName)
+    public RUN_State(Player _player, PlayerControler _controler, Animator _animator, string _aniName)
     {
+        player = _player;
+        controler = _controler;
         animator = _animator;
         aniName = _aniName;
     }

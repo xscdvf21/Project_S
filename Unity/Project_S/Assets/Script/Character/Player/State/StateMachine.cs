@@ -41,6 +41,16 @@ public class StateMachine
         }
     }
 
+
+    public void OnUpdate()
+    {
+        currentState.OnUpdate();
+    }
+    public void OnFixedUpdate()
+    {
+        currentState.OnFixedUpdate();
+    }
+
     public void RemoveState(PLAYER_STATE _key)
     {
         if (dic_State.ContainsKey(_key))

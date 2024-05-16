@@ -8,15 +8,25 @@ using UnityEngine;
 
 public class MonsterControler : MonoBehaviour
 {
+    //생성할 때 자기자신을 들고있는게, 최적화에 좋을거 같아서
+    [SerializeField] Monster me;
+    [Header("플레이어와 거리")]
+    public float playerDis;
 
+    private void Awake()
+    {
+        //
+        if (me == null)
+            me = GetComponent<Monster>();
+
+    }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
-            Monster_Death();
+        DistancePlayer();
+
     }
     private void FixedUpdate()
     {
-
         Monster_Move();
     }
 
@@ -33,17 +43,12 @@ public class MonsterControler : MonoBehaviour
 
         float distance = Vector2.Distance(player.transform.position, transform.position);
 
-        if (distance > 1f)
+        if (distance > me.ability.atk_Dis)
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, GetComponent<Monster>().ability.moveSpeed * Time.deltaTime);
 
 
     }
 
-    void Monster_Death()
-    {
-        gameObject.SetActive(false);
-        Object_Mgr.Instance.monster_Mgr.Monster_Dead(GetComponent<Monster>());
-    }
     /// <summary>
     /// 다른방법을 생각해봐야할듯
     /// </summary>
@@ -63,5 +68,13 @@ public class MonsterControler : MonoBehaviour
     //    if(collision.transform.tag == "Mosnter")
     //        transform.Translate(Vector3.back * (Time.deltaTime * GetComponent<Monster>().ability.moveSpeed ));
     //}
+
+    void DistancePlayer()
+    {
+        if (!me.Get_Alive())
+            return;
+
+        playerDis = Vector2.Distance(this.transform.position, Object_Mgr.Instance.player_Mgr.Get_PlayerPos());
+    }
 }
 

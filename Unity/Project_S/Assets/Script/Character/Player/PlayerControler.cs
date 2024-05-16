@@ -5,17 +5,25 @@ using UnityEngine;
 public  class PlayerControler : MonoBehaviour
 {
     [SerializeField] PLAYER_STATE state;
-    public Player player;
 
+    //생성할 때 자기자신을 들고있는게, 최적화에 좋을거 같아서
+    public Player player;
     Camera cam;
     StateMachine stateMachine;
 
     public string[] stateNames;
-
     [SerializeField] Rigidbody2D rb;
+
+
     //움직임에 대한, 변수 및 불
     private bool isMove = false;
+    private bool isAuto = false;
+    private bool isAttack = false;
     private Vector2 vMovePos;
+
+    //최소 거리 몬스터 (실시간으로 업데이트)
+    [Header("가장 가까운 몬스터")]
+    public Monster monster;
     
     private void Awake()
     {
@@ -33,21 +41,30 @@ public  class PlayerControler : MonoBehaviour
 
     private void Update()
     {
-        
+        stateMachine.OnUpdate();
     }
     private void FixedUpdate()
     {
+        stateMachine.OnFixedUpdate();
+        //수동 조작이 아닐 경우만 체크
+        if(!isMove)
+        {
+            isAuto = true;
+            isAttack = Attack_Check(player.ability.atk_Dis);
+        }
         CameraFix();
         Player_KeyInput();
+
+
     }
     void InitState()
     {
         Animator animator = GetComponentInChildren<Animator>();
 
-        stateMachine = new StateMachine(PLAYER_STATE.IDLE, new IDLE_State(animator, stateNames[(int)PLAYER_STATE.IDLE]));
-        stateMachine.AddState(PLAYER_STATE.RUN, new RUN_State(animator, stateNames[(int)PLAYER_STATE.RUN]));
-        stateMachine.AddState(PLAYER_STATE.ATTACK, new ATTACK_State(animator, stateNames[(int)PLAYER_STATE.ATTACK]));
-        stateMachine.AddState(PLAYER_STATE.DEAD, new DEAD_State(animator, stateNames[(int)PLAYER_STATE.DEAD]));
+        stateMachine = new StateMachine(PLAYER_STATE.IDLE, new IDLE_State(player, this, animator, stateNames[(int)PLAYER_STATE.IDLE]));
+        stateMachine.AddState(PLAYER_STATE.RUN, new RUN_State(player, this, animator, stateNames[(int)PLAYER_STATE.RUN]));
+        stateMachine.AddState(PLAYER_STATE.ATTACK, new ATTACK_State(player, this, animator, stateNames[(int)PLAYER_STATE.ATTACK]));
+        stateMachine.AddState(PLAYER_STATE.DEAD, new DEAD_State(player, this, animator, stateNames[(int)PLAYER_STATE.DEAD]));
     }
 
     void CameraFix()
@@ -55,6 +72,43 @@ public  class PlayerControler : MonoBehaviour
         Vector2 vPos = player.GetComponent<RectTransform>().anchoredPosition;
         cam.transform.position = new Vector3(vPos.x, vPos.y, cam.transform.position.z);
     }
+    public void Player_KeyInput()
+    {
+        //체력이 0일 경우, 아무것도 못함
+        if(player.ability.hp <= 0)
+        {
+            Player_Dead();
+            return;
+        }
+
+        if(Input.GetMouseButton(0))
+        {
+            isMove = true;
+            isAuto = false;
+            isAttack = false;
+            vMovePos = cam.ScreenToWorldPoint(Input.mousePosition);           
+        }
+
+        //주위에 몬스터가 없을 경우 아이들 상태
+        if (monster == null)
+        {
+            Player_Idle();
+            isMove = false;
+        }
+        //맵을 클릭하여, 수동 조작 일 경우, 살아있는 몬스터가 존재
+        //살아있는 몬스터가 존재하고, 맵을 클릭하여 수동조작 일경우
+        else if (isMove && monster != null)
+            Player_Move();
+        //공격 할 몬스터가 없으며, 살아있는 몬스터가 존재하고, 오토 조작 일 경우 (가까운 몬스터에게 접근)
+        else if (!isAttack && monster != null && isAuto)
+            Player_AutoMove();
+        //사거리 안에 적이 있을경우 공격
+        else if (isAttack)
+            Player_Attack();
+     
+        
+    }
+
 
     public void SetState(PLAYER_STATE _state)
     {
@@ -66,8 +120,6 @@ public  class PlayerControler : MonoBehaviour
     {
         if(state != PLAYER_STATE.IDLE)
             SetState(PLAYER_STATE.IDLE);
-
-
     }
 
     //움직임 상태
@@ -75,9 +127,8 @@ public  class PlayerControler : MonoBehaviour
     {
 
         if(state != PLAYER_STATE.RUN)
-        {
             SetState(PLAYER_STATE.RUN);
-        }
+        
 
         transform.position = Vector2.MoveTowards(transform.position, vMovePos, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
 
@@ -88,40 +139,47 @@ public  class PlayerControler : MonoBehaviour
             return;
         }
     }
+    public void Player_AutoMove()
+    {
+        if (state != PLAYER_STATE.RUN)
+        {
+            SetState(PLAYER_STATE.RUN);
+        }
+
+        transform.position = Vector2.MoveTowards(transform.position, monster.transform.position, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
+    }
 
     //공격 상태
     public void Player_Attack()
     {
-        SetState(PLAYER_STATE.ATTACK);
-
+        if(state != PLAYER_STATE.ATTACK)
+            SetState(PLAYER_STATE.ATTACK);
 
     }
 
     //죽음 상태 
     public void Player_Dead()
     {
-        SetState(PLAYER_STATE.DEAD);
+        if (state != PLAYER_STATE.DEAD)
+            SetState(PLAYER_STATE.DEAD);
     }
 
-    public void Player_KeyInput()
+    public bool Attack_Check(float _atk_Dis)
     {
-        if(Input.GetMouseButton(0))
-        {
-            isMove = true;
-            vMovePos = cam.ScreenToWorldPoint(Input.mousePosition);           
-        }
+        if (Object_Mgr.Instance == null)
+            return false;
 
-        if (isMove)
-            Player_Move();
+        monster = Object_Mgr.Instance.monster_Mgr.Get_MinDistanceMonster();
+
+        if (monster == null)
+            return false;
+
+        if (monster.GetComponent<MonsterControler>().playerDis <= _atk_Dis)
+            return true;
         else
-            Player_Idle();
-        
+            return false;
+
     }
 
-    public bool Attack_Check()
-    {
-        return false;
 
-       
-    }
 }

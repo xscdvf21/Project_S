@@ -1196,12 +1196,13 @@ MonoBehaviour:
     foot: {fileID: 0}
     back: {fileID: 0}
   ability:
-    atk: 0
-    atk_Speed: 0
+    atk: 20
+    atk_Dis: 1
+    atk_Speed: 1
     exp: 0
     maxExp: 0
-    hp: 0
-    maxHp: 0
+    hp: 100
+    maxHp: 150
     mp: 0
     maxMp: 0
     move_Speed: 1
@@ -1229,6 +1230,7 @@ MonoBehaviour:
   - AttackState
   - DeadState
   rb: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!61 &2820181928573076186
 BoxCollider2D:
   m_ObjectHideFlags: 0

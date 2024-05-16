@@ -25,4 +25,9 @@ public class Player_Mgr : MonoBehaviour
     {
         return mainPlayer;
     }
+
+    public Vector2 Get_PlayerPos()
+    {
+        return mainPlayer.transform.position;
+    }
 }
