@@ -25,7 +25,7 @@ public class InGame_Monster : MonoBehaviour
             dic_parent.Add((MONSTER_KIND)i, obj.transform);
         }
 
-        CreateMonster(5, MONSTER_KIND.SLIME_RED);
+        CreateMonster(20, MONSTER_KIND.SLIME_RED);
     }
 
 
