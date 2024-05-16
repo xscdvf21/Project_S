@@ -79,7 +79,7 @@ public  class PlayerControler : MonoBehaviour
             SetState(PLAYER_STATE.RUN);
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, vMovePos, GetComponent<Player>().ability.moveSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, vMovePos, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
 
         if ((Vector2)transform.position == vMovePos)
         {
