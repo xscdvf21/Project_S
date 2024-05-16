@@ -11,6 +11,9 @@ public class Item_Weapon : Item
     [Header("데미지")]
     public int atk;
 
+    [Header("무기 사거리")]
+    public float atk_ranger;
+
     public void Add_ItemAbility(ref Player _player)
     {
         if (_player == null)
@@ -18,4 +21,5 @@ public class Item_Weapon : Item
 
         _player.ability.atk += atk;
     }
+
 }

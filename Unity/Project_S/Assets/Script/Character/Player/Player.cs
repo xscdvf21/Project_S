@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public Player_ItemData items;
     public Player_AbilityData ability;
     public Player_SkillData skill;
-    public Player_BoneData bone;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         items.Init();
-        bone.Init();
     }
 
     // Update is called once per frame
@@ -151,41 +150,49 @@ public class Player : MonoBehaviour
 
     }
 
-    [Serializable]
-    public class Player_BoneData
-    {
-        public List<SpriteRenderer> itemBones;
-       
-        public void Init()
-        {
-            SetItem();
-        }
-        public void SetItem()
-        {
-
-        }
-       
-    }
-
+    /// <summary>
+    /// 플레이어에게 장착된 아이템을 관리
+    /// </summary>
     [Serializable]
     public class Player_ItemData
     {
+        [Header("플레이어 아이템 최대 해금 인덱스")]
+        public Item_ClearIndexData indexData;
+
+        [Header("최대 해금 착용아이템")]
         public Item_Weapon weapon;
         public Item_Helmet helmet;
         public Item_Armor armor;
-        public Item_Back back;
         public Item_Gloves gloves;
         public Item_Foot foot;
+        public Item_Back back;
 
 
         public void Init()
         {
+            Item_Init();
             Add_ItemAbility();
         }
+        
+        /// <summary>
+        /// 플레이어의 아이템을 장착시켜줌
+        /// </summary>
+        void Item_Init()
+        {
+            weapon = Object_Mgr.Instance.item_Mgr.Get_Weapon(indexData.weponIndex);
+            helmet = Object_Mgr.Instance.item_Mgr.Get_Helmet(indexData.helmetInex);
+            armor = Object_Mgr.Instance.item_Mgr.Get_Armor(indexData.armorIndex);
+            gloves = Object_Mgr.Instance.item_Mgr.Get_Gloves(indexData.glovesIndex);
+            foot = Object_Mgr.Instance.item_Mgr.Get_Foot(indexData.footIndex);
+            back = Object_Mgr.Instance.item_Mgr.Get_Back(indexData.backIndex);
 
+        }
+        /// <summary>
+        /// 장착된 아이템의 능력치를 캐릭 스텟에 더해줌
+        /// </summary>
         void Add_ItemAbility()
         {
-            Player player = Game_Mgr.Instance.mainPlayer;
+            Player player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
 
             if (player == null)
                 return;
@@ -196,8 +203,18 @@ public class Player : MonoBehaviour
             back.Add_ItemAbility(ref player);
             gloves.Add_ItemAbility(ref player);
             foot.Add_ItemAbility(ref player);
+        }
 
-
+        //플레이어 아이템 최대 해금 인덱스
+        [Serializable]
+        public class Item_ClearIndexData
+        {
+            public int weponIndex;
+            public int helmetInex;
+            public int armorIndex;
+            public int glovesIndex;
+            public int footIndex;
+            public int backIndex;
         }
     }
   

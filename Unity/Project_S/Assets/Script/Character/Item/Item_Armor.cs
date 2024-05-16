@@ -20,4 +20,6 @@ public class Item_Armor : Item
         _player.ability.maxHp += maxHp;
         _player.ability.maxMp += maxMp;
     }
+
+
 }

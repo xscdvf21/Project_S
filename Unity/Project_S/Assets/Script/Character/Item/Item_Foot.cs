@@ -16,4 +16,5 @@ public class Item_Foot : Item
 
         _player.ability.move_Speed += Move_Speed;
     }
+
 }

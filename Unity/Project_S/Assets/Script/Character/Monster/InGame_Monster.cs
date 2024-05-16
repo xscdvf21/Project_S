@@ -25,21 +25,21 @@ public class InGame_Monster : MonoBehaviour
             dic_parent.Add((MONSTER_KIND)i, obj.transform);
         }
 
-        for(int i =0; i < 5; ++i)
-        {
-            CreateMonster(MONSTER_KIND.SLIME_RED, new Vector2(i, i));
-
-        }
-
+        CreateMonster(5, MONSTER_KIND.SLIME_RED);
     }
 
-    private void CreateMonster(MONSTER_KIND _kind, Vector2 _vPos)
+
+
+    private void CreateMonster(int _count, MONSTER_KIND _kind)
     {
         if (dic_parent.TryGetValue(_kind, out Transform _result))
         {
-            GameObject monster = Object_Mgr.Instance.CreateMonster(_kind, _vPos);
-            monster.transform.SetParent(_result, false);
-            Game_Mgr.Instance.MonsterAdd(monster.GetComponent<Monster>());
+
+            for (int i = 0; i < _count; ++i)
+            {
+                int iIndex = i;
+                Object_Mgr.Instance.monster_Mgr.CreateMonster(_result, _kind, new Vector2(iIndex, iIndex));
+            }
         }
 
     }

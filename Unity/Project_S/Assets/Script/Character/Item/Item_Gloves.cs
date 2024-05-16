@@ -23,6 +23,6 @@ public class Item_Gloves : Item
         _player.ability.atk_Speed += Atk_Speed;
         _player.ability.cri_Chance += CRI_Chance;
         _player.ability.damage_CRI += Damage_CRI;
-
     }
+
 }

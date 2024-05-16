@@ -16,19 +16,18 @@ public enum PLAYER_STATE
 
 }
 
-
 public enum CHARACTER_SPRITE
 {
     NONE = -1,
-    HAIR,
-    FACEHAIR,
-    CLOTH,
-    PANT,
-    HELMET,
-    ARMOR,
-    WEAPON,
-    BACK,
-    EYE,
+    HAIR_SRPITE,
+    FACEHAIR_SPRITE,
+    CLOTH_SRPITE,
+    PANT_SRPITE,
+    HELMET_SRPITE,
+    ARMOR_SRPITE,
+    WEAPON_SRPITE,
+    BACK_SRPITE,
+    EYE_SRPITE,
     END,
 }
 
@@ -38,7 +37,7 @@ public enum CHARACTER_SPRITE
 /// <summary>
 /// 캐릭 스프라이트
 /// </summary>
-public enum HAIR
+public enum HAIR_SPRITE
 {
     NONE = -1,
     HAIR_1,
@@ -53,7 +52,7 @@ public enum HAIR
     END,
 }
 
-public enum FACEHAIR
+public enum FACEHAIR_SPRITE
 {
     NONE = -1,
     FACEHAIR_1,
@@ -64,7 +63,7 @@ public enum FACEHAIR
     END,
 }
 
-public enum CLOTH
+public enum CLOTH_SPRITE
 {
     NONE = -1,
 
@@ -83,7 +82,7 @@ public enum CLOTH
     
     END
 }
-public enum PANT
+public enum PANT_SPRITE
 {
     NONE = -1,
     FOOT_1,
@@ -93,7 +92,7 @@ public enum PANT
     END,
 }
 
-public enum HELMET
+public enum HELMET_SPRITE
 {
     NONE = 1,
     HELMET_1,
@@ -108,7 +107,7 @@ public enum HELMET
     END
 }
 
-public enum ARMOR
+public enum ARMOR_SPRITE
 {
     NONE = -1,
     ARMOR_1,
@@ -122,7 +121,7 @@ public enum ARMOR
     END,
 }
 
-public enum WEAPON
+public enum WEAPON_SPRITE
 {
     NONE = -1,
     AXE_1,
@@ -140,7 +139,7 @@ public enum WEAPON
     END,
 
 }
-public enum BACK
+public enum BACK_SPRITE
 {
     NONE = -1,
     BACK_1,
@@ -151,7 +150,13 @@ public enum BACK
     END,
 }
 
-public enum EYE
+public enum GLOVES_SPRITE
+{
+    NONE = -1,
+    END,
+}
+
+public enum EYE_SPRITE
 {
     NONE = -1,
     EYE_1,

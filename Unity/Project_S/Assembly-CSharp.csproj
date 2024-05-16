@@ -74,9 +74,11 @@
     <Compile Include="Assets\Script\Character\Player\PlayerControler.cs" />
     <Compile Include="Assets\Script\Skill\BaseSkill.cs" />
     <Compile Include="Assets\Script\Character\Player\State\RUN_State.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\Monster_Mgr.cs" />
     <Compile Include="Assets\Script\Skill\Player\Player_Skill_GuidedArrow.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifEncoder.cs" />
     <Compile Include="Assets\Script\Character\Player\State\IDLE_State.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\Player_Mgr.cs" />
     <Compile Include="Assets\Script\Manager\Sprite_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Foot.cs" />
     <Compile Include="Assets\Script\Map\InGame_Map.cs" />
@@ -118,10 +120,12 @@
     <Compile Include="Assets\SPUM\Script\SPUM_PackageButton.cs" />
     <Compile Include="Assets\SPUM\Script\Ect\ColorSelect.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
+    <Compile Include="Assets\Script\Map\Map_Stage.cs" />
     <Compile Include="Assets\Script\Character\Player\State\SKILL_State.cs" />
     <Compile Include="Assets\Script\Manager\InputKey_Mgr.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\SPUM\Script\Ect\SpritePos.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\Item_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Player\State\DEAD_State.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_Prefabs.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_Button.cs" />
@@ -130,6 +134,7 @@
     <Compile Include="Assets\Script\Manager\Skill_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_EyeSet.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\Map_Mgr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Changelog.txt" />

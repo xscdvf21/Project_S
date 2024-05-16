@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,9 +19,6 @@ public class Game_Mgr : MonoBehaviour
         }
     }
 
-    public Player mainPlayer;
-
-    public List<Monster> list_Monster;
     private void Awake()
     {
         instance = this;
@@ -37,11 +35,6 @@ public class Game_Mgr : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void MonsterAdd(Monster _monster)
-    {
-        list_Monster.Add(_monster);
     }
 
 

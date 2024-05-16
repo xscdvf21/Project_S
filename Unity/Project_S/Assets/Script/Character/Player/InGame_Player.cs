@@ -13,10 +13,7 @@ public class InGame_Player : MonoBehaviour
         if (!Object_Mgr.Instance)
             return;
 
-        GameObject player = Object_Mgr.Instance.CreatePlayer(_vPos);
-        player.transform.SetParent(this.transform, false);
-
-        Game_Mgr.Instance.mainPlayer = player.GetComponent<Player>();
+        Object_Mgr.Instance.player_Mgr.CreatePlayer(transform, _vPos);
     }
 
 }

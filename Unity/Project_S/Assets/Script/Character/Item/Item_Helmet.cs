@@ -18,4 +18,5 @@ public class Item_Helmet : Item
         _player.ability.cri_Chance += CRI_Chance;
         _player.ability.damage_CRI += Damage_CRI;
     }
+
 }

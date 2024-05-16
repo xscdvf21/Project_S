@@ -93,6 +93,8 @@ public  class PlayerControler : MonoBehaviour
     public void Player_Attack()
     {
         SetState(PLAYER_STATE.ATTACK);
+
+
     }
 
     //авю╫ ╩Себ 
@@ -114,5 +116,12 @@ public  class PlayerControler : MonoBehaviour
         else
             Player_Idle();
         
+    }
+
+    public bool Attack_Check()
+    {
+        return false;
+
+       
     }
 }

@@ -1182,42 +1182,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-    weapon: {fileID: 11400000, guid: b01cd190796c38f48b06a2740d7f4c56, type: 2}
-    helmet: {fileID: 11400000, guid: 5a845ba7f7956ce4a9ea2f103d482adf, type: 2}
-    armor: {fileID: 11400000, guid: da3e1b647372c2c4faf08014ff7694ea, type: 2}
-    back: {fileID: 11400000, guid: 6ebd66e29f295b2478513cc7f39d1d44, type: 2}
-    gloves: {fileID: 11400000, guid: 0cb9e614b311cbf449eb56cfef930676, type: 2}
-    foot: {fileID: 11400000, guid: 063ecbd1b491dac40b87774cc5e35673, type: 2}
+    indexData:
+      weponIndex: 0
+      helmetInex: 0
+      armorIndex: 0
+      glovesIndex: 0
+      footIndex: 0
+      backIndex: 0
+    weapon: {fileID: 0}
+    helmet: {fileID: 0}
+    armor: {fileID: 0}
+    gloves: {fileID: 0}
+    foot: {fileID: 0}
+    back: {fileID: 0}
   ability:
-    damage: 100
-    attackSpeed: 0
+    atk: 0
+    atk_Speed: 0
     exp: 0
     maxExp: 0
     hp: 0
     maxHp: 0
-    mana: 0
-    maxMana: 0
-    moveSpeed: 2
+    mp: 0
+    maxMp: 0
+    move_Speed: 1
+    cri_Chance: 0
+    damage_CRI: 0
   skill:
     list_Skill: []
-  bone:
-    itemBones:
-    - {fileID: 5239227334441798537}
-    - {fileID: 4141716335484709363}
-    - {fileID: 863471854679962058}
-    - {fileID: 193777522905769341}
-    - {fileID: 3926895547608583656}
-    - {fileID: 8832401478303149821}
-    - {fileID: 3548885302442752511}
-    - {fileID: 7381818333699845772}
-    - {fileID: 5916495797421501113}
-    - {fileID: 3926895547608583656}
-    - {fileID: 8832401478303149821}
-    - {fileID: 3874817666377331149}
-    - {fileID: 7669185645576977461}
-    - {fileID: 1270755330118121289}
-    - {fileID: 6626315952711894591}
-    - {fileID: 7532555447056121473}
 --- !u!114 &4257862960348419111
 MonoBehaviour:
   m_ObjectHideFlags: 0

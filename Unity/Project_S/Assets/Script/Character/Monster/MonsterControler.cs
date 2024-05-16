@@ -8,8 +8,15 @@ using UnityEngine;
 
 public class MonsterControler : MonoBehaviour
 {
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F1))
+            Monster_Death();
+    }
     private void FixedUpdate()
     {
+
         Monster_Move();
     }
 
@@ -17,10 +24,11 @@ public class MonsterControler : MonoBehaviour
     //플레이어를 향해 달려오도록 구현
     public void Monster_Move()
     {
-        if (Game_Mgr.Instance.mainPlayer == null)
+        if (Object_Mgr.Instance.player_Mgr.mainPlayer == null)
             return;
 
-        Player player = Game_Mgr.Instance.mainPlayer;
+        Player player = Object_Mgr.Instance.player_Mgr.mainPlayer;
+
         Vector2 vDir = (player.transform.position - transform.position).normalized;
 
         float distance = Vector2.Distance(player.transform.position, transform.position);
@@ -30,6 +38,12 @@ public class MonsterControler : MonoBehaviour
 
 
     }
+
+    void Monster_Death()
+    {
+        gameObject.SetActive(false);
+        Object_Mgr.Instance.monster_Mgr.Monster_Dead(GetComponent<Monster>());
+    }
     /// <summary>
     /// 다른방법을 생각해봐야할듯
     /// </summary>
@@ -38,7 +52,7 @@ public class MonsterControler : MonoBehaviour
     //{
     //    if (collision.transform.tag == "Monster")
     //    {
-           
+
     //        transform.Translate(Vector3.up * 1f);
 
     //    }
