@@ -74,6 +74,7 @@
     <Compile Include="Assets\Script\Manager\Sprite_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Foot.cs" />
     <Compile Include="Assets\Script\Map\InGame_Map.cs" />
+    <Compile Include="Assets\Script\Character\Skill\Active\ActiveSKill_Object.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_SpriteList.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteEyeSync.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PackageButton.cs" />
+    <Compile Include="Assets\Script\Character\Skill\Passive\PassiveSkill_Object.cs" />
     <Compile Include="Assets\Script\Manager\InputKey_Mgr.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\SPUM\Script\Ect\SpritePos.cs" />

@@ -47,17 +47,7 @@ public class Player : MonoBehaviour
 
     }
 
-    public void Add_Skill(PLAYER_SKILL _type)
-    {
-        if (skill == null)
-            skill = new Player_SkillData();
 
-        GameObject clone = Instantiate(Skill_Mgr.Instance.player_Skill.GetSkill(_type).gameObject);
-        clone.transform.SetParent(this.transform.Find("Skill"), false);
-
-        skill.AddSkill(_type, clone.GetComponent<BaseSkill>());
-
-    }
 
     /// <summary>
     /// 현재 적용되어있는 스킬

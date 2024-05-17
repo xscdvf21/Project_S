@@ -16,6 +16,20 @@ public enum PLAYER_STATE
 
 }
 
+public enum ACTIVE_SKILL
+{
+    NONE = -1,
+    END,
+}
+public enum PASSIVE_SKILL
+{
+    NONE = -1,
+
+    END,
+}
+
+
+
 public enum CHARACTER_SPRITE
 {
     NONE = -1,
