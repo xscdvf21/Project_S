@@ -29,14 +29,35 @@ public class ObjectPool : MonoBehaviour
 
         for (int i = 0; i < initSize; ++i)
         {
-            GameObject obj = Instantiate(prefabs);
-            obj.transform.SetParent(transform, false);
-            obj.SetActive(false);
-            queue.Enqueue(obj);
+            CreateObject();
         }
 
 
         if (Object_Mgr.Instance)
             Object_Mgr.Instance.text_Mgr.Add_Dic(type, this);
     }
+    /// <summary>
+    /// 초기 생성과 부족할 떄 사용
+    /// </summary>
+    void CreateObject()
+    {
+        GameObject obj = Instantiate(prefabs);
+        obj.transform.SetParent(transform, false);
+        obj.SetActive(false);
+        queue.Enqueue(obj);
+    }
+
+    public GameObject GetObject()
+    {
+        if (queue.Count < 1)
+            CreateObject();
+
+        return queue.Dequeue();
+    }
+
+    public void ReturnObject(GameObject _obj)
+    {
+        queue.Enqueue(_obj);
+    }
 }
+
