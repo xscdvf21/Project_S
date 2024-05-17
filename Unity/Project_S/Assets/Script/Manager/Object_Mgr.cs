@@ -33,6 +33,9 @@ public class Object_Mgr : MonoBehaviour
 
     [Header("맵(스테이지) 관리")]
     public Map_Mgr map_Mgr;
+
+    [Header("텍스트 관리(데미지 텍스트)")]
+    public Text_Mgr text_Mgr;
     private void Awake()
     {
         instance = this;

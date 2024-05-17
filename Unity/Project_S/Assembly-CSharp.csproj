@@ -60,81 +60,84 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.28f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Character\Monster\Monster.cs" />
     <Compile Include="Assets\Script\Character\Player\State\StateMachine.cs" />
     <Compile Include="Assets\Script\Manager\Game_Mgr.cs" />
     <Compile Include="Assets\SPUM\SoonsoonData\SoonsoonData.cs" />
     <Compile Include="Assets\Script\Skill\Monster\Monster_Skill.cs" />
-    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Recorder.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Gloves.cs" />
-    <Compile Include="Assets\Script\Character\Monster\InGame_Monster.cs" />
-    <Compile Include="Assets\Script\Character\Player\SetBoolBehaviour.cs" />
-    <Compile Include="Assets\Script\Character\Player\State\ATTACK_State.cs" />
     <Compile Include="Assets\Script\Character\Player\PlayerControler.cs" />
-    <Compile Include="Assets\Script\Skill\BaseSkill.cs" />
-    <Compile Include="Assets\Script\Character\Player\State\RUN_State.cs" />
-    <Compile Include="Assets\Script\Manager\Object_Mgr\Monster_Mgr.cs" />
     <Compile Include="Assets\Script\Skill\Player\Player_Skill_GuidedArrow.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifEncoder.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\DamageText.cs" />
     <Compile Include="Assets\Script\Character\Player\State\IDLE_State.cs" />
-    <Compile Include="Assets\Script\Manager\Object_Mgr\Player_Mgr.cs" />
     <Compile Include="Assets\Script\Manager\Sprite_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Foot.cs" />
     <Compile Include="Assets\Script\Map\InGame_Map.cs" />
-    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifFrame.cs" />
-    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\ReflectionUtils.cs" />
-    <Compile Include="Assets\SPUM\Script\SPUM_Manager.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_SpriteList.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteEyeSync.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
-    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Worker.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\MinAttribute.cs" />
-    <Compile Include="Assets\Script\Manager\InGame_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_HorseSpriteList.cs" />
-    <Compile Include="Assets\Script\Enum\Enum.cs" />
-    <Compile Include="Assets\Script\Character\Item\Item_Helmet.cs" />
-    <Compile Include="Assets\Script\Skill\Skill_Machine.cs" />
-    <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\Script\Character\Player\State\BaseState.cs" />
     <Compile Include="Assets\Script\Manager\Lobby_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_AnimationController.cs" />
-    <Compile Include="Assets\Script\Character\Item\Item_Weapon.cs" />
     <Compile Include="Assets\Script\Character\Monster\MonsterControler.cs" />
-    <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
     <Compile Include="Assets\Script\Skill\Player\Player_Skill.cs" />
     <Compile Include="Assets\Script\Character\Item\Item.cs" />
-    <Compile Include="Assets\Script\Character\Item\Item_Back.cs" />
-    <Compile Include="Assets\Script\Manager\Object_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Player\Player.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PreviewItem.cs" />
     <Compile Include="Assets\Script\Manager\InGameUI_Mgr.cs" />
-    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\NeuQuant.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\ObjectPool.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSyncManager.cs" />
-    <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Armor.cs" />
     <Compile Include="Assets\Script\Manager\Manager.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SPUM_SpriteEditManager.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_SpriteButtonST.cs" />
-    <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
-    <Compile Include="Assets\SPUM\Script\SPUM_PackageButton.cs" />
     <Compile Include="Assets\SPUM\Script\Ect\ColorSelect.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
     <Compile Include="Assets\Script\Map\Map_Stage.cs" />
     <Compile Include="Assets\Script\Character\Player\State\SKILL_State.cs" />
+    <Compile Include="Assets\SPUM\Script\SPUM_Prefabs.cs" />
+    <Compile Include="Assets\SPUM\Script\SPUM_Button.cs" />
+    <Compile Include="Assets\Script\Character\Player\InGame_Player.cs" />
+    <Compile Include="Assets\Script\Manager\Skill_Mgr.cs" />
+    <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
+    <Compile Include="Assets\SPUM\Script\SPUM_EyeSet.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\Map_Mgr.cs" />
+    <Compile Include="Assets\Script\Character\Monster\Monster.cs" />
+    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Recorder.cs" />
+    <Compile Include="Assets\Script\Character\Monster\InGame_Monster.cs" />
+    <Compile Include="Assets\Script\Character\Player\SetBoolBehaviour.cs" />
+    <Compile Include="Assets\Script\Character\Player\State\ATTACK_State.cs" />
+    <Compile Include="Assets\Script\Skill\BaseSkill.cs" />
+    <Compile Include="Assets\Script\Character\Player\State\RUN_State.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\Monster_Mgr.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\Player_Mgr.cs" />
+    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifFrame.cs" />
+    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\ReflectionUtils.cs" />
+    <Compile Include="Assets\SPUM\Script\SPUM_Manager.cs" />
+    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Worker.cs" />
+    <Compile Include="Assets\Script\Manager\InGame_Mgr.cs" />
+    <Compile Include="Assets\Script\Enum\Enum.cs" />
+    <Compile Include="Assets\Script\Character\Item\Item_Helmet.cs" />
+    <Compile Include="Assets\Script\Skill\Skill_Machine.cs" />
+    <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
+    <Compile Include="Assets\Script\Character\Item\Item_Weapon.cs" />
+    <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
+    <Compile Include="Assets\Script\Character\Item\Item_Back.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr.cs" />
+    <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\NeuQuant.cs" />
+    <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
+    <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
+    <Compile Include="Assets\SPUM\Script\SPUM_PackageButton.cs" />
     <Compile Include="Assets\Script\Manager\InputKey_Mgr.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\SPUM\Script\Ect\SpritePos.cs" />
     <Compile Include="Assets\Script\Manager\Object_Mgr\Item_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Player\State\DEAD_State.cs" />
-    <Compile Include="Assets\SPUM\Script\SPUM_Prefabs.cs" />
-    <Compile Include="Assets\SPUM\Script\SPUM_Button.cs" />
     <Compile Include="Assets\SPUM\Sprite_SheetExporter(Beta)\Script\SPUM_Exporter.cs" />
-    <Compile Include="Assets\Script\Character\Player\InGame_Player.cs" />
-    <Compile Include="Assets\Script\Manager\Skill_Mgr.cs" />
-    <Compile Include="Assets\SPUM\Script\SPUM_EyeSet.cs" />
-    <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
-    <Compile Include="Assets\Script\Manager\Object_Mgr\Map_Mgr.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\Text_Mgr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Changelog.txt" />
@@ -1084,8 +1087,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.2D.Aseprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">

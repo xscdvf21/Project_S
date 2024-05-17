@@ -215,4 +215,12 @@ public enum WEAPON_TYPE
     END
 }
 
+public enum DAMAGE_FONT
+{
+    NONE = -1,
+    DEFAULT,
+    CRI,
+    END,
+}
+
 
