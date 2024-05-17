@@ -48,27 +48,6 @@ public class MonsterControler : MonoBehaviour
 
 
     }
-
-    /// <summary>
-    /// 다른방법을 생각해봐야할듯
-    /// </summary>
-    /// <param name="collision"></param>
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if (collision.transform.tag == "Monster")
-    //    {
-
-    //        transform.Translate(Vector3.up * 1f);
-
-    //    }
-    //}
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(collision.transform.tag == "Mosnter")
-    //        transform.Translate(Vector3.back * (Time.deltaTime * GetComponent<Monster>().ability.moveSpeed ));
-    //}
-
     void DistancePlayer()
     {
         if (!me.Get_Alive())

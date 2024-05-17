@@ -16,14 +16,17 @@ public class Monster : MonoBehaviour
 
     public void TakeDamage(int _damage)
     {
-        ability.hp -= _damage;      
-        DeathCheck();
+        ability.hp -= _damage;
+        if (ability.hp <= 0)
+        {
+            Dead();
+        }
 
         if (Object_Mgr.Instance)
             Object_Mgr.Instance.text_Mgr.ShowDamage(DAMAGE_FONT.DEFAULT ,transform.position, _damage.ToString());
     }
 
-    public void DeathCheck()
+    public void Dead()
     {
         if (ability.hp <= 0)
         {
@@ -61,12 +64,15 @@ public class Monster : MonoBehaviour
         
         [Header("플레이어에게 줄 경험치량")]
         public int exp;
+        public int gold;
 
         [Space(30)]
         public int hp;
         public int maxHp;
 
         public int moveSpeed;
+
+
 
     }
 

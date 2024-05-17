@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour 
 {
 
-    public DAMAGE_FONT type;
+    private DAMAGE_FONT type;
 
     public int initSize;
     public GameObject prefabs;
@@ -15,6 +15,9 @@ public class ObjectPool : MonoBehaviour
     void Start()
     {
         Init();
+
+        if (Object_Mgr.Instance)
+            Object_Mgr.Instance.text_Mgr.Add_Dic(type, this);
     }
 
     // Update is called once per frame
@@ -23,7 +26,7 @@ public class ObjectPool : MonoBehaviour
         
     }
 
-    void Init()
+    public void Init()
     {
         queue = new Queue<GameObject>();
 
@@ -31,14 +34,11 @@ public class ObjectPool : MonoBehaviour
         {
             CreateObject();
         }
-
-        if (Object_Mgr.Instance)
-            Object_Mgr.Instance.text_Mgr.Add_Dic(type, this);
     }
     /// <summary>
     /// 초기 생성과 부족할 떄 사용
     /// </summary>
-    void CreateObject()
+    public void CreateObject()
     {
         GameObject obj = Instantiate(prefabs);
         obj.transform.SetParent(transform, false);
