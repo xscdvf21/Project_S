@@ -16,8 +16,11 @@ public class Monster : MonoBehaviour
 
     public void TakeDamage(int _damage)
     {
-        ability.hp -= _damage;
+        ability.hp -= _damage;      
         DeathCheck();
+
+        if (Object_Mgr.Instance)
+            Object_Mgr.Instance.text_Mgr.ShowDamage(DAMAGE_FONT.DEFAULT ,transform.position, _damage.ToString());
     }
 
     public void DeathCheck()

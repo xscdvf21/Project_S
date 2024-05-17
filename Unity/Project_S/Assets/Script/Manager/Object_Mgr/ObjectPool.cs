@@ -32,7 +32,6 @@ public class ObjectPool : MonoBehaviour
             CreateObject();
         }
 
-
         if (Object_Mgr.Instance)
             Object_Mgr.Instance.text_Mgr.Add_Dic(type, this);
     }
