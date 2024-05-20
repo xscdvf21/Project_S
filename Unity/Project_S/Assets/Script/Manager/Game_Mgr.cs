@@ -19,23 +19,54 @@ public class Game_Mgr : MonoBehaviour
         }
     }
 
+    [SerializeField] public byte[] key = SaveSystem.GenerateRandomKey(32);
+    [SerializeField] public byte[] iv = SaveSystem.GenerateRandomKey(16);
+
+    public Player_Save player_save = new Player_Save();
+
+    [SerializeField] bool isDataLoad = false;
+    public float autoSaveTime;
     private void Awake()
     {
         instance = this;
+        autoSaveTime = 60;
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player_save.Load();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(isDataLoad)
+            AutoSave();
     }
 
+
+    private void AutoSave()
+    {
+        
+        autoSaveTime -= Time.deltaTime;
+        if (autoSaveTime < 0)
+        {
+            //데이터 파일 자동 저창
+            Save();
+        }
+    }
+
+    public void Save()
+    {
+        player_save.Save();
+        autoSaveTime = 60f;
+    }
+
+    public void SetDataLoad(bool _b)
+    {
+        isDataLoad = _b;
+    }
 
 }

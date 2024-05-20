@@ -1196,6 +1196,7 @@ MonoBehaviour:
     foot: {fileID: 0}
     back: {fileID: 0}
   ability:
+    level: 1
     atk: 20
     atk_Dis: 1
     atk_Speed: 1

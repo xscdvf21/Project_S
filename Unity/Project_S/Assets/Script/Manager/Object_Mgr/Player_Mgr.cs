@@ -19,6 +19,13 @@ public class Player_Mgr : MonoBehaviour
         player.transform.SetParent(_parent, false);
 
         mainPlayer = player.GetComponent<Player>();
+
+        mainPlayer.ability = Game_Mgr.Instance.player_save.GetAbility();
+        mainPlayer.skill = Game_Mgr.Instance.player_save.GetSkill();
+        mainPlayer.items = Game_Mgr.Instance.player_save.GetItems();
+
+        Game_Mgr.Instance.SetDataLoad(true);
+
     }
 
     public Player Get_MainPlayer()

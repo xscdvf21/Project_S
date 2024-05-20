@@ -19,12 +19,13 @@ public enum PLAYER_STATE
 public enum ACTIVE_SKILL
 {
     NONE = -1,
+    ACTIVE_1,
     END,
 }
 public enum PASSIVE_SKILL
 {
     NONE = -1,
-
+    PASSIVE_1,
     END,
 }
 

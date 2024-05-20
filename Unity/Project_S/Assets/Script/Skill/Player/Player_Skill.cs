@@ -18,6 +18,9 @@ public class Player_Skill : MonoBehaviour
 
     private void Init()
     {
+        dic_Active = new Dictionary<ACTIVE_SKILL, ActiveSKill_Object>();
+        dic_Passive = new Dictionary<PASSIVE_SKILL, PassiveSkill_Object>();
+
         for(int i = 0; i < actives.Count; ++i)
         {
             int iIndex = i;

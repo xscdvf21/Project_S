@@ -39,12 +39,17 @@ public class Manager : MonoBehaviour
     }
     void Start()
     {
-        SceneManager.LoadScene("InGame");
+        SceneManager.LoadScene("Lobby");
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnApplicationQuit()
+    {
+        Game_Mgr.Instance.Save();
     }
 }
