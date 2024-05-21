@@ -58,6 +58,8 @@ public class Player_Save : SaveFile
     {
         Debug.Log("데이터 로드 및 셋팅 성공");
 
+        ability.level = temp.ability.level;
+
         ability.atk = temp.ability.atk;
         ability.atk_Dis = temp.ability.atk_Dis;
         ability.atk_Speed = temp.ability.atk_Speed;
@@ -94,6 +96,8 @@ public class Player_Save : SaveFile
 
     private void InitDataSetting(Player _temp, Player_Save _player)
     {
+        _player.ability.level       = _temp.ability.level;
+
         _player.ability.atk         = _temp.ability.atk;
         _player.ability.atk_Dis     = _temp.ability.atk_Dis;
         _player.ability.atk_Speed   = _temp.ability.atk_Speed;

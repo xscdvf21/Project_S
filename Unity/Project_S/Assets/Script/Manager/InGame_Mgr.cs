@@ -32,13 +32,17 @@ public class InGame_Mgr : MonoBehaviour
         }
 
         instance = this;
-    }
 
-    private void Start()
-    {
         map.Init();
         player.Init();
         monster.Init();
+
+    }
+    
+
+    private void Start()
+    {
+
     }
 
 

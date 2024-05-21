@@ -34,10 +34,10 @@ public class MonsterControler : MonoBehaviour
     //플레이어를 향해 달려오도록 구현
     public void Monster_Move()
     {
-        if (Object_Mgr.Instance.player_Mgr.mainPlayer == null)
+        if (Object_Mgr.Instance.player_Mgr.Get_MainPlayer() == null)
             return;
 
-        Player player = Object_Mgr.Instance.player_Mgr.mainPlayer;
+        Player player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
 
         Vector2 vDir = (player.transform.position - transform.position).normalized;
 

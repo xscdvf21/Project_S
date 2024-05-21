@@ -7,7 +7,7 @@ public class Player_Mgr : MonoBehaviour
     [Header("플레이어 목록 (프리팹)")]
     public Player playerPrefab;
 
-    public Player mainPlayer;
+    [SerializeField] Player mainPlayer;
     public void CreatePlayer(Transform _parent, Vector2 _vPos)
     {
         if (playerPrefab == null)

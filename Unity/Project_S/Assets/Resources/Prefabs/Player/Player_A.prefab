@@ -1201,11 +1201,11 @@ MonoBehaviour:
     atk_Dis: 1
     atk_Speed: 1
     exp: 0
-    maxExp: 0
+    maxExp: 100
     hp: 100
-    maxHp: 150
+    maxHp: 100
     mp: 0
-    maxMp: 0
+    maxMp: 100
     move_Speed: 1
     cri_Chance: 0
     damage_CRI: 0
