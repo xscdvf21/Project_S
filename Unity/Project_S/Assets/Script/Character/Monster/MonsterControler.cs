@@ -8,9 +8,12 @@ using UnityEngine;
 
 public class MonsterControler : MonoBehaviour
 {
+
     //생성할 때 자기자신을 들고있는게, 최적화에 좋을거 같아서
     [SerializeField] Monster me;
     [Header("플레이어와 거리")]
+
+    [SerializeField] Player player;
     public float playerDis;
 
     private void Awake()
@@ -18,6 +21,8 @@ public class MonsterControler : MonoBehaviour
         //
         if (me == null)
             me = GetComponent<Monster>();
+
+        player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
 
     }
     private void Update()
@@ -34,10 +39,10 @@ public class MonsterControler : MonoBehaviour
     //플레이어를 향해 달려오도록 구현
     public void Monster_Move()
     {
-        if (Object_Mgr.Instance.player_Mgr.Get_MainPlayer() == null)
+        if (player == null)
             return;
 
-        Player player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
+ 
 
         Vector2 vDir = (player.transform.position - transform.position).normalized;
 
