@@ -32,13 +32,14 @@ public class Lobby_Mgr : MonoBehaviour
         startBtn.onClick.AddListener(OnClickStartBtn);
         optionBtn.onClick.AddListener(OnClickOptionBtn);
         quitBtn.onClick.AddListener(OnClickQuitBtn);
+
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Object_Mgr.Instance.player_Mgr.CreatePlayer();
     }
 
     // Update is called once per frame

@@ -45,6 +45,7 @@ public class Loading_Mgr : MonoBehaviour
         {
             yield return null;
 
+            //로딩이 끝났고, 메인플레이어가 널이 아니라면,
             if (0.9f <= op.progress)
             {
                 timer += Time.deltaTime;

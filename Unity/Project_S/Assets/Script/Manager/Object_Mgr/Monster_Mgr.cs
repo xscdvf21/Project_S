@@ -40,7 +40,7 @@ public class Monster_Mgr : MonoBehaviour
         monster.transform.position = new Vector2(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
         monster.transform.SetParent(_parent, false);
 
-        monster.GetComponent<Monster>().Set_Alive(true);
+        monster.GetComponent<MonsterControler>().Set_Alive(true);
 
         monster_Alive.Add(monster.GetComponent<Monster>());
 
@@ -76,8 +76,8 @@ public class Monster_Mgr : MonoBehaviour
         foreach(var monster in monster_death)
         {
             monster_Alive.Add(monster);
-            monster.Set_Alive(true);
-            monster.Set_Pos(new Vector2(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f)));
+            monster.GetComponent<MonsterControler>().Set_Alive(true);
+            monster.GetComponent<MonsterControler>().Set_Pos(new Vector2(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f)));
             monster.ability.hp = monster.ability.maxHp;
         }
 

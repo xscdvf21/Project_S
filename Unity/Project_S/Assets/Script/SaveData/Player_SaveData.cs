@@ -10,6 +10,7 @@ public class Player_Save : SaveFile
     [SerializeField] Player_AbilityData ability;
     [SerializeField] Player_SkillData skill;
     [SerializeField] Player_ItemData items;
+    [SerializeField] Player_Resource resource;
     
 
     public void Save()
@@ -58,14 +59,10 @@ public class Player_Save : SaveFile
     {
         Debug.Log("데이터 로드 및 셋팅 성공");
 
-        ability.level = temp.ability.level;
-
         ability.atk = temp.ability.atk;
         ability.atk_Dis = temp.ability.atk_Dis;
         ability.atk_Speed = temp.ability.atk_Speed;
 
-        ability.exp = temp.ability.exp;
-        ability.maxExp = temp.ability.maxExp;
 
         ability.hp = temp.ability.hp;
         ability.maxHp = temp.ability.maxHp;
@@ -79,7 +76,11 @@ public class Player_Save : SaveFile
         ability.damage_CRI = temp.ability.damage_CRI;
 
 
-        for(int i = 0; i < temp.skill.list_Skill.Count; ++i)
+        resource.level = temp.resource.level;
+        resource.exp = temp.resource.exp;
+        resource.maxExp = temp.resource.maxExp;
+
+        for (int i = 0; i < temp.skill.list_Skill.Count; ++i)
         {
             skill.list_Skill.Add(temp.skill.list_Skill[i]);
         }
@@ -96,14 +97,9 @@ public class Player_Save : SaveFile
 
     private void InitDataSetting(Player _temp, Player_Save _player)
     {
-        _player.ability.level       = _temp.ability.level;
-
         _player.ability.atk         = _temp.ability.atk;
         _player.ability.atk_Dis     = _temp.ability.atk_Dis;
         _player.ability.atk_Speed   = _temp.ability.atk_Speed;
-
-        _player.ability.exp         = _temp.ability.exp;
-        _player.ability.maxExp      = _temp.ability.maxExp;
 
         _player.ability.hp          = _temp.ability.hp;
         _player.ability.maxHp       = _temp.ability.maxHp;
@@ -116,6 +112,10 @@ public class Player_Save : SaveFile
         _player.ability.cri_Chance  = _temp.ability.cri_Chance;
         _player.ability.damage_CRI  = _temp.ability.damage_CRI;
 
+
+        _player.resource.level = _temp.resource.level;
+        _player.resource.exp = _temp.resource.exp;
+        _player.resource.maxExp = _temp.resource.maxExp;
 
         for (int i = 0; i < _temp.skill.list_Skill.Count; ++i)
         {
@@ -146,5 +146,9 @@ public class Player_Save : SaveFile
         return skill;
     }
 
+    public Player_Resource Get_Resource()
+    {
+        return resource;
+    }
 
 }

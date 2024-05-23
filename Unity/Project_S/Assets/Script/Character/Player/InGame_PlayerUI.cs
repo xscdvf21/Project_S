@@ -48,7 +48,6 @@ public class InGame_PlayerUI : MonoBehaviour
 
         public override void OnAwake(Player _player)
         {
-            text_level.text = _player.ability.level.ToString();
 
             slider_HP.minValue = 0f;
             slider_HP.maxValue = _player.ability.maxHp;
@@ -56,8 +55,11 @@ public class InGame_PlayerUI : MonoBehaviour
             slider_MP.minValue = 0f;
             slider_MP.maxValue = _player.ability.maxMp;
 
+
+            text_level.text = _player.resource.level.ToString();
+
             slider_EXP.minValue = 0f;
-            slider_EXP.maxValue = _player.ability.maxExp;
+            slider_EXP.maxValue = _player.resource.maxExp;
         }
 
         public override void OnEnter(Player _player)
@@ -67,11 +69,13 @@ public class InGame_PlayerUI : MonoBehaviour
 
         public override void OnUpdate(Player _player)
         {
-            text_level.text = _player.ability.level.ToString();
 
             slider_HP.value = _player.ability.hp;
             slider_MP.value = _player.ability.mp;
-            slider_EXP.value = _player.ability.exp;
+
+
+            text_level.text = _player.resource.level.ToString();
+            slider_EXP.value = _player.resource.exp;
             
         }
 

@@ -5,10 +5,10 @@ using UnityEngine;
 public  class PlayerControler : MonoBehaviour
 {
     [SerializeField] PLAYER_STATE state;
+    [SerializeField] Camera cam;
 
     //생성할 때 자기자신을 들고있는게, 최적화에 좋을거 같아서
     public Player player;
-    Camera cam;
     StateMachine stateMachine;
 
     public string[] stateNames;
@@ -33,10 +33,7 @@ public  class PlayerControler : MonoBehaviour
         if (rb == null)
             rb = GetComponent<Rigidbody2D>();
 
-        cam = Camera.main;
-
         InitState();
-
     }
 
     private void Update()
@@ -52,6 +49,7 @@ public  class PlayerControler : MonoBehaviour
             isAuto = true;
             isAttack = Attack_Check(player.ability.atk_Dis);
         }
+
         CameraFix();
         Player_KeyInput();
 
@@ -69,6 +67,9 @@ public  class PlayerControler : MonoBehaviour
 
     void CameraFix()
     {
+        if (cam == null)
+            return;
+
         Vector2 vPos = player.GetComponent<RectTransform>().anchoredPosition;
         cam.transform.position = new Vector3(vPos.x, vPos.y, cam.transform.position.z);
     }
@@ -181,5 +182,8 @@ public  class PlayerControler : MonoBehaviour
 
     }
 
-
+    public void SetCamera(Camera _camera)
+    {
+        cam = _camera;
+    }
 }

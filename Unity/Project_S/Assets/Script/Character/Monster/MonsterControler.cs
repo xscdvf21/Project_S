@@ -16,6 +16,8 @@ public class MonsterControler : MonoBehaviour
     [SerializeField] Player player;
     public float playerDis;
 
+
+    private bool isAlive;
     private void Awake()
     {
         //
@@ -36,13 +38,23 @@ public class MonsterControler : MonoBehaviour
     }
 
 
+    public void TakeDamage(int _damage)
+    {
+        me.ability.hp -= _damage;
+        if (me.ability.hp <= 0)
+        {
+            Monster_Dead();
+        }
+
+        if (Object_Mgr.Instance)
+            Object_Mgr.Instance.text_Mgr.ShowDamage(DAMAGE_FONT.DEFAULT, transform.position, _damage.ToString());
+    }
+
     //플레이어를 향해 달려오도록 구현
     public void Monster_Move()
     {
         if (player == null)
             return;
-
- 
 
         Vector2 vDir = (player.transform.position - transform.position).normalized;
 
@@ -53,12 +65,39 @@ public class MonsterControler : MonoBehaviour
 
 
     }
+
+    public void Monster_Dead()
+    {
+
+        gameObject.SetActive(false);
+        isAlive = false;
+        Object_Mgr.Instance.monster_Mgr.Monster_Dead(me);
+
+        player.resource.Add_Resource(me.resource.GetExp(), me.resource.GetGold());
+
+    }
     void DistancePlayer()
     {
-        if (!me.Get_Alive())
+        if (!Get_Alive())
             return;
 
         playerDis = Vector2.Distance(this.transform.position, Object_Mgr.Instance.player_Mgr.Get_PlayerPos());
+    }
+
+
+    public void Set_Alive(bool _alive)
+    {
+        gameObject.SetActive(true);
+        isAlive = _alive;
+    }
+
+    public bool Get_Alive()
+    {
+        return isAlive;
+    }
+    public void Set_Pos(Vector2 _vPos)
+    {
+        transform.position = _vPos;
     }
 }
 

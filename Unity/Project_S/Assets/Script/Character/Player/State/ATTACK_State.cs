@@ -65,7 +65,7 @@ public class ATTACK_State : BaseState
 
             animator.SetBool(aniName, true);
 
-            controler.monster.TakeDamage(player.ability.atk);
+            controler.monster.GetComponent<MonsterControler>().TakeDamage(player.ability.atk);
             Debug.Log("플레이어가 공격 합니다.");
 
             isAttacking = true;

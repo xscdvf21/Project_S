@@ -198,6 +198,8 @@ Transform:
   - {fileID: 4697743242855302367}
   - {fileID: 8599280636884427704}
   - {fileID: 3039408913609111891}
+  - {fileID: 8718502984575927853}
+  - {fileID: 407627586054874135}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6976645514131162784
@@ -219,6 +221,7 @@ MonoBehaviour:
   - {fileID: 4147472823829292267}
   - {fileID: 8415191721072692919}
   - {fileID: 6253568950684650687}
+  - {fileID: 9220825937554072295}
 --- !u!1 &3900479880573202379
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +923,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5773572289799763917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7611589720184123854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8718502984575927853}
+  m_Layer: 0
+  m_Name: ----------------------------------------------- (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8718502984575927853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611589720184123854}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5773572289799763917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8020241894627223108
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1031,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: ea7c7cb6a54822eb02f6173de71ebb498d7a134e3bb7f404137c6773335d3366
   iv: fc85d304de4e153428230b4c0f44626f
+  player_save:
+    ability:
+      atk: 0
+      atk_Dis: 0
+      atk_Speed: 0
+      hp: 0
+      maxHp: 0
+      mp: 0
+      maxMp: 0
+      move_Speed: 0
+      cri_Chance: 0
+      damage_CRI: 0
+    skill:
+      list_Skill: []
+    items:
+      indexData:
+        weponIndex: 0
+        helmetInex: 0
+        armorIndex: 0
+        glovesIndex: 0
+        footIndex: 0
+        backIndex: 0
+      weapon: {fileID: 0}
+      helmet: {fileID: 0}
+      armor: {fileID: 0}
+      gloves: {fileID: 0}
+      foot: {fileID: 0}
+      back: {fileID: 0}
+    resource:
+      level: 0
+      exp: 0
+      maxExp: 0
+      gold: 0
+  isDataLoad: 0
+  autoSaveTime: 0
 --- !u!1 &8415191721072692919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,3 +1110,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7dc0478facd1fd499e8d4ec5bd77e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &9220825937554072295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407627586054874135}
+  - component: {fileID: 8354022737456053931}
+  m_Layer: 0
+  m_Name: Camera_Mgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &407627586054874135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220825937554072295}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5773572289799763917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8354022737456053931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220825937554072295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759705ed310e74d4492e315e442aefe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}

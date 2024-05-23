@@ -1,1 +1,51 @@
-E3c5x6Dpu+876knJzEEvNpCZTQwvWZyDhSYstUpGe/pt5wtRrQ+l50bvrYPQ0FzAuYyJc5mioOCM3g+h9H9abjf3wBxMDl7AyduZTs9bf5qlyjJzIShe8oGCdfdugBXEVMc1gHdJVqNsopzhKLqgKor6HVJ66wroeAuByZSDhPWFGFDmNntiwiGC8K+w7lqBQ8t6Y3d7Ds1HIWh6gb+oM/ZUKy4UEQ5etiIzNnmp7h+xLRFsMAMEW7GhnmH4dtC9qeTdAsdW/oL7GvEp/Y+ZjSYWg8OUdvMHqATHy9bseAdKkElhfMviffpjwkoOr0ZPoILaXaIN/ODLTq0a+lh/dScHZnvyOyX84stoOVWX7z4mzo6oKVCOyIrEI9CcFGHnSbU3NQ4f1PpeJjt8Y27F3LdoLCfmNKjmWJ2yw6zY+E3VVXsJN7bjFziCvHi6i7QNxtWBobQpW3rLm/D95g5WVBBRQL3FSi9vrkT1WR4fIBjkMt6xDW5cUs6CIgYi+ae1k5px9717OUjOLEiF3Fg1vtMBWVGItVRlJZqnXhc+f0A7IT3aWru/InkqS2jHlKVxvrCb2GKsloFyWLbKtWSITUdFEvptmX4SND7Cxz05fJcSuFPddy/JKkDPgvvschLYqvzL3lzk8YQW3yyvvMGvexrQwU28JyNCppsXzRkCsyoC/cxI5SctWfM8CJCPtaBUq9NVyooXVOVKBPZsVvEIJ1k6j63uRbRA9vADlRCeDEhE+nj3dF7arNdzguRj9x26/37mnSbgNm1ik4eGsVEJdxBMKTQsh0jwPlkLr1Ewj8STjSDPrePaH34tFBKRQzsjQAJU6grJsLgveerwks36x1LhZYLu3uLPHyVwp6V2h7n9MelsGREsjBPMRciAc+EVOWpBy5venxMWlIFnBzgI27Eb58BaRhsJS+1xGfSjSvFxUqbNToOoi6J1c5Ok8AFcDgZtI354iMDvpRmWcrv6s2uBc3ehr0jIHCDUE6X3Ha1SJ869OPBNG18B3NqnHa565Tj6eGXRNKe1ob2ODmp+R4ssBzq86Q43PIeFXBEG7Y32aZmVok3hLi7Gw1lFXNLQt/xWFFZwRKLIxh4gQGvUcE7Jn9m60TD0wc6CWzs2jNqUnAiLl+c9hI5woTg+2h0eMCdMrZqHMUuIwhTyQjuqj6HcycUHiO1sGDchrtxHoGJBwtuCvcLyynKGHC9XRzK9TzG6OHrULMStyHVV8tWGTEyb/S8mQOcPnwqnabPypsigeOx5EhUPmMbt1ZTrODmw
+{
+    "ability": {
+        "atk": 20,
+        "atk_Dis": 1.0,
+        "atk_Speed": 1.0,
+        "hp": 100,
+        "maxHp": 100,
+        "mp": 0,
+        "maxMp": 100,
+        "move_Speed": 1.0,
+        "cri_Chance": 0.0,
+        "damage_CRI": 0.0
+    },
+    "skill": {
+        "list_Skill": []
+    },
+    "items": {
+        "indexData": {
+            "weponIndex": 0,
+            "helmetInex": 0,
+            "armorIndex": 0,
+            "glovesIndex": 0,
+            "footIndex": 0,
+            "backIndex": 0
+        },
+        "weapon": {
+            "instanceID": 22680
+        },
+        "helmet": {
+            "instanceID": 22670
+        },
+        "armor": {
+            "instanceID": 22782
+        },
+        "gloves": {
+            "instanceID": 22944
+        },
+        "foot": {
+            "instanceID": 22496
+        },
+        "back": {
+            "instanceID": 22818
+        }
+    },
+    "resource": {
+        "level": 1,
+        "exp": 0,
+        "maxExp": 100,
+        "gold": 0
+    }
+}

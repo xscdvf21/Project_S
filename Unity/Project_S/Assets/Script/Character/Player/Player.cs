@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public Player_ItemData items = new Player_ItemData();
     public Player_AbilityData ability = new Player_AbilityData();
     public Player_SkillData skill = new Player_SkillData();
-
+    public Player_Resource resource = new Player_Resource();
     // Start is called before the first frame update
     private void Awake()
     {
@@ -102,14 +102,9 @@ public class Player_SkillData
 [Serializable]
 public class Player_AbilityData
 {
-    public int level;
-
     public int atk;
     public float atk_Dis;
     public float atk_Speed;
-
-    public int exp;
-    public int maxExp;
 
     public int hp;
     public int maxHp;
@@ -122,23 +117,6 @@ public class Player_AbilityData
     public float cri_Chance;
     public float damage_CRI;
 
-    public void AddExp(int _exp)
-    {
-        exp += _exp;
-
-        if (exp >= maxExp)
-            LevelUp();
-
-    }
-
-    public void LevelUp()
-    {
-        if (exp < maxExp)
-            return;
-
-        level++;
-        exp -= maxExp;
-    }
 }
 
 /// <summary>
@@ -206,5 +184,54 @@ public class Player_ItemData : SaveFile
         public int glovesIndex;
         public int footIndex;
         public int backIndex;
+    }
+}
+
+//경험치, 골드량 등등 플레이어의 자원을 표시함
+[Serializable]
+public class Player_Resource
+{
+    public int level;
+
+    public int exp;
+    public int maxExp;
+
+    public int gold;
+
+    public void Add_Resource(int _exp, int _gold)
+    {
+        AddExp(_exp);
+        AddGold(_gold);
+    }
+
+    private void AddExp(int _exp)
+    {
+        exp += _exp;
+
+        if (exp >= maxExp)
+            LevelUp();
+
+    }
+
+    private void AddGold(int _gold)
+    {
+        gold += _gold;
+    }
+
+    private void LevelUp()
+    {
+        if (exp < maxExp)
+            return;
+
+        level++;
+        exp -= maxExp;
+    }
+
+    public void UseGold(int _gold)
+    {
+        if (gold > _gold)
+            return;
+
+        gold -= _gold;
     }
 }

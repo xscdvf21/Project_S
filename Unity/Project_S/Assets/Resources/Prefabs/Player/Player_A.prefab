@@ -1196,12 +1196,9 @@ MonoBehaviour:
     foot: {fileID: 0}
     back: {fileID: 0}
   ability:
-    level: 1
     atk: 20
     atk_Dis: 1
     atk_Speed: 1
-    exp: 0
-    maxExp: 100
     hp: 100
     maxHp: 100
     mp: 0
@@ -1211,6 +1208,11 @@ MonoBehaviour:
     damage_CRI: 0
   skill:
     list_Skill: []
+  resource:
+    level: 1
+    exp: 0
+    maxExp: 100
+    gold: 0
 --- !u!114 &4257862960348419111
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,8 +20,8 @@ public static class SaveSystem
     {
 
         string ToJsonData = JsonUtility.ToJson(_data, true);
-        File.WriteAllText(GetPath(_FileName), Encrypt(ToJsonData));
-        //File.WriteAllText(GetPath(_FileName), ToJsonData);
+        File.WriteAllText(GetPath(_FileName), ToJsonData);
+        //File.WriteAllText(GetPath(_FileName), Encrypt(ToJsonData));
     }
 
 
@@ -38,12 +38,12 @@ public static class SaveSystem
 
         try
         {
-            string FromJsonData = Decrypt(File.ReadAllText(GetPath(_FileName)));
-            _data = JsonUtility.FromJson<T>(FromJsonData);
-
-
-            //string FromJsonData = File.ReadAllText(GetPath(_FileName));
+            //string FromJsonData = Decrypt(File.ReadAllText(GetPath(_FileName)));
             //_data = JsonUtility.FromJson<T>(FromJsonData);
+
+
+            string FromJsonData = File.ReadAllText(GetPath(_FileName));
+            _data = JsonUtility.FromJson<T>(FromJsonData);
         }
         catch
         {

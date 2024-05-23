@@ -102,6 +102,7 @@
     <Compile Include="Assets\Script\Map\Map_Stage.cs" />
     <Compile Include="Assets\Script\Character\Player\State\SKILL_State.cs" />
     <Compile Include="Assets\Script\SaveData\Player_Save.cs" />
+    <Compile Include="Assets\Script\Manager\Camera_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_Prefabs.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_Button.cs" />
     <Compile Include="Assets\Script\Character\Player\InGame_Player.cs" />
