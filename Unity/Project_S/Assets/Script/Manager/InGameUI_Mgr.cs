@@ -17,7 +17,9 @@ public class InGameUI_Mgr : MonoBehaviour
     public InGame_PlayerUI playerUI;
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+            instance = this;
+
     }
 }
 

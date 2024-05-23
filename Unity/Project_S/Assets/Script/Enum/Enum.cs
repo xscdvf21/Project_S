@@ -16,6 +16,19 @@ public enum PLAYER_STATE
 
 }
 
+public enum PLAYER_ABILITY
+{
+    NONE = -1,
+    ATTACK,
+    ATTACK_SPEED,
+    HP,
+    MP,
+    MOVE_SPEED,
+    CRI_CHANCE,
+    DAMAGE_CRI,
+    END,
+}
+
 public enum ACTIVE_SKILL
 {
     NONE = -1,

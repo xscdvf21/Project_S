@@ -67,6 +67,7 @@
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Gloves.cs" />
     <Compile Include="Assets\Script\Character\Player\PlayerControler.cs" />
+    <Compile Include="Assets\Script\Manager\Shop_Mgr\Ability_Shop.cs" />
     <Compile Include="Assets\Script\Skill\Player\Player_Skill_GuidedArrow.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifEncoder.cs" />
     <Compile Include="Assets\Script\Manager\Object_Mgr\DamageText.cs" />
@@ -74,7 +75,9 @@
     <Compile Include="Assets\Script\Manager\Sprite_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Foot.cs" />
     <Compile Include="Assets\Script\Map\InGame_Map.cs" />
+    <Compile Include="Assets\Script\Manager\InGamePopup_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Skill\Active\ActiveSKill_Object.cs" />
+    <Compile Include="Assets\Script\Manager\Object_Mgr\Object_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_SpriteList.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteEyeSync.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
@@ -88,6 +91,8 @@
     <Compile Include="Assets\Script\Character\Item\Item.cs" />
     <Compile Include="Assets\Script\SaveData\SaveFile.cs" />
     <Compile Include="Assets\Sci-Fi UI\Demo_Assets\scripts\GUI_Demo.cs" />
+    <Compile Include="Assets\Script\Manager\Shop_Mgr\Weapon_Shop.cs" />
+    <Compile Include="Assets\Script\Popup\InGamePopup_AbilityShop.cs" />
     <Compile Include="Assets\Script\Character\Player\Player.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PreviewItem.cs" />
     <Compile Include="Assets\Script\Manager\InGameUI_Mgr.cs" />
@@ -96,6 +101,7 @@
     <Compile Include="Assets\Script\Character\Item\Item_Armor.cs" />
     <Compile Include="Assets\Script\Manager\Manager.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SPUM_SpriteEditManager.cs" />
+    <Compile Include="Assets\Script\Manager\Shop_Mgr\Skill_Shop.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_SpriteButtonST.cs" />
     <Compile Include="Assets\SPUM\Script\Ect\ColorSelect.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
@@ -131,10 +137,10 @@
     <Compile Include="Assets\Script\Character\Item\Item_Helmet.cs" />
     <Compile Include="Assets\Script\Skill\Skill_Machine.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
+    <Compile Include="Assets\Script\Manager\Shop_Mgr\Shop_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Weapon.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Back.cs" />
-    <Compile Include="Assets\Script\Manager\Object_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\NeuQuant.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
