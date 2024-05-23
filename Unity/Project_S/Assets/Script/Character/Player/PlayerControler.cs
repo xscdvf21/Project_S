@@ -34,6 +34,8 @@ public  class PlayerControler : MonoBehaviour
             rb = GetComponent<Rigidbody2D>();
 
         InitState();
+
+        cam = Camera_Mgr.Instance.GetCamera();
     }
 
     private void Update()
@@ -87,7 +89,7 @@ public  class PlayerControler : MonoBehaviour
             isMove = true;
             isAuto = false;
             isAttack = false;
-            vMovePos = cam.ScreenToWorldPoint(Input.mousePosition);           
+            vMovePos = cam.ScreenToWorldPoint(Input.mousePosition);
         }
 
         //주위에 몬스터가 없을 경우 아이들 상태

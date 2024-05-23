@@ -36,6 +36,8 @@ public class Camera_Mgr : MonoBehaviour
                 cam.tag = "MainCamera";
                 cam.transform.SetParent(transform, false);
                 cam.transform.position = new Vector3(0f, 0f, -10f);
+                cam.orthographic = true;
+                cam.orthographicSize = 5;
             }
         }
     }
@@ -50,5 +52,10 @@ public class Camera_Mgr : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public Camera GetCamera()
+    {
+        return cam;
     }
 }

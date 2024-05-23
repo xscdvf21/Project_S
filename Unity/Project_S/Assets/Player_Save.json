@@ -24,22 +24,22 @@
             "backIndex": 0
         },
         "weapon": {
-            "instanceID": 22680
+            "instanceID": 14458
         },
         "helmet": {
-            "instanceID": 22670
+            "instanceID": 14460
         },
         "armor": {
-            "instanceID": 22782
+            "instanceID": 14462
         },
         "gloves": {
-            "instanceID": 22944
+            "instanceID": 14464
         },
         "foot": {
-            "instanceID": 22496
+            "instanceID": 14466
         },
         "back": {
-            "instanceID": 22818
+            "instanceID": 14468
         }
     },
     "resource": {
