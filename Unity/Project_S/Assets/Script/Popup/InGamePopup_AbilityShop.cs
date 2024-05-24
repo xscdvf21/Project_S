@@ -37,32 +37,32 @@ public class InGamePopup_AbilityShop : InGamePopup_MenuComponent
 
     private void UpdateActiveBtn()
     {
-        var player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
+        //var player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
 
-        if (player == null)
-            return;
+        //if (player == null)
+        //    return;
 
-        for(int i = 0; i < component.Length; ++i)
-        {
-            PLAYER_ABILITY iIndex = (PLAYER_ABILITY)i;
-            var shop = Shop_Mgr.Instance.ability_Shop.GetAbility(iIndex);
-            component[i].btn.interactable = shop.IsGetBuy(ref player.resource.gold);
-            component[i].needGold.text = shop.GetPrice().ToString() + " C";
-        }
+        //for(int i = 0; i < component.Length; ++i)
+        //{
+        //    PLAYER_ABILITY iIndex = (PLAYER_ABILITY)i;
+        //    //var shop = Shop_Mgr.Instance.ability_Shop.GetAbility(iIndex);
+        //    component[i].btn.interactable = shop.IsGetBuy(ref player.resource.gold);
+        //    component[i].needGold.text = shop.GetPrice().ToString() + " C";
+        //}
     }
 
     private void OnClickBtn(int _iIndex)
     {
-        var player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
+        //var player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
 
-        if (player == null)
-            return;
+        //if (player == null)
+        //    return;
 
-        PLAYER_ABILITY iIndex = (PLAYER_ABILITY)_iIndex;
-        bool result = Shop_Mgr.Instance.ability_Shop.GetAbility(iIndex).BuyShop(ref player);
+        //PLAYER_ABILITY iIndex = (PLAYER_ABILITY)_iIndex;
+        ////bool result = Shop_Mgr.Instance.ability_Shop.GetAbility(iIndex).BuyShop(ref player);
 
-        if (result)
-            Game_Mgr.Instance.Get_SaveData().GetAbility().Add_Index(iIndex);
+        //if (result)
+        //    Game_Mgr.Instance.Get_SaveData().GetAbility().Add_Index(iIndex);
 
     }
 

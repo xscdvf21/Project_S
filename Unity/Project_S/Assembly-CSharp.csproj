@@ -67,7 +67,6 @@
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Gloves.cs" />
     <Compile Include="Assets\Script\Character\Player\PlayerControler.cs" />
-    <Compile Include="Assets\Script\Manager\Shop_Mgr\Ability_Shop.cs" />
     <Compile Include="Assets\Script\Skill\Player\Player_Skill_GuidedArrow.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifEncoder.cs" />
     <Compile Include="Assets\Script\Manager\Object_Mgr\DamageText.cs" />
@@ -92,9 +91,9 @@
     <Compile Include="Assets\Script\Character\Item\Item.cs" />
     <Compile Include="Assets\Script\SaveData\SaveFile.cs" />
     <Compile Include="Assets\Sci-Fi UI\Demo_Assets\scripts\GUI_Demo.cs" />
-    <Compile Include="Assets\Script\Manager\Shop_Mgr\Weapon_Shop.cs" />
     <Compile Include="Assets\Script\Popup\InGamePopup_AbilityShop.cs" />
     <Compile Include="Assets\Script\Character\Player\Player.cs" />
+    <Compile Include="Assets\Script\Manager\Shop_Mgr\Shop_ItemData.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PreviewItem.cs" />
     <Compile Include="Assets\Script\Manager\InGameUI_Mgr.cs" />
     <Compile Include="Assets\Script\Manager\Object_Mgr\ObjectPool.cs" />
@@ -103,7 +102,6 @@
     <Compile Include="Assets\Script\Character\Item\Item_Armor.cs" />
     <Compile Include="Assets\Script\Manager\Manager.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SPUM_SpriteEditManager.cs" />
-    <Compile Include="Assets\Script\Manager\Shop_Mgr\Skill_Shop.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_SpriteButtonST.cs" />
     <Compile Include="Assets\SPUM\Script\Ect\ColorSelect.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
@@ -158,6 +156,7 @@
     <Compile Include="Assets\Script\Manager\Object_Mgr\Item_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Player\State\DEAD_State.cs" />
     <Compile Include="Assets\SPUM\Sprite_SheetExporter(Beta)\Script\SPUM_Exporter.cs" />
+    <Compile Include="Assets\Script\Manager\Shop_Mgr\Shop_AbilityData.cs" />
     <Compile Include="Assets\Script\Manager\Object_Mgr\Text_Mgr.cs" />
   </ItemGroup>
   <ItemGroup>

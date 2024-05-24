@@ -14,6 +14,9 @@ public class Item_Weapon : Item
     [Header("무기 사거리")]
     public float atk_ranger;
 
+    [Header("뵤유 효과")]
+    public int haveAtk;
+
     public void Add_ItemAbility(ref Player _player)
     {
         if (_player == null)

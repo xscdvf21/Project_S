@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//SHOP 에서도 사용
 public class Item_Mgr : MonoBehaviour
 {
     public List<Item_Weapon> wepons;

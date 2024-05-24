@@ -203,6 +203,7 @@ public class Player_ItemIndex
     public struct item
     {
         public int itemCount;
+
     }
 
 

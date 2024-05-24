@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shop_Mgr : MonoBehaviour
 {
+
     private static Shop_Mgr instance = null;
 
     public static Shop_Mgr Instance
@@ -14,20 +15,21 @@ public class Shop_Mgr : MonoBehaviour
         }
     }
 
-    public Ability_Shop ability_Shop;
-    public Weapon_Shop weapon_Shop;
-    public Skill_Shop skill_Shop;
-
+    public Shop_AbilityData abilityShop;
+    public Shop_ItemData itemShop;
 
     private void Awake()
     {
-        instance = this;
-
+        instance = null;
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //for(int i = 0; i < itemShop.wepons.Count; ++i)
+        //{
+        //    itemShop.wepons[i].atk = (i + 1) * 10;
+        //}
     }
 
     // Update is called once per frame
