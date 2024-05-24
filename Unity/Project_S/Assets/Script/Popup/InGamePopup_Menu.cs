@@ -7,10 +7,10 @@ public class InGamePopup_Menu : MonoBehaviour
     public List<InGamePopup_MenuComponent> components;
 
     [Space(20)]
-    [SerializeField] INGAME_MENU menuType;
+    [SerializeField] INGAME_MENU menuType;   
     public Button closeBtn;
-
-
+    private bool isOpen;
+    [Space(20)]
     public InGamePopup_Stage stage_Popup;
     public InGamePopup_AbilityShop abilityShop_Popup;
     public InGamePopup_ItemShop itemShop_Popup;
@@ -36,6 +36,9 @@ public class InGamePopup_Menu : MonoBehaviour
 
         gameObject.SetActive(true);
         closeBtn.gameObject.SetActive(true);
+
+        isOpen = true;
+
     }
 
     private void AllHide()
@@ -46,6 +49,8 @@ public class InGamePopup_Menu : MonoBehaviour
         menuType = INGAME_MENU.NONE;
         gameObject.SetActive(false);
         closeBtn.gameObject.SetActive(false);
+
+        isOpen = false;
     }
 
     public void Hide(INGAME_MENU _type)
@@ -60,5 +65,10 @@ public class InGamePopup_Menu : MonoBehaviour
 
         if (InGameUI_Mgr.Instance)
             InGameUI_Mgr.Instance.menuUi.Close(menuType);
+    }
+
+    public bool Get_IsOpen()
+    {
+        return isOpen;
     }
 }

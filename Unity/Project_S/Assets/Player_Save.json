@@ -44,8 +44,8 @@
     },
     "resource": {
         "level": 1,
-        "exp": 27,
+        "exp": 32,
         "maxExp": 100,
-        "gold": 23
+        "gold": 0
     }
 }

@@ -86,12 +86,18 @@ public  class PlayerControler : MonoBehaviour
 
         
         //팝업이 작동중인지 아닌지 파악 해야할듯
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0) && !InGamePopup_Mgr.Instance.menu_Popup.Get_IsOpen())
         {
+            //하단 메뉴버튼을 눌렀을 때 막기 위해
+            Vector3 vMousePos = Input.mousePosition;
+            if (vMousePos.y <= 50f)
+                return;
+
             isMove = true;
             isAuto = false;
             isAttack = false;
-            vMovePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            
+            vMovePos = cam.ScreenToWorldPoint(vMousePos);
         }
 
         //주위에 몬스터가 없을 경우 아이들 상태
