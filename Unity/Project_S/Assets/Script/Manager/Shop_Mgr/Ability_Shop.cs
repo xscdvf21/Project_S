@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 /// <summary>
-/// 플레이어 능력치를 구매하는 상점
+/// 플레이어 능력치를 구매하는 상점의 데이터를 들고있음
 /// </summary>
 public class Ability_Shop : MonoBehaviour
 {
@@ -40,11 +40,6 @@ public class Ability_Shop : MonoBehaviour
         }
     }
 
-    public void BuyAbility(PLAYER_ABILITY _abilityType, ref int _playerGold)
-    {
-        if (dic_Shop.TryGetValue(_abilityType, out Shop_Component _result))
-            _result.BuyShop(ref _playerGold);
-    }
 
     public Shop_Component GetAbility(PLAYER_ABILITY _abilityType)
     {
@@ -57,27 +52,33 @@ public class Ability_Shop : MonoBehaviour
     [Serializable]
     public class Shop_Component
     {
-        public int value;
-        public int goldPrice;
+        [SerializeField] int value;
+        [SerializeField] int goldPrice;
 
-        public bool Get_Buy(ref int _playerGold)
+        public bool IsGetBuy(ref int _playerGold)
         {
             if (_playerGold < goldPrice)
                 return false;
 
             return true;
         }
-        public  void BuyShop(ref int _playerGold)
+        public  bool BuyShop(ref Player _player)
         {
-            if (!Get_Buy(ref _playerGold))
-                return;
+            if (!IsGetBuy(ref _player.resource.gold))
+                return false;
 
 
-            _playerGold -= goldPrice;
-
+            _player.resource.gold -= goldPrice;
             goldPrice += 1;
             value += 1;
-            
+
+            return true;
+
+        }
+
+        public int GetPrice()
+        {
+            return goldPrice;
         }
     }
     

@@ -7,24 +7,31 @@ using System;
 [Serializable]
 public class Player : MonoBehaviour
 {
-    public Player_ItemData items = new Player_ItemData();
+    public Player_Save saveData;
+
     public Player_AbilityData ability = new Player_AbilityData();
+    public Player_ItemData items = new Player_ItemData();
     public Player_SkillData skill = new Player_SkillData();
     public Player_Resource resource = new Player_Resource();
     // Start is called before the first frame update
     private void Awake()
     {
 
-
+        saveData = Game_Mgr.Instance.Get_SaveData();
     }
 
     private void OnEnable()
     {
 
     }
+
     void Start()
     {
-        items.Init();
+        ability.Init(saveData);
+        resource.Init(saveData);
+
+        //items.Init(saveData);
+        //skill.Init(saveData);
 
     }
 
@@ -51,15 +58,62 @@ public class Player : MonoBehaviour
     }
 }
 
+
+public abstract class Data
+{
+    public abstract void Init(Player_Save _saveData);
+}
+
+[Serializable]
+public class Player_AbilityData : Data
+{
+
+    public int atk;
+    public float atk_Dis;
+    public float atk_Speed;
+
+    public int hp;
+    public int maxHp;
+
+    public int mp;
+    public int maxMp;
+
+    public float move_Speed;
+
+    public float cri_Chance;
+    public float damage_CRI;
+    public override void Init(Player_Save _saveData)
+    {
+        atk += _saveData.GetAbility().atkIndex;
+        atk_Speed += _saveData.GetAbility().atk_SpeedIndex;
+
+        hp += _saveData.GetAbility().hpIndex;
+
+        mp += _saveData.GetAbility().mpIndex;
+
+        move_Speed += _saveData.GetAbility().move_SpeedIndex;
+
+        cri_Chance += _saveData.GetAbility().cri_ChanceIndex;
+        damage_CRI += _saveData.GetAbility().damage_CRIIndex;
+
+
+        maxHp = hp;
+        maxMp = mp;
+    }
+
+}
 /// <summary>
 /// 현재 적용되어있는 스킬
 /// </summary>
 /// 같은것은 하나만 가능
 [Serializable]
-public class Player_SkillData
+public class Player_SkillData : Data
 {
-
     public List<Skill> list_Skill;
+    public override void Init(Player_Save _saveData)
+    {
+
+    }
 
     public void AddSkill(PLAYER_SKILL _type, BaseSkill _skill)
     {
@@ -99,35 +153,13 @@ public class Player_SkillData
     }
 }
 
-[Serializable]
-public class Player_AbilityData
-{
-    public int atk;
-    public float atk_Dis;
-    public float atk_Speed;
-
-    public int hp;
-    public int maxHp;
-
-    public int mp;
-    public int maxMp;
-
-    public float move_Speed;
-
-    public float cri_Chance;
-    public float damage_CRI;
-
-}
 
 /// <summary>
 /// 플레이어에게 장착된 아이템을 관리
 /// </summary>
 [Serializable]
-public class Player_ItemData
+public class Player_ItemData : Data
 {
-    [Header("플레이어 아이템 최대 해금 인덱스")]
-    public Player_ItemIndex indexData;
-
     [Header("최대 해금 착용아이템")]
     public Item_Weapon weapon;
     public Item_Helmet helmet;
@@ -136,24 +168,24 @@ public class Player_ItemData
     public Item_Foot foot;
     public Item_Back back;
 
-
-    public void Init()
+    public override void Init(Player_Save _saveData)
     {
-        Item_Init();
+
+        Item_Init(_saveData);
         Add_ItemAbility();
     }
 
     /// <summary>
     /// 플레이어의 아이템을 장착시켜줌
     /// </summary>
-    void Item_Init()
+    void Item_Init(Player_Save _saveData)
     {
-        weapon = Object_Mgr.Instance.item_Mgr.Get_Weapon(indexData.weponIndex);
-        helmet = Object_Mgr.Instance.item_Mgr.Get_Helmet(indexData.helmetInex);
-        armor = Object_Mgr.Instance.item_Mgr.Get_Armor(indexData.armorIndex);
-        gloves = Object_Mgr.Instance.item_Mgr.Get_Gloves(indexData.glovesIndex);
-        foot = Object_Mgr.Instance.item_Mgr.Get_Foot(indexData.footIndex);
-        back = Object_Mgr.Instance.item_Mgr.Get_Back(indexData.backIndex);
+        weapon = Object_Mgr.Instance.item_Mgr.Get_Weapon(_saveData.GetItems().wepons.Count -1);
+        helmet = Object_Mgr.Instance.item_Mgr.Get_Helmet(_saveData.GetItems().helmets.Count - 1);
+        armor = Object_Mgr.Instance.item_Mgr.Get_Armor(_saveData.GetItems().armors.Count - 1);
+        gloves = Object_Mgr.Instance.item_Mgr.Get_Gloves(_saveData.GetItems().goloves.Count - 1);
+        foot = Object_Mgr.Instance.item_Mgr.Get_Foot(_saveData.GetItems().foots.Count - 1);
+        back = Object_Mgr.Instance.item_Mgr.Get_Back(_saveData.GetItems().backs.Count - 1);
 
     }
     /// <summary>
@@ -181,14 +213,23 @@ public class Player_ItemData
 
 //경험치, 골드량 등등 플레이어의 자원을 표시함
 [Serializable]
-public class Player_Resource
+public class Player_Resource : Data
 {
+
     public int level;
 
     public int exp;
     public int maxExp;
 
     public int gold;
+    public override void Init(Player_Save _saveData)
+    {
+        level = _saveData.Get_Resource().level;
+        exp = _saveData.Get_Resource().exp;        
+        gold = _saveData.Get_Resource().gold;
+
+        maxExp = level * 100;
+    }
 
 
 
@@ -219,6 +260,7 @@ public class Player_Resource
 
         level++;
         exp -= maxExp;
+        maxExp = maxExp * level;
     }
 
     public void UseGold(int _gold)
@@ -229,20 +271,9 @@ public class Player_Resource
         gold -= _gold;
     }
 
-
-
 }
 
 
 //플레이어의 아이템 해금 인덱스 들고있는 아이템은 저장 할 필요가 없기 때문에 인덱스만 들고있어도 될듯
 //스킬도 마찬가지로 될 예정
-[Serializable]
-public class Player_ItemIndex
-{
-    public int weponIndex;
-    public int helmetInex;
-    public int armorIndex;
-    public int glovesIndex;
-    public int footIndex;
-    public int backIndex;
-}
+

@@ -121,7 +121,6 @@
     <Compile Include="Assets\Script\Manager\Object_Mgr\Map_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Monster\Monster.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Recorder.cs" />
-    <Compile Include="Assets\Script\SaveData\Player_SaveData.cs" />
     <Compile Include="Assets\Script\InGame\UI\InGameUI_Menu.cs" />
     <Compile Include="Assets\Script\Character\Monster\InGame_Monster.cs" />
     <Compile Include="Assets\Script\Character\Player\SetBoolBehaviour.cs" />

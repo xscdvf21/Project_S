@@ -13,26 +13,7 @@ public class Player_Mgr : MonoBehaviour
     {
         
     }
-    public void CreatePlayer(Transform _parent, Vector2 _vPos)
-    {
-        if (playerPrefab == null)
-            return;
 
-        GameObject player = Instantiate(playerPrefab.gameObject);
-
-        player.transform.position = _vPos;
-        player.transform.SetParent(_parent, false);
-
-        mainPlayer = player.GetComponent<Player>();
-
-        mainPlayer.ability = Game_Mgr.Instance.player_save.GetAbility();
-        mainPlayer.skill = Game_Mgr.Instance.player_save.GetSkill();
-        mainPlayer.items.indexData = Game_Mgr.Instance.player_save.GetItems();
-        mainPlayer.resource = Game_Mgr.Instance.player_save.Get_Resource();
-
-        Game_Mgr.Instance.SetDataLoad(true);
-
-    }
 
     public void CreatePlayer()
     {
@@ -47,11 +28,7 @@ public class Player_Mgr : MonoBehaviour
 
         mainPlayer = player.GetComponent<Player>();
 
-        mainPlayer.ability = Game_Mgr.Instance.player_save.GetAbility();
-        mainPlayer.skill = Game_Mgr.Instance.player_save.GetSkill();
-        mainPlayer.items.indexData = Game_Mgr.Instance.player_save.GetItems();
-        mainPlayer.resource = Game_Mgr.Instance.player_save.Get_Resource();
-
+        mainPlayer.saveData = Game_Mgr.Instance.Get_SaveData().Get_SaveData();
         Game_Mgr.Instance.SetDataLoad(true);
 
     }

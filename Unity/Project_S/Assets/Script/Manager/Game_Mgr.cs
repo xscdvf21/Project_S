@@ -22,7 +22,7 @@ public class Game_Mgr : MonoBehaviour
     [SerializeField] public byte[] key = SaveSystem.GenerateRandomKey(32);
     [SerializeField] public byte[] iv = SaveSystem.GenerateRandomKey(16);
 
-    public Player_Save player_save = new Player_Save();
+    [SerializeField] Player_Save player_save = new Player_Save();
 
     [SerializeField] bool isDataLoad = false;
     public float autoSaveTime;
@@ -58,15 +58,37 @@ public class Game_Mgr : MonoBehaviour
         }
     }
 
-    public void Save()
+   private void Save()
     {
+        Insert();
+
         player_save.Save();
         autoSaveTime = 60f;
+    }
+
+    //세이브 전에 인설트 해줘야함
+    void Insert()
+    {
+        if (!Object_Mgr.Instance)
+            return;
+
+        Player player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
     }
 
     public void SetDataLoad(bool _b)
     {
         isDataLoad = _b;
+    }
+
+
+    private void OnApplicationQuit()
+    {
+        Save();
+    }
+
+    public Player_Save Get_SaveData()
+    {
+        return player_save;
     }
 
 }

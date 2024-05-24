@@ -1,0 +1,19 @@
+{
+    "ability": {
+        "atkIndex": 0,
+        "atk_DisIndex": 0,
+        "atk_SpeedIndex": 0,
+        "hpIndex": 0,
+        "mpIndex": 0,
+        "move_SpeedIndex": 0,
+        "cri_ChanceIndex": 0,
+        "damage_CRIIndex": 0
+    },
+    "items": {},
+    "skill": {},
+    "resource": {
+        "level": 1,
+        "exp": 0,
+        "gold": 0
+    }
+}

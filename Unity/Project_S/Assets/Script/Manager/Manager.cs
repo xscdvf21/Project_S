@@ -48,8 +48,4 @@ public class Manager : MonoBehaviour
         
     }
 
-    private void OnApplicationQuit()
-    {
-        Game_Mgr.Instance.Save();
-    }
 }
