@@ -9,7 +9,7 @@ public class Player_Save : SaveFile
 
     [SerializeField] Player_AbilityData ability;
     [SerializeField] Player_SkillData skill;
-    [SerializeField] Player_ItemData items;
+    [SerializeField] Player_ItemIndex items;
     [SerializeField] Player_Resource resource;
     
 
@@ -79,6 +79,7 @@ public class Player_Save : SaveFile
         resource.level = temp.resource.level;
         resource.exp = temp.resource.exp;
         resource.maxExp = temp.resource.maxExp;
+        resource.gold = temp.resource.gold;
 
         for (int i = 0; i < temp.skill.list_Skill.Count; ++i)
         {
@@ -86,12 +87,12 @@ public class Player_Save : SaveFile
         }
 
 
-        items.indexData.weponIndex = temp.items.indexData.weponIndex;
-        items.indexData.helmetInex = temp.items.indexData.helmetInex;
-        items.indexData.armorIndex = temp.items.indexData.armorIndex;
-        items.indexData.glovesIndex = temp.items.indexData.glovesIndex;
-        items.indexData.footIndex = temp.items.indexData.footIndex;
-        items.indexData.backIndex = temp.items.indexData.backIndex;
+        items.weponIndex = temp.items.weponIndex;
+        items.helmetInex = temp.items.helmetInex;
+        items.armorIndex = temp.items.armorIndex;
+        items.glovesIndex = temp.items.glovesIndex;
+        items.footIndex = temp.items.footIndex;
+        items.backIndex = temp.items.backIndex;
 
     }
 
@@ -116,6 +117,7 @@ public class Player_Save : SaveFile
         _player.resource.level = _temp.resource.level;
         _player.resource.exp = _temp.resource.exp;
         _player.resource.maxExp = _temp.resource.maxExp;
+        _player.resource.gold = _temp.resource.gold;
 
         for (int i = 0; i < _temp.skill.list_Skill.Count; ++i)
         {
@@ -123,15 +125,15 @@ public class Player_Save : SaveFile
         }
 
 
-        items.indexData.weponIndex  = _temp.items.indexData.weponIndex;
-        items.indexData.helmetInex  = _temp.items.indexData.helmetInex;
-        items.indexData.armorIndex  = _temp.items.indexData.armorIndex;
-        items.indexData.glovesIndex = _temp.items.indexData.glovesIndex;
-        items.indexData.footIndex   = _temp.items.indexData.footIndex;
-        items.indexData.backIndex   = _temp.items.indexData.backIndex;
+        items.weponIndex  = _temp.items.indexData.weponIndex;
+        items.helmetInex  = _temp.items.indexData.helmetInex;
+        items.armorIndex  = _temp.items.indexData.armorIndex;
+        items.glovesIndex = _temp.items.indexData.glovesIndex;
+        items.footIndex   = _temp.items.indexData.footIndex;
+        items.backIndex   = _temp.items.indexData.backIndex;
     }
 
-    public Player_ItemData GetItems ()
+    public Player_ItemIndex GetItems ()
     {
         return items;
     }

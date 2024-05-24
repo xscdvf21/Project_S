@@ -123,10 +123,10 @@ public class Player_AbilityData
 /// 플레이어에게 장착된 아이템을 관리
 /// </summary>
 [Serializable]
-public class Player_ItemData : SaveFile
+public class Player_ItemData
 {
     [Header("플레이어 아이템 최대 해금 인덱스")]
-    public Item_ClearIndexData indexData;
+    public Player_ItemIndex indexData;
 
     [Header("최대 해금 착용아이템")]
     public Item_Weapon weapon;
@@ -174,18 +174,10 @@ public class Player_ItemData : SaveFile
         foot.Add_ItemAbility(ref player);
     }
 
-    //플레이어 아이템 최대 해금 인덱스
-    [Serializable]
-    public class Item_ClearIndexData
-    {
-        public int weponIndex;
-        public int helmetInex;
-        public int armorIndex;
-        public int glovesIndex;
-        public int footIndex;
-        public int backIndex;
-    }
+
 }
+
+//플레이어 아이템 최대 해금 인덱스
 
 //경험치, 골드량 등등 플레이어의 자원을 표시함
 [Serializable]
@@ -197,6 +189,8 @@ public class Player_Resource
     public int maxExp;
 
     public int gold;
+
+
 
     public void Add_Resource(int _exp, int _gold)
     {
@@ -234,4 +228,21 @@ public class Player_Resource
 
         gold -= _gold;
     }
+
+
+
+}
+
+
+//플레이어의 아이템 해금 인덱스 들고있는 아이템은 저장 할 필요가 없기 때문에 인덱스만 들고있어도 될듯
+//스킬도 마찬가지로 될 예정
+[Serializable]
+public class Player_ItemIndex
+{
+    public int weponIndex;
+    public int helmetInex;
+    public int armorIndex;
+    public int glovesIndex;
+    public int footIndex;
+    public int backIndex;
 }

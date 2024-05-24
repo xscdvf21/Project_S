@@ -27,7 +27,7 @@ public class Player_Mgr : MonoBehaviour
 
         mainPlayer.ability = Game_Mgr.Instance.player_save.GetAbility();
         mainPlayer.skill = Game_Mgr.Instance.player_save.GetSkill();
-        mainPlayer.items = Game_Mgr.Instance.player_save.GetItems();
+        mainPlayer.items.indexData = Game_Mgr.Instance.player_save.GetItems();
         mainPlayer.resource = Game_Mgr.Instance.player_save.Get_Resource();
 
         Game_Mgr.Instance.SetDataLoad(true);
@@ -49,7 +49,7 @@ public class Player_Mgr : MonoBehaviour
 
         mainPlayer.ability = Game_Mgr.Instance.player_save.GetAbility();
         mainPlayer.skill = Game_Mgr.Instance.player_save.GetSkill();
-        mainPlayer.items = Game_Mgr.Instance.player_save.GetItems();
+        mainPlayer.items.indexData = Game_Mgr.Instance.player_save.GetItems();
         mainPlayer.resource = Game_Mgr.Instance.player_save.Get_Resource();
 
         Game_Mgr.Instance.SetDataLoad(true);

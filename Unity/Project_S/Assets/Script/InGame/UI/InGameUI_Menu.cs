@@ -38,11 +38,12 @@ public class InGameUI_Menu : MonoBehaviour
         if (!_isOn || !InGamePopup_Mgr.Instance)
             return;
 
+        menuType = _type;
+
         if (group.allowSwitchOff)
             group.allowSwitchOff = false;
 
-        menuType = _type;
-        InGamePopup_Mgr.Instance.menu_Popup.Show(_type);
+        InGamePopup_Mgr.Instance.menu_Popup.Show(menuType);
     }
 
     public void Close(INGAME_MENU _type)
