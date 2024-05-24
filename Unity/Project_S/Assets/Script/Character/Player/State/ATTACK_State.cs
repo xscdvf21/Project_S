@@ -55,7 +55,11 @@ public class ATTACK_State : BaseState
                 ReAttack();
 
             if(delTime >= 0.4f && animator.GetBool(aniName))
+            {
                 animator.SetBool(aniName, false);
+                controler.monster.GetComponent<MonsterControler>().TakeDamage(player.ability.atk);
+                Debug.Log("플레이어가 공격 합니다.");
+            }
         }
 
         if (!isAttacking)
@@ -65,8 +69,7 @@ public class ATTACK_State : BaseState
 
             animator.SetBool(aniName, true);
 
-            controler.monster.GetComponent<MonsterControler>().TakeDamage(player.ability.atk);
-            Debug.Log("플레이어가 공격 합니다.");
+
 
             isAttacking = true;
         }

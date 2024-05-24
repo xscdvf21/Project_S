@@ -5,9 +5,9 @@ using UnityEngine;
 public class InGamePopup_Mgr : MonoBehaviour
 {
 
-    private InGamePopup_Mgr instance = null;
+    private static InGamePopup_Mgr instance = null;
 
-    public InGamePopup_Mgr Instance
+    public static InGamePopup_Mgr Instance
     {
         get
         {
@@ -15,7 +15,7 @@ public class InGamePopup_Mgr : MonoBehaviour
         }
     }
 
-    public InGamePopup_AbilityShop abilityShop_Popup;
+    public InGamePopup_Menu menu_Popup;
     // Start is called before the first frame update
     void Start()
     {

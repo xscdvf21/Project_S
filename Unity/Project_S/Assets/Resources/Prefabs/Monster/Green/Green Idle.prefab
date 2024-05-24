@@ -129,10 +129,12 @@ MonoBehaviour:
     atk: 1
     atk_Dis: 1
     attackSpeed: 1
-    exp: 0
     hp: 100
     maxHp: 100
     moveSpeed: 1
+  resource:
+    exp: 1
+    gold: 1
 --- !u!114 &-1181625840720127599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   me: {fileID: -2417208004945848854}
+  player: {fileID: 0}
   playerDis: 0
 --- !u!210 &2134833452188630876
 SortingGroup:

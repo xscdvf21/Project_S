@@ -252,3 +252,17 @@ public enum DAMAGE_FONT
 }
 
 
+public enum INGAME_MENU
+{
+    NONE = -1,
+    STAGE,
+    ABILITY,
+    ITEM,
+    SKILL,
+    CASH,
+    END,
+}
+
+
+
+

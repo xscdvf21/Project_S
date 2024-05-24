@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-public class InGame_PlayerUI : MonoBehaviour
+/// <summary>
+/// 인게임에서 플레이어 관련 UI, 
+/// </summary>
+public class InGameUI_Player : MonoBehaviour
 {
     Player player;
     [SerializeField] INFO_UI info_UI;
@@ -46,6 +49,9 @@ public class InGame_PlayerUI : MonoBehaviour
         [SerializeField] Slider slider_MP;
         [SerializeField] Slider slider_EXP;
 
+        [SerializeField] Text text_Gold;
+
+
         public override void OnAwake(Player _player)
         {
 
@@ -60,6 +66,8 @@ public class InGame_PlayerUI : MonoBehaviour
 
             slider_EXP.minValue = 0f;
             slider_EXP.maxValue = _player.resource.maxExp;
+
+            text_Gold.text = _player.resource.gold.ToString() + " C";
         }
 
         public override void OnEnter(Player _player)
@@ -76,7 +84,9 @@ public class InGame_PlayerUI : MonoBehaviour
 
             text_level.text = _player.resource.level.ToString();
             slider_EXP.value = _player.resource.exp;
-            
+
+
+            text_Gold.text = _player.resource.gold.ToString() + " C";
         }
 
     }
@@ -98,6 +108,24 @@ public class InGame_PlayerUI : MonoBehaviour
         }
     }
 
+    [Serializable]
+    public class RESOURCE_UI : PlayerUI
+    {
+        public override void OnAwake(Player _player)
+        {
+
+        }
+
+        public override void OnEnter(Player _player)
+        {
+
+        }
+
+        public override void OnUpdate(Player _player)
+        {
+
+        }
+    }
     public abstract class PlayerUI
     {
         //

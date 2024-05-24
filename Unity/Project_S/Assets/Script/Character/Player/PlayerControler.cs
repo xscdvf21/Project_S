@@ -84,6 +84,8 @@ public  class PlayerControler : MonoBehaviour
             return;
         }
 
+        
+        //팝업이 작동중인지 아닌지 파악 해야할듯
         if(Input.GetMouseButton(0))
         {
             isMove = true;

@@ -24,28 +24,28 @@
             "backIndex": 0
         },
         "weapon": {
-            "instanceID": 14458
+            "instanceID": 22684
         },
         "helmet": {
-            "instanceID": 14460
+            "instanceID": 22686
         },
         "armor": {
-            "instanceID": 14462
+            "instanceID": 22688
         },
         "gloves": {
-            "instanceID": 14464
+            "instanceID": 22690
         },
         "foot": {
-            "instanceID": 14466
+            "instanceID": 22692
         },
         "back": {
-            "instanceID": 14468
+            "instanceID": 22694
         }
     },
     "resource": {
         "level": 1,
-        "exp": 0,
+        "exp": 27,
         "maxExp": 100,
-        "gold": 0
+        "gold": 23
     }
 }

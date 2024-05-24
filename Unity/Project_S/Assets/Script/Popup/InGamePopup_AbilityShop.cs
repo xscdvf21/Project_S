@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class InGamePopup_AbilityShop : MonoBehaviour
+public class InGamePopup_AbilityShop : InGamePopup_MenuComponent
 {
 
     [SerializeField] Button[] btns;
