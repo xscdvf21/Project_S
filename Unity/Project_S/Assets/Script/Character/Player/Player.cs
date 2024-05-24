@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
 
-        saveData = Game_Mgr.Instance.Get_SaveData();
+        saveData = Save_Mgr.Instance.Get_SaveData();
     }
 
     private void OnEnable()
@@ -180,12 +180,12 @@ public class Player_ItemData : Data
     /// </summary>
     void Item_Init(Player_Save _saveData)
     {
-        weapon = Object_Mgr.Instance.item_Mgr.Get_Weapon(_saveData.GetItems().wepons.Count -1);
-        helmet = Object_Mgr.Instance.item_Mgr.Get_Helmet(_saveData.GetItems().helmets.Count - 1);
-        armor = Object_Mgr.Instance.item_Mgr.Get_Armor(_saveData.GetItems().armors.Count - 1);
-        gloves = Object_Mgr.Instance.item_Mgr.Get_Gloves(_saveData.GetItems().goloves.Count - 1);
-        foot = Object_Mgr.Instance.item_Mgr.Get_Foot(_saveData.GetItems().foots.Count - 1);
-        back = Object_Mgr.Instance.item_Mgr.Get_Back(_saveData.GetItems().backs.Count - 1);
+        weapon = Shop_Mgr.Instance.itemShop.Get_Weapon(_saveData.GetItems().wepons.Count -1);
+        helmet = Shop_Mgr.Instance.itemShop.Get_Helmet(_saveData.GetItems().helmets.Count - 1);
+        armor = Shop_Mgr.Instance.itemShop.Get_Armor(_saveData.GetItems().armors.Count - 1);
+        gloves = Shop_Mgr.Instance.itemShop.Get_Gloves(_saveData.GetItems().goloves.Count - 1);
+        foot = Shop_Mgr.Instance.itemShop.Get_Foot(_saveData.GetItems().foots.Count - 1);
+        back = Shop_Mgr.Instance.itemShop.Get_Back(_saveData.GetItems().backs.Count - 1);
 
     }
     /// <summary>

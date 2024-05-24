@@ -17,7 +17,7 @@ public class Shop_Mgr : MonoBehaviour
 
     public Shop_AbilityData abilityShop;
     public Shop_ItemData itemShop;
-
+    public Shop_SkillData skillShop;
     private void Awake()
     {
         instance = null;

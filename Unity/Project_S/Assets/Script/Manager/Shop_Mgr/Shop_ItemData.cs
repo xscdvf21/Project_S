@@ -12,7 +12,6 @@ public class Shop_ItemData : MonoBehaviour
     public List<Item_Foot> foots;
     public List<Item_Back> backs;
 
-
     public Item_Weapon Get_Weapon(int _itemIndex = 0)
     {
         if (_itemIndex < wepons.Count)

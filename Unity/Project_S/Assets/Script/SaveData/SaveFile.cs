@@ -76,8 +76,8 @@ public static class SaveSystem
     {
         using(Aes aesAlg = Aes.Create())
         {
-            aesAlg.Key = Game_Mgr.Instance.key;
-            aesAlg.IV  = Game_Mgr.Instance.iv;
+            aesAlg.Key = Save_Mgr.Instance.key;
+            aesAlg.IV  = Save_Mgr.Instance.iv;
 
             ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
 
@@ -99,8 +99,8 @@ public static class SaveSystem
     {
         using (Aes aesAlg = Aes.Create())
         {
-            aesAlg.Key = Game_Mgr.Instance.key;
-            aesAlg.IV = Game_Mgr.Instance.iv;
+            aesAlg.Key = Save_Mgr.Instance.key;
+            aesAlg.IV = Save_Mgr.Instance.iv;
 
             ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
 

@@ -141,6 +141,7 @@
     <Compile Include="Assets\Script\Manager\Shop_Mgr\Shop_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Weapon.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
+    <Compile Include="Assets\Script\Manager\Server\Save_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Back.cs" />
     <Compile Include="Assets\Script\Popup\InGamePopup_Menu.cs" />
     <Compile Include="Assets\Script\InGame\UI\InGameUI_Player.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PackageButton.cs" />
+    <Compile Include="Assets\Script\Manager\Shop_Mgr\Shop_SkillData.cs" />
     <Compile Include="Assets\Script\Character\Skill\Passive\PassiveSkill_Object.cs" />
     <Compile Include="Assets\Script\Popup\InGamePopup_CashShop.cs" />
     <Compile Include="Assets\Script\Manager\InputKey_Mgr.cs" />

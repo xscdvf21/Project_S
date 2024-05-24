@@ -28,9 +28,6 @@ public class Object_Mgr : MonoBehaviour
     [Header("몬스터 관리")]
     public Monster_Mgr monster_Mgr;
 
-    [Header("아이템 목록")]
-    public Item_Mgr item_Mgr;
-
     [Header("맵(스테이지) 관리")]
     public Map_Mgr map_Mgr;
 

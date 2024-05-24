@@ -28,8 +28,8 @@ public class Player_Mgr : MonoBehaviour
 
         mainPlayer = player.GetComponent<Player>();
 
-        mainPlayer.saveData = Game_Mgr.Instance.Get_SaveData().Get_SaveData();
-        Game_Mgr.Instance.SetDataLoad(true);
+        mainPlayer.saveData = Save_Mgr.Instance.Get_SaveData().Get_SaveData();
+        Save_Mgr.Instance.SetDataLoad(true);
 
     }
 
