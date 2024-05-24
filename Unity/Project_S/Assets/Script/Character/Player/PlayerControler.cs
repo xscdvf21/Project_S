@@ -90,7 +90,7 @@ public  class PlayerControler : MonoBehaviour
         {
             //하단 메뉴버튼을 눌렀을 때 막기 위해
             Vector3 vMousePos = Input.mousePosition;
-            if (vMousePos.y <= 50f)
+            if (vMousePos.y <= 300f)
                 return;
 
             isMove = true;

@@ -72,6 +72,7 @@ public class Save_Mgr : MonoBehaviour
             return;
 
         Player player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
+
     }
 
     public void SetDataLoad(bool _b)
