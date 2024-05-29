@@ -73,6 +73,9 @@ public class Save_Mgr : MonoBehaviour
 
         Player player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
 
+        player_save.Get_Resource().gold = player.resource.gold;
+        player_save.Get_Resource().gold = player.resource.gold;
+
     }
 
     public void SetDataLoad(bool _b)

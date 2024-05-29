@@ -92,6 +92,13 @@ public class Player_Save : SaveFile
         return resource;
     }
 
+    public void Insert_Data(ref Player player)
+    {
+        resource.level = player.resource.level;
+        resource.exp = player.resource.exp;
+        resource.gold = player.resource.gold;
+    }
+
 }
 
 
