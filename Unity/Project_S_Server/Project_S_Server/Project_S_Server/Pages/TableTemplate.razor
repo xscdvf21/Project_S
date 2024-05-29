@@ -1,0 +1,36 @@
+﻿@using Project_S_Server.Data;
+
+@typeparam T_Item
+<h3>TableTemplate</h3>
+
+
+<table class="table">
+
+    <thead>
+        <tr>
+            @_title
+        </tr>
+        <tr>
+            @_header
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in _items)
+        {
+        <tr>
+            @_row(item)
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+@code {
+    [Parameter] public RenderFragment _title { get; set; }
+    [Parameter] public RenderFragment _header { get; set; }
+
+    [Parameter] public RenderFragment<T_Item> _row { get; set; }
+
+    [Parameter] public IReadOnlyList<T_Item> _items { get; set; }
+
+}

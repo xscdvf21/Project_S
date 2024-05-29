@@ -1,0 +1,90 @@
+﻿@page "/Users"
+
+@using Project_S_Server.Data;
+
+<h3>Users</h3>
+
+
+
+<br/>
+
+
+<TableTemplate _items="users" T_Item="UserData">
+
+    <_title>
+        <th>TotalUser : @users.Count()</th>
+    </_title>
+
+    <_header>
+        <th>ID</th>
+        <th>PassWord</th>
+        <th>추가 사항</th>
+        <th>추가 사항</th>
+    </_header>
+
+    <_row Context="user">
+        <td>@user.Name</td>
+        <td>@user.PassWord</td>
+        <td></td>
+        <td></td>
+    </_row>
+
+</TableTemplate>
+
+@*<ul class="list-group">
+    @foreach(UserData user in users)
+    {
+        <li @key ="user" class="list-group-item">
+            <button class="btn btn-link" type="button" @onclick="()=> KickUser(user)">[Delete]</button>
+            <label>@user.Name</label>
+        </li>  
+            
+    }
+ </ul>*@
+
+
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <input class="form-control" placeholder="Add User" @bind-value=_inputName />
+        </div>
+        <div class=" col">
+            <button class="btn btn-primary" type="button" @onclick="AddUser">Add a User</button>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    List<UserData> users = new List<UserData>();
+    string _inputName;
+
+    //string insertName;
+
+    protected override void OnInitialized()
+    {
+        users.Add(new UserData() { Name = "jdy" });
+        users.Add(new UserData() { Name = "nhj" });
+        users.Add(new UserData() { Name = "mjo" });
+    }
+
+
+
+    void AddUser()
+    {
+        if (string.IsNullOrEmpty(_inputName))
+            return;
+
+        users.Add(new UserData() { Name = _inputName });
+        _inputName = "";
+    }
+
+    void KickUser(UserData _user)
+    {
+        users.Remove(_user);
+    }
+
+
+}
