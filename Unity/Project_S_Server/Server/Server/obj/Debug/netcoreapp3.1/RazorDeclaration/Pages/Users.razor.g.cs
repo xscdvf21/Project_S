@@ -77,14 +77,14 @@ using Server.Shared;
 #nullable disable
 #nullable restore
 #line 2 "C:\Project_S\Unity\Project_S_Server\Server\Server\Pages\Users.razor"
-using Server.Data.Models;
+using Server.Data.Services;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\Project_S\Unity\Project_S_Server\Server\Server\Pages\Users.razor"
-using Server.Data.Services;
+using SharedData.Models;
 
 #line default
 #line hidden
@@ -98,14 +98,75 @@ using Server.Data.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Project_S\Unity\Project_S_Server\Server\Server\Pages\Users.razor"
+#line 99 "C:\Project_S\Unity\Project_S_Server\Server\Server\Pages\Users.razor"
        
     List<UserInfo> userResult;
 
+    string errorMsg;
+
+    bool isShowPopup;
+    UserInfo info;
 
     protected override async Task OnInitializedAsync()
     {
         userResult = await UserService.GetUserInfoAsync();
+    }
+
+
+    void AddUser()
+    {
+        errorMsg = "";
+
+        isShowPopup = true;
+        info = new UserInfo();
+    }
+
+    void UpdateUser(UserInfo _info)
+    {
+        isShowPopup = true;
+        info = _info;
+    }
+
+    async Task DeleteUser(UserInfo _info)
+    {
+        var result = UserService.DeleteInfo(_info);
+        userResult = await UserService.GetUserInfoAsync();
+    }
+
+    void ClosePopup()
+    {
+        isShowPopup = false;
+    }
+
+
+
+    async Task SaveUserInfo()
+    {
+        foreach (var user in userResult)
+        {
+            if (user.userID == info.userID)
+            {
+                errorMsg = "ID가 존재합니다.";
+
+                if (string.IsNullOrEmpty(info.password))
+                    errorMsg = "비밀번호를 입력해주세요.";
+
+                return;
+
+            }
+        }
+
+        if (string.IsNullOrEmpty(info.password))
+        {
+            errorMsg = "비밀번호를 입력해주세요.";
+            return;
+        }
+        info.date = DateTime.Now;
+        var result = UserService.AddUserInfo(info);
+
+
+
+        ClosePopup();
     }
 
 #line default

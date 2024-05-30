@@ -1,0 +1,10 @@
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\bin\Debug\netcoreapp3.1\SharedData.deps.json
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\bin\Debug\netcoreapp3.1\SharedData.dll
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\bin\Debug\netcoreapp3.1\SharedData.pdb
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\obj\Debug\netcoreapp3.1\SharedData.csproj.AssemblyReference.cache
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\obj\Debug\netcoreapp3.1\SharedData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\obj\Debug\netcoreapp3.1\SharedData.AssemblyInfoInputs.cache
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\obj\Debug\netcoreapp3.1\SharedData.AssemblyInfo.cs
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\obj\Debug\netcoreapp3.1\SharedData.csproj.CoreCompileInputs.cache
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\obj\Debug\netcoreapp3.1\SharedData.dll
+C:\Project_S\Unity\Project_S_Server\Server\SharedData\obj\Debug\netcoreapp3.1\SharedData.pdb

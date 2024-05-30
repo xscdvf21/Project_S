@@ -219,28 +219,6 @@ namespace Server.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Server.Data.Models.UserInfo", b =>
-                {
-                    b.Property<string>("userID")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("iIndex")
-                        .HasColumnType("int");
-
-                    b.Property<string>("password")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("userName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("userID");
-
-                    b.ToTable("userInfo");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)

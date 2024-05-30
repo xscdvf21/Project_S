@@ -1,6 +1,6 @@
 ﻿@page "/users"
-@using Server.Data.Models
 @using Server.Data.Services
+@using SharedData.Models;
 
 @inject UserService UserService
 
@@ -25,6 +25,8 @@
                         <th>Password</th>
                         <th>UserName</th>
                         <th>CreateTime</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,10 +37,57 @@
                             <td>@user.password</td>
                             <td>@user.userName</td>
                             <td>@user.date</td>
+                            <td>
+                                <button class="btn btn-primary" @onclick="()=>UpdateUser(user)">Edit</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" @onclick="()=>DeleteUser(user)">Delete</button>
+                            </td>
+
+
+                            <td></td>
                         </tr>
                     }
                 </tbody>
             </table>
+
+            <p>
+                <button class="btn btn-primary" @onclick="AddUser">
+                    Add User
+                </button>
+            </p>
+
+
+            @if (isShowPopup)
+            {
+                <div class="modal" style=" display:block" role="dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Add / Update UserInfo</h3>
+                            <button type="button" class="close" @onclick="ClosePopup">
+                                <span area-hidden="true">X</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label style="color:red">@errorMsg</label>
+
+                            <br />
+
+                            <label for="userID">ID</label>
+                            <input class="form-control" type="text" placeholder="userID" @bind-value="info.userID" />
+
+                            <br />
+
+                            <label for="userID">PASSWORD</label>
+                            <input class="form-control" type="text" placeholder="password" @bind-value="info.password" />
+
+                            <br />
+
+                            <button class="btn btn-primary" @onclick="SaveUserInfo">Save</button>
+                        </div>
+                    </div>
+                </div>
+            }
         }
     </Authorized>
     <NotAuthorized>
@@ -50,9 +99,70 @@
 @code {
     List<UserInfo> userResult;
 
+    string errorMsg;
+
+    bool isShowPopup;
+    UserInfo info;
 
     protected override async Task OnInitializedAsync()
     {
         userResult = await UserService.GetUserInfoAsync();
+    }
+
+
+    void AddUser()
+    {
+        errorMsg = "";
+
+        isShowPopup = true;
+        info = new UserInfo();
+    }
+
+    void UpdateUser(UserInfo _info)
+    {
+        isShowPopup = true;
+        info = _info;
+    }
+
+    async Task DeleteUser(UserInfo _info)
+    {
+        var result = UserService.DeleteInfo(_info);
+        userResult = await UserService.GetUserInfoAsync();
+    }
+
+    void ClosePopup()
+    {
+        isShowPopup = false;
+    }
+
+
+
+    async Task SaveUserInfo()
+    {
+        foreach (var user in userResult)
+        {
+            if (user.userID == info.userID)
+            {
+                errorMsg = "ID가 존재합니다.";
+
+                if (string.IsNullOrEmpty(info.password))
+                    errorMsg = "비밀번호를 입력해주세요.";
+
+                return;
+
+            }
+        }
+
+        if (string.IsNullOrEmpty(info.password))
+        {
+            errorMsg = "비밀번호를 입력해주세요.";
+            return;
+        }
+        info.date = DateTime.Now;
+        var result = UserService.AddUserInfo(info);
+
+
+
+        ClosePopup();
     }
 }

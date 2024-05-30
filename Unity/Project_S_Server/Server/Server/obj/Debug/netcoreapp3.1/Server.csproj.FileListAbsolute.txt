@@ -105,3 +105,5 @@ C:\Project_S\Unity\Project_S_Server\Server\Server\obj\Debug\netcoreapp3.1\Server
 C:\Project_S\Unity\Project_S_Server\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
 C:\Project_S\Unity\Project_S_Server\Server\Server\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Users.razor.g.cs
 C:\Project_S\Unity\Project_S_Server\Server\Server\obj\Debug\netcoreapp3.1\Razor\Pages\Users.razor.g.cs
+C:\Project_S\Unity\Project_S_Server\Server\Server\bin\Debug\netcoreapp3.1\SharedData.dll
+C:\Project_S\Unity\Project_S_Server\Server\Server\bin\Debug\netcoreapp3.1\SharedData.pdb
