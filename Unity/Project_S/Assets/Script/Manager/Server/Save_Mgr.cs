@@ -41,8 +41,8 @@ public class Save_Mgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDataLoad)
-            AutoSave();
+        //if (isDataLoad)
+        //    AutoSave();
     }
 
 

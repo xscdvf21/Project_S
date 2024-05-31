@@ -61,12 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Character\Player\State\StateMachine.cs" />
-    <Compile Include="Assets\Script\Manager\Game_Mgr.cs" />
     <Compile Include="Assets\SPUM\SoonsoonData\SoonsoonData.cs" />
     <Compile Include="Assets\Script\Skill\Monster\Monster_Skill.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Gloves.cs" />
     <Compile Include="Assets\Script\Character\Player\PlayerControler.cs" />
+    <Compile Include="Assets\Script\Manager\LobbyPopup_Mgr.cs" />
     <Compile Include="Assets\Script\Skill\Player\Player_Skill_GuidedArrow.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifEncoder.cs" />
     <Compile Include="Assets\Script\Manager\Object_Mgr\DamageText.cs" />
@@ -78,6 +78,7 @@
     <Compile Include="Assets\Script\Manager\InGamePopup_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Skill\Active\ActiveSKill_Object.cs" />
     <Compile Include="Assets\Script\Manager\Object_Mgr\Object_Mgr.cs" />
+    <Compile Include="Assets\Script\Popup\LobbyPopup_CloseMsg.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_SpriteList.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteEyeSync.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Script\SaveData\SaveFile.cs" />
     <Compile Include="Assets\Sci-Fi UI\Demo_Assets\scripts\GUI_Demo.cs" />
     <Compile Include="Assets\Script\Popup\InGamePopup_AbilityShop.cs" />
+    <Compile Include="Assets\Script\Manager\Game_Mgr\Game_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Player\Player.cs" />
     <Compile Include="Assets\Script\Manager\Shop_Mgr\Shop_ItemData.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PreviewItem.cs" />
@@ -141,6 +143,7 @@
     <Compile Include="Assets\Script\Manager\Shop_Mgr\Shop_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Weapon.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
+    <Compile Include="Assets\Script\Manager\Server\WebServer_Data.cs" />
     <Compile Include="Assets\Script\Manager\Server\Save_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Back.cs" />
     <Compile Include="Assets\Script\Manager\Server\WebServer_Mgr.cs" />
