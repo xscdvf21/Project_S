@@ -143,6 +143,7 @@
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
     <Compile Include="Assets\Script\Manager\Server\Save_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Back.cs" />
+    <Compile Include="Assets\Script\Manager\Server\WebServer_Mgr.cs" />
     <Compile Include="Assets\Script\Popup\InGamePopup_Menu.cs" />
     <Compile Include="Assets\Script\InGame\UI\InGameUI_Player.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\NeuQuant.cs" />

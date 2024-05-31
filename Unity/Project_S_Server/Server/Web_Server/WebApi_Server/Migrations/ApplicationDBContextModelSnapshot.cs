@@ -26,12 +26,13 @@ namespace WebApi_Server.Migrations
 
                     b.Property<DateTime>("date")
                         .HasColumnType("datetime2");
-
+ 
                     b.Property<string>("password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("userName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)"); 
+
 
                     b.HasKey("userID");
 
