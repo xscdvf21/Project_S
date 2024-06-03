@@ -7,10 +7,18 @@ public class Monster_B_Fly : BaseMonsterState
 
     private string aniName;
     private Animator animator;
-    public Monster_B_Fly(Animator _animator, string _aniName)
+
+    private float moveSpeed;
+
+    Monster me;
+    PlayerControler playerController;
+    public Monster_B_Fly(PlayerControler _playerController, Monster _me, Animator _animator, string _aniName)
     {
         aniName = _aniName;
         animator = _animator;
+
+        playerController = _playerController;
+        me = _me;
     }
     public override void OnAwake()
     {
@@ -33,6 +41,13 @@ public class Monster_B_Fly : BaseMonsterState
     }
     public override void OnFixedUpdate()
     {
+        if (playerController == null)
+            return;
+
+        Vector2 vDir = (playerController.transform.position - me.transform.position).normalized;
+
+        float distance = Vector2.Distance(playerController.transform.position, me.transform.position);
+        me.transform.position = Vector2.MoveTowards(me.transform.position, playerController.transform.position, me.ability.moveSpeed * Time.deltaTime);
 
     }
 }

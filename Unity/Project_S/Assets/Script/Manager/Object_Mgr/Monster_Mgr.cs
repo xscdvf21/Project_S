@@ -51,22 +51,21 @@ public class Monster_Mgr : MonoBehaviour
 
     public Monster Get_MinDistanceMonster()
     {
-        return null;
-        //if (monster_Alive.Count < 1)
-        //    return null;
+        if (monster_Alive.Count < 1)
+            return null;
 
-        //Monster result = monster_Alive[0];
-        //for(int i = 0; i < monster_Alive.Count; ++i)
-        //{
-        //    int iIndex = i;
-        //    MonsterControler resultCom = result.GetComponent<MonsterControler>();
-        //    MonsterControler monsterCom = monster_Alive[iIndex].GetComponent<MonsterControler>();
+        Monster result = monster_Alive[0];
+        for (int i = 0; i < monster_Alive.Count; ++i)
+        {
+            int iIndex = i;
+            BaseMonsterController resultCom = result.GetComponent<BaseMonsterController>();
+            BaseMonsterController monsterCom = monster_Alive[iIndex].GetComponent<BaseMonsterController>();
 
-        //    if (resultCom.playerDis > monsterCom.playerDis)
-        //        result = monster_Alive[iIndex];            
-        //}
+            if (resultCom.playerDis > monsterCom.playerDis)
+                result = monster_Alive[iIndex];
+        }
 
-        //return result;
+        return result;
     }
 
 

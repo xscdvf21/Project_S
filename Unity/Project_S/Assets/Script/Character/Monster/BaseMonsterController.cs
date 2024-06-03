@@ -35,15 +35,33 @@ public abstract class BaseMonsterController : MonoBehaviour
         if (me == null)
             me = GetComponent<Monster>();
 
-        if(Object_Mgr.Instance.player_Mgr.Get_MainPlayer() != null)
+        if (animator == null)
+            animator = GetComponent<Animator>();
+
+        if (Object_Mgr.Instance.player_Mgr.Get_MainPlayer() != null)
             player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
 
         isAlive = true;
     }
 
     //플레이어와의 거리 계산
-    public void PlayerDistance(Vector2 _vPos, Vector2 _playerPos)
+    public void DistancePlayer()
     {
-        playerDis = Vector2.Distance(_vPos, _playerPos);
+        if (player == null)
+            return;
+
+        playerDis = Vector2.Distance(transform.position, player.transform.position);
+    }
+
+
+    //히트를 어떻게 처리해야할까
+    public void TakeDamage(int _damage)
+    {
+        me.ability.hp -= _damage;
+
+        if (Object_Mgr.Instance)
+            Object_Mgr.Instance.text_Mgr.ShowDamage(DAMAGE_FONT.DEFAULT, transform.position, _damage.ToString());
+
+
     }
 }

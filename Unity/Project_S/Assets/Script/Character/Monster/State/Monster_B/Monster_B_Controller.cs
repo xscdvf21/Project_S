@@ -15,6 +15,17 @@ public class Monster_B_Controller : BaseMonsterController
     }
     private void Update()
     {
+        DistancePlayer();
+
+        if (playerDis > me.ability.atk_Dis)
+            Move();
+        else if (playerDis <= me.ability.atk_Dis)
+            Attack();
+        else if (me.ability.hp <= 0)
+            Dead();
+        else if(player == null)
+            Idle();
+
         stateMachine.OnUpdate();
     }
 
@@ -25,8 +36,9 @@ public class Monster_B_Controller : BaseMonsterController
     public override void InitState()
     {
         stateMachine = new MonsterStateMachine(MONSTER_STATE.IDLE, new Monster_B_Idle(animator, "isIdle"));
-        stateMachine.AddState(MONSTER_STATE.MOVE, new Monster_B_Fly(animator, "isMove"));
-        stateMachine.AddState(MONSTER_STATE.ATTACK, new Monster_B_Attack(animator, "isAttack"));
+
+        stateMachine.AddState(MONSTER_STATE.MOVE, new Monster_B_Fly(player.GetComponent<PlayerControler>(), me, animator, "isMove"));
+        stateMachine.AddState(MONSTER_STATE.ATTACK, new Monster_B_Attack(player.GetComponent<PlayerControler>(), me, animator, "isAttack"));
         stateMachine.AddState(MONSTER_STATE.HIT, new Monster_B_Hit(animator, "isHit"));
         stateMachine.AddState(MONSTER_STATE.DEAD, new Monster_B_Dead(animator, "isDead"));
 
@@ -42,6 +54,8 @@ public class Monster_B_Controller : BaseMonsterController
     {
         if (state != MONSTER_STATE.MOVE)
             SetState(MONSTER_STATE.MOVE);
+
+
     }
     public override void Attack()
     {
@@ -67,8 +81,4 @@ public class Monster_B_Controller : BaseMonsterController
         stateMachine.ChangeState(_state);
     }
 
-    public void InitAnimator()
-    {
-
-    }
 }

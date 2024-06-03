@@ -185,7 +185,7 @@ public  class PlayerControler : MonoBehaviour
         if (monster == null)
             return false;
 
-        if (monster.GetComponent<MonsterControler>().playerDis <= _atk_Dis)
+        if (monster.GetComponent<BaseMonsterController>().playerDis <= _atk_Dis)
             return true;
         else
             return false;
@@ -195,5 +195,13 @@ public  class PlayerControler : MonoBehaviour
     public void SetCamera(Camera _camera)
     {
         cam = _camera;
+    }
+
+    public void TakeDamage(int _damage)
+    {
+        player.ability.hp -= _damage;
+
+        if (player.ability.hp <= 0f)
+            Player_Dead();
     }
 }

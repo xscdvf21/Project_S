@@ -124,12 +124,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterType: 1
   ability:
-    atk: 0
-    atk_Dis: 0
-    attackSpeed: 0
+    atk: 1
+    atk_Dis: 1
+    attackSpeed: 2
     hp: 0
     maxHp: 0
-    moveSpeed: 0
+    moveSpeed: 1
   resource:
     exp: 0
     gold: 0

@@ -14,6 +14,7 @@ public abstract class BaseMonsterState
     public abstract void OnFixedUpdate();
 
     public abstract void OnExit();
+
     // Start is called before the first frame update
 
 }
