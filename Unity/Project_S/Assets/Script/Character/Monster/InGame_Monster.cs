@@ -8,7 +8,7 @@ using System;
 public class InGame_Monster : MonoBehaviour
 {
     [SerializeField] Transform me;
-    Dictionary<MONSTER_KIND, Transform> dic_parent;
+    Dictionary<MONSTER_TYPE, Transform> dic_parent;
 
     private void Awake()
     {
@@ -16,29 +16,29 @@ public class InGame_Monster : MonoBehaviour
     }
     public void Init()
     {
-        dic_parent = new Dictionary<MONSTER_KIND, Transform>();
-        for (int i = 0; i < (int)MONSTER_KIND.END; ++i)
+        dic_parent = new Dictionary<MONSTER_TYPE, Transform>();
+        for (int i = 0; i < (int)MONSTER_TYPE.END; ++i)
         {
-            GameObject obj = new GameObject(((MONSTER_KIND)i).ToString());
+            GameObject obj = new GameObject(((MONSTER_TYPE)i).ToString());
             obj.transform.SetParent(me);
 
-            dic_parent.Add((MONSTER_KIND)i, obj.transform);
+            dic_parent.Add((MONSTER_TYPE)i, obj.transform);
         }
 
-        CreateMonster(20, MONSTER_KIND.SLIME_RED);
+        CreateMonster(20, MONSTER_TYPE.MONSTER_B);
     }
 
 
 
-    private void CreateMonster(int _count, MONSTER_KIND _kind)
+    private void CreateMonster(int _count, MONSTER_TYPE _type)
     {
-        if (dic_parent.TryGetValue(_kind, out Transform _result))
+        if (dic_parent.TryGetValue(_type, out Transform _result))
         {
 
             for (int i = 0; i < _count; ++i)
             {
                 int iIndex = i;
-                Object_Mgr.Instance.monster_Mgr.CreateMonster(_result, _kind, new Vector2(UnityEngine.Random.Range(-100f, 100f), UnityEngine.Random.Range(-100f, 100f)));
+                Object_Mgr.Instance.monster_Mgr.CreateMonster(_result, _type, new Vector2(UnityEngine.Random.Range(-100f, 100f), UnityEngine.Random.Range(-100f, 100f)));
             }
         }
 

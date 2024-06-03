@@ -33,14 +33,12 @@ public class Monster_Mgr : MonoBehaviour
     }
 
     //처음 생성
-    public void CreateMonster(Transform _parent, MONSTER_KIND _kind, Vector2 _vPos)
+    public void CreateMonster(Transform _parent, MONSTER_TYPE _type, Vector2 _vPos)
     {
-        GameObject monster = Instantiate(monsterPrefabs[(int)_kind].gameObject);
+        GameObject monster = Instantiate(monsterPrefabs[(int)_type].gameObject);
 
         monster.transform.position = new Vector2(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
         monster.transform.SetParent(_parent, false);
-
-        monster.GetComponent<MonsterControler>().Set_Alive(true);
 
         monster_Alive.Add(monster.GetComponent<Monster>());
 
@@ -53,21 +51,22 @@ public class Monster_Mgr : MonoBehaviour
 
     public Monster Get_MinDistanceMonster()
     {
-        if (monster_Alive.Count < 1)
-            return null;
+        return null;
+        //if (monster_Alive.Count < 1)
+        //    return null;
 
-        Monster result = monster_Alive[0];
-        for(int i = 0; i < monster_Alive.Count; ++i)
-        {
-            int iIndex = i;
-            MonsterControler resultCom = result.GetComponent<MonsterControler>();
-            MonsterControler monsterCom = monster_Alive[iIndex].GetComponent<MonsterControler>();
+        //Monster result = monster_Alive[0];
+        //for(int i = 0; i < monster_Alive.Count; ++i)
+        //{
+        //    int iIndex = i;
+        //    MonsterControler resultCom = result.GetComponent<MonsterControler>();
+        //    MonsterControler monsterCom = monster_Alive[iIndex].GetComponent<MonsterControler>();
 
-            if (resultCom.playerDis > monsterCom.playerDis)
-                result = monster_Alive[iIndex];            
-        }
+        //    if (resultCom.playerDis > monsterCom.playerDis)
+        //        result = monster_Alive[iIndex];            
+        //}
 
-        return result;
+        //return result;
     }
 
 

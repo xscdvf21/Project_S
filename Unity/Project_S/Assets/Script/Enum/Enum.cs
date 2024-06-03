@@ -16,6 +16,18 @@ public enum PLAYER_STATE
 
 }
 
+public enum MONSTER_STATE
+{
+    NONE = -1,
+    IDLE,
+    MOVE,
+    ATTACK,
+    POWER_ATTACK,
+    HIT,
+    DEAD,
+    END,
+}
+
 public enum PLAYER_ABILITY
 {
     NONE = -1,
@@ -59,7 +71,13 @@ public enum CHARACTER_SPRITE
     END,
 }
 
-
+public enum SPRITE_TYPE
+{
+    NONE = -1,
+    PLAYER,
+    MONSTER_BOSS,
+    END,
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////
 /// <summary>
@@ -194,20 +212,10 @@ public enum EYE_SPRITE
 public enum MONSTER_TYPE
 {
     NONE = -1,
-    DEFAULT,
-    BOSS,
-    END
-}
-
-public enum MONSTER_KIND
-{
-    NONE = -1,
-    SLIME_RED,
-    SLIME_BLUE,
-    SLIME_GREEN,
+    MONSTER_A,
+    MONSTER_B,
     END,
 }
-
 
 public enum ITEM
 {

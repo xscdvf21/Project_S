@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 public class Monster : MonoBehaviour
 {
-    [SerializeField] protected MONSTER_TYPE _type;
+    [SerializeField] MONSTER_TYPE monsterType;
 
     public Monster_AbilityData ability;
     public Monster_Resource resource;
