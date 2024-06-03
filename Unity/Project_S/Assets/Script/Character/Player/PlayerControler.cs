@@ -155,34 +155,11 @@ public  class PlayerControler : MonoBehaviour
             SetState(PLAYER_STATE.IDLE);
             return;
         }
-
-
-        //if (state != PLAYER_STATE.RUN)
-        //    SetState(PLAYER_STATE.RUN);
-
-        //transform.position = Vector2.MoveTowards(transform.position, vMovePos, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
-
-        //if ((Vector2)transform.position == vMovePos)
-        //{
-        //    isMove = false;
-        //    SetState(PLAYER_STATE.IDLE);
-        //    return;
-        //}
     }
     public void Player_AutoMove()
     {
         if (state != PLAYER_STATE.RUN)
-        {
             SetState(PLAYER_STATE.RUN);
-        }
-
-        //if (transform.position.x < monster.transform.position.x)
-        //    transform.localScale = new Vector3(-1f, 1f, 1f);
-        //else
-        //    transform.localScale = new Vector3(1f, 1f, 1f);
-
-
-        //transform.position = Vector2.MoveTowards(transform.position, monster.transform.position, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
     }
 
     //공격 상태
