@@ -50,6 +50,11 @@ public class ATTACK_State : BaseState
     {
         if(isAttacking)
         {
+            if (controler.transform.position.x < controler.monster.transform.position.x)
+                controler.transform.localScale = new Vector3(-1f, 1f, 1f);
+            else
+                controler.transform.localScale = new Vector3(1f, 1f, 1f);
+
             delTime += Time.deltaTime;
             if (delTime >= player.ability.atk_Speed)
                 ReAttack();

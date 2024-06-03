@@ -90,6 +90,8 @@ public  class PlayerControler : MonoBehaviour
         {
             //하단 메뉴버튼을 눌렀을 때 막기 위해
             Vector3 vMousePos = Input.mousePosition;
+            float screenX = Screen.width / 2f;
+
             if (vMousePos.y <= 300f)
                 return;
 
@@ -97,7 +99,14 @@ public  class PlayerControler : MonoBehaviour
             isAuto = false;
             isAttack = false;
             
+            if(vMousePos.x < screenX)
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            else
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+
             vMovePos = cam.ScreenToWorldPoint(vMousePos);
+
+
         }
 
         //주위에 몬스터가 없을 경우 아이들 상태
@@ -137,9 +146,8 @@ public  class PlayerControler : MonoBehaviour
     public void Player_Move()
     {
 
-        if(state != PLAYER_STATE.RUN)
+        if (state != PLAYER_STATE.RUN)
             SetState(PLAYER_STATE.RUN);
-        
 
         transform.position = Vector2.MoveTowards(transform.position, vMovePos, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
 
@@ -156,6 +164,12 @@ public  class PlayerControler : MonoBehaviour
         {
             SetState(PLAYER_STATE.RUN);
         }
+
+        if (transform.position.x < monster.transform.position.x)
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        else
+            transform.localScale = new Vector3(1f, 1f, 1f);
+
 
         transform.position = Vector2.MoveTowards(transform.position, monster.transform.position, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
     }

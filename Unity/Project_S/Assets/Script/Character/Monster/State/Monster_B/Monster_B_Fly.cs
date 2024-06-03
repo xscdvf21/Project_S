@@ -44,6 +44,11 @@ public class Monster_B_Fly : BaseMonsterState
         if (playerController == null)
             return;
 
+        if (me.transform.position.x < playerController.transform.position.x)
+            me.transform.localScale = new Vector3(-1f, 1f, 1f);
+        else
+            me.transform.localScale = new Vector3(1f, 1f, 1f);
+
         Vector2 vDir = (playerController.transform.position - me.transform.position).normalized;
 
         float distance = Vector2.Distance(playerController.transform.position, me.transform.position);
