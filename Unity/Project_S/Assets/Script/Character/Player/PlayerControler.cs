@@ -16,11 +16,12 @@ public  class PlayerControler : MonoBehaviour
 
 
     //움직임에 대한, 변수 및 불
-    private bool isMove = false;
-    private bool isAuto = false;
+    public bool isMove = false;
+    public bool isAuto = false;
     private bool isAttack = false;
-    private Vector2 vMovePos;
 
+    public Vector2 vMovePos;
+    
     //최소 거리 몬스터 (실시간으로 업데이트)
     [Header("가장 가까운 몬스터")]
     public Monster monster;
@@ -95,15 +96,15 @@ public  class PlayerControler : MonoBehaviour
             if (vMousePos.y <= 300f)
                 return;
 
-            isMove = true;
-            isAuto = false;
-            isAttack = false;
-            
             if(vMousePos.x < screenX)
                 transform.localScale = new Vector3(1f, 1f, 1f);
             else
                 transform.localScale = new Vector3(-1f, 1f, 1f);
 
+            isMove = true;
+            isAuto = false;
+            isAttack = false;
+            
             vMovePos = cam.ScreenToWorldPoint(vMousePos);
 
 
@@ -149,14 +150,24 @@ public  class PlayerControler : MonoBehaviour
         if (state != PLAYER_STATE.RUN)
             SetState(PLAYER_STATE.RUN);
 
-        transform.position = Vector2.MoveTowards(transform.position, vMovePos, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
-
-        if ((Vector2)transform.position == vMovePos)
+        if (isMove == false)
         {
-            isMove = false;
             SetState(PLAYER_STATE.IDLE);
             return;
         }
+
+
+        //if (state != PLAYER_STATE.RUN)
+        //    SetState(PLAYER_STATE.RUN);
+
+        //transform.position = Vector2.MoveTowards(transform.position, vMovePos, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
+
+        //if ((Vector2)transform.position == vMovePos)
+        //{
+        //    isMove = false;
+        //    SetState(PLAYER_STATE.IDLE);
+        //    return;
+        //}
     }
     public void Player_AutoMove()
     {
@@ -165,13 +176,13 @@ public  class PlayerControler : MonoBehaviour
             SetState(PLAYER_STATE.RUN);
         }
 
-        if (transform.position.x < monster.transform.position.x)
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        else
-            transform.localScale = new Vector3(1f, 1f, 1f);
+        //if (transform.position.x < monster.transform.position.x)
+        //    transform.localScale = new Vector3(-1f, 1f, 1f);
+        //else
+        //    transform.localScale = new Vector3(1f, 1f, 1f);
 
 
-        transform.position = Vector2.MoveTowards(transform.position, monster.transform.position, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
+        //transform.position = Vector2.MoveTowards(transform.position, monster.transform.position, GetComponent<Player>().ability.move_Speed * Time.deltaTime);
     }
 
     //공격 상태
