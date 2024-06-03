@@ -10,13 +10,8 @@ public class Monster_B_Attack : BaseMonsterState
 
     private float delTime = 0f;
 
-
     Monster me;
     PlayerControler playerController;
-
-    private bool isAttacking;
-
-
     public Monster_B_Attack(PlayerControler _playerController, Monster _me, Animator _animator, string _aniName)
     {
         aniName = _aniName;
@@ -34,9 +29,8 @@ public class Monster_B_Attack : BaseMonsterState
 
     public override void OnEnter()
     {
-
+        me.SetAttacking(false);
         delTime = me.ability.attackSpeed;
-        isAttacking = false;
     }
 
     public override void OnExit()
@@ -46,21 +40,24 @@ public class Monster_B_Attack : BaseMonsterState
 
     public override void OnUpdate()
     {
-        delTime -= Time.deltaTime;
 
-
-        //공격
-        if(delTime <= 0f)
+        //1.공격안할때만, 시간 체크
+        if (me.GetAttacking() == false)
         {
-            Debug.Log("플레이어 공격 데미지: " + me.ability.atk);
+            delTime -= Time.deltaTime;
+            if (animator.GetBool(aniName))
+                animator.SetBool(aniName, false);
 
-            animator.SetBool(aniName, true);
-            playerController.TakeDamage(me.ability.atk);
-            delTime = me.ability.attackSpeed;
-                        
+
+            if (delTime <= 0f)
+            {
+                //공격
+                me.SetAttacking(true);
+                animator.SetBool(aniName, true);
+                playerController.TakeDamage(me.ability.atk);
+            }
+
         }
-
-
 
     }
     public override void OnFixedUpdate()
@@ -76,8 +73,6 @@ public class Monster_B_Attack : BaseMonsterState
 
     public void ReAttack()
     {
-
-        isAttacking = false;
         delTime = me.ability.attackSpeed;
     }
 }

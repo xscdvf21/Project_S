@@ -40,6 +40,7 @@ public class Monster_Mgr : MonoBehaviour
         monster.transform.position = new Vector2(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
         monster.transform.SetParent(_parent, false);
 
+        monster.GetComponent<Monster>().SetAlive(true);
         monster_Alive.Add(monster.GetComponent<Monster>());
 
     }

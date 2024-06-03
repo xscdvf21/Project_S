@@ -7,7 +7,6 @@ public class Monster_B_Controller : BaseMonsterController
     [SerializeField] MONSTER_STATE state;
     MonsterStateMachine stateMachine;
 
-
     private void Awake()
     {
         InitComponent();
@@ -17,14 +16,19 @@ public class Monster_B_Controller : BaseMonsterController
     {
         DistancePlayer();
 
-        if (playerDis > me.ability.atk_Dis)
+        if (me.ability.hp <= 0f)
+        {
+            Dead();
+            return;
+        }
+
+        if (player == null || player.ability.hp <= 0f)
+            Idle();
+        else if (playerDis > me.ability.atk_Dis)
             Move();
         else if (playerDis <= me.ability.atk_Dis)
             Attack();
-        else if (me.ability.hp <= 0)
-            Dead();
-        else if(player == null)
-            Idle();
+
 
         stateMachine.OnUpdate();
     }
@@ -40,7 +44,7 @@ public class Monster_B_Controller : BaseMonsterController
         stateMachine.AddState(MONSTER_STATE.MOVE, new Monster_B_Fly(player.GetComponent<PlayerControler>(), me, animator, "isMove"));
         stateMachine.AddState(MONSTER_STATE.ATTACK, new Monster_B_Attack(player.GetComponent<PlayerControler>(), me, animator, "isAttack"));
         stateMachine.AddState(MONSTER_STATE.HIT, new Monster_B_Hit(animator, "isHit"));
-        stateMachine.AddState(MONSTER_STATE.DEAD, new Monster_B_Dead(animator, "isDead"));
+        stateMachine.AddState(MONSTER_STATE.DEAD, new Monster_B_Dead(me, animator, "isDead"));
 
     }
 
@@ -80,5 +84,4 @@ public class Monster_B_Controller : BaseMonsterController
         state = _state;
         stateMachine.ChangeState(_state);
     }
-
 }
