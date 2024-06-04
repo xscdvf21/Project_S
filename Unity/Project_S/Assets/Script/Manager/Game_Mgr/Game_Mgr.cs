@@ -29,6 +29,17 @@ public class Game_Mgr : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        Init();
+    }
+
+    private void Init()
+    {
+        stage = 0;
+        waveStep = 1;
+    }
+
     public void SuccessLogin()
     {
         isLogin = true;
@@ -38,9 +49,7 @@ public class Game_Mgr : MonoBehaviour
 
         Invoke("GameStart", 2f);
 
-    }
-
-    
+    } 
     public void GameStart()
     {
         Loading_Mgr.Instance.NextScene("InGame");
@@ -51,7 +60,7 @@ public class Game_Mgr : MonoBehaviour
         if (!Object_Mgr.Instance)
             return;
 
-        stage = _stage;
+        stage++;
         waveStep = 1;
 
         //플레이어 위치 
@@ -67,7 +76,23 @@ public class Game_Mgr : MonoBehaviour
                 manager.monster_Mgr.CreateMonster(parent, _type, new Vector2(UnityEngine.Random.Range(-100f, 100f), UnityEngine.Random.Range(-100f, 100f)));
             }
         }
+    }
 
+    /// <summary>
+    /// 웨이브를 증가시키고, 몬스터 다시 생성
+    /// </summary>
+    public void Add_Wave()
+    {
+        //waveStep++;
 
+        //var manager = Object_Mgr.Instance;
+        //Transform parent = InGame_Mgr.Instance.monster.GetParent(_type);
+        //if (parent != null)
+        //{
+        //    for (int i = 0; i < _monsterCount; ++i)
+        //    {
+        //        manager.monster_Mgr.CreateMonster(parent, _type, new Vector2(UnityEngine.Random.Range(-100f, 100f), UnityEngine.Random.Range(-100f, 100f)));
+        //    }
+        //}
     }
 }
