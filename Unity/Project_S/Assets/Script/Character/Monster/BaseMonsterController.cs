@@ -22,7 +22,7 @@ public abstract class BaseMonsterController : MonoBehaviour
     //공격
     public abstract void Attack();
 
-    //공격받았을 때
+    //공격받았을 때 히트 개념은 없는거 같긴하다. 이펙트 터트려주는게 다인듯
     public abstract void Hit();
 
     //죽음

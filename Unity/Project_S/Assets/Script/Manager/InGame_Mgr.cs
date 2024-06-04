@@ -37,6 +37,9 @@ public class InGame_Mgr : MonoBehaviour
         player.Init();
         monster.Init();
 
+
+        if (Game_Mgr.Instance)
+            Game_Mgr.Instance.StageCreate(1, Vector2.zero, MONSTER_TYPE.MONSTER_B, 20);
     }
     
 

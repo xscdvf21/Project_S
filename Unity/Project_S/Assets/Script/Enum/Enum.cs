@@ -212,8 +212,11 @@ public enum EYE_SPRITE
 public enum MONSTER_TYPE
 {
     NONE = -1,
-    MONSTER_A,
-    MONSTER_B,
+    MONSTER_A, 
+    MONSTER_B, //원거리
+    MONSTER_C, //근거리
+    MONSTER_D, //골드 던전
+    MONSTER_A_BOSS,
     END,
 }
 

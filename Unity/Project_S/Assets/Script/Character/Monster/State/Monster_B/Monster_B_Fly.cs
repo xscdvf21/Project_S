@@ -8,8 +8,6 @@ public class Monster_B_Fly : BaseMonsterState
     private string aniName;
     private Animator animator;
 
-    private float moveSpeed;
-
     Monster me;
     PlayerControler playerController;
     public Monster_B_Fly(PlayerControler _playerController, Monster _me, Animator _animator, string _aniName)
@@ -28,6 +26,7 @@ public class Monster_B_Fly : BaseMonsterState
     public override void OnEnter()
     {
         animator.SetBool(aniName, true);
+
     }
 
     public override void OnExit()
@@ -49,9 +48,7 @@ public class Monster_B_Fly : BaseMonsterState
         else
             me.transform.localScale = new Vector3(1f, 1f, 1f);
 
-        Vector2 vDir = (playerController.transform.position - me.transform.position).normalized;
 
-        float distance = Vector2.Distance(playerController.transform.position, me.transform.position);
         me.transform.position = Vector2.MoveTowards(me.transform.position, playerController.transform.position, me.ability.moveSpeed * Time.deltaTime);
 
     }

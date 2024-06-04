@@ -43,7 +43,6 @@ public class Monster_B_Controller : BaseMonsterController
 
         stateMachine.AddState(MONSTER_STATE.MOVE, new Monster_B_Fly(player.GetComponent<PlayerControler>(), me, animator, "isMove"));
         stateMachine.AddState(MONSTER_STATE.ATTACK, new Monster_B_Attack(player.GetComponent<PlayerControler>(), me, animator, "isAttack"));
-        stateMachine.AddState(MONSTER_STATE.HIT, new Monster_B_Hit(animator, "isHit"));
         stateMachine.AddState(MONSTER_STATE.DEAD, new Monster_B_Dead(me, animator, "isDead"));
 
     }
@@ -69,8 +68,7 @@ public class Monster_B_Controller : BaseMonsterController
 
     public override void Hit()
     {
-        if (state != MONSTER_STATE.HIT)
-            SetState(MONSTER_STATE.HIT);
+
     }
 
     public override void Dead()

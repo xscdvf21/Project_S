@@ -24,27 +24,15 @@ public class InGame_Monster : MonoBehaviour
 
             dic_parent.Add((MONSTER_TYPE)i, obj.transform);
         }
-
-        CreateMonster(20, MONSTER_TYPE.MONSTER_B);
     }
 
 
-
-    private void CreateMonster(int _count, MONSTER_TYPE _type)
+    public Transform GetParent(MONSTER_TYPE _type)
     {
         if (dic_parent.TryGetValue(_type, out Transform _result))
-        {
+            return _result;
 
-            for (int i = 0; i < _count; ++i)
-            {
-                int iIndex = i;
-                Object_Mgr.Instance.monster_Mgr.CreateMonster(_result, _type, new Vector2(UnityEngine.Random.Range(-100f, 100f), UnityEngine.Random.Range(-100f, 100f)));
-            }
-        }
-
+        return null;
     }
-
-
-
 }
 
