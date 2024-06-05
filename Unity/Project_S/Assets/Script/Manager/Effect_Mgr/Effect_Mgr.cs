@@ -14,7 +14,7 @@ public class Effect_Mgr : MonoBehaviour
             return instance;
         }
     }
-    public Dictionary<EFFECT_TYPE, EffectPool> dic_Effect;
+    public Dictionary<EFFECT_TYPE, Effect_ObjectPool> dic_Effect;
 
     private void Awake()
     {
@@ -31,12 +31,5 @@ public class Effect_Mgr : MonoBehaviour
     {
         
     }
-
-    [Serializable]
-    public class EffectPool
-    {
-        Queue<GameObject> qeueue;
-    }
-
 
 }
