@@ -87,7 +87,9 @@
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteEyeSync.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\MinAttribute.cs" />
+    <Compile Include="Assets\Script\Manager\Effect_Mgr\Effect_ObjectPool.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_HorseSpriteList.cs" />
+    <Compile Include="Assets\Script\Manager\Effect_Mgr\Effect_Sprite.cs" />
     <Compile Include="Assets\Script\Character\Player\State\BaseState.cs" />
     <Compile Include="Assets\Script\Manager\Lobby_Mgr.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_AnimationController.cs" />
@@ -108,6 +110,7 @@
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSyncManager.cs" />
     <Compile Include="Assets\Script\Character\Monster\State\Monster_B\Monster_B_Hit.cs" />
     <Compile Include="Assets\Script\Popup\InGamePopup_SkillShop.cs" />
+    <Compile Include="Assets\Script\Manager\Effect_Mgr\Effect_Mgr.cs" />
     <Compile Include="Assets\Script\Character\Item\Item_Armor.cs" />
     <Compile Include="Assets\Script\Manager\Manager.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SPUM_SpriteEditManager.cs" />
