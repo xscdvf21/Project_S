@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class DEAD_State : BaseState
 {
@@ -8,6 +9,8 @@ public class DEAD_State : BaseState
     [SerializeField] string aniName;
     [SerializeField] Animator animator;
 
+
+    float deadTime;
     public DEAD_State()
     {
 
@@ -27,7 +30,7 @@ public class DEAD_State : BaseState
 
     public override void OnEnter()
     {
-
+        deadTime = 10f;
     }
 
     public override void OnExit()
@@ -42,7 +45,13 @@ public class DEAD_State : BaseState
 
     public override void OnUpdate()
     {
+        deadTime -= Time.deltaTime;
 
+        if(deadTime < 0f)
+        {
+            Object_Mgr.Instance.player_Mgr.ReSetPlayer();
+
+        }
     }
 }
 

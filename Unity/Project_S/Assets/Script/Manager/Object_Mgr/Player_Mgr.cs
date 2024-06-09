@@ -50,4 +50,12 @@ public class Player_Mgr : MonoBehaviour
         mainPlayer.transform.position = _vPos;
         mainPlayer.transform.SetParent(_parent, false);
     }
+
+    public void ReSetPlayer()
+    {
+        mainPlayer.transform.position = Vector3.zero;
+        mainPlayer.ability.hp = mainPlayer.ability.maxHp;
+        mainPlayer.GetComponent<PlayerControler>().SetState(PLAYER_STATE.IDLE);
+        
+    }
 }
