@@ -101,6 +101,33 @@ public class Player_AbilityData : Data
         maxMp = mp;
     }
 
+
+    public void Add_Ability(PLAYER_ABILITY _abilityType, int _addValue)
+    {
+        switch (_abilityType)
+        {
+            case PLAYER_ABILITY.ATTACK:
+                atk += _addValue;
+                break;
+            case PLAYER_ABILITY.ATTACK_SPEED:
+                atk_Speed += _addValue;
+                break;
+            case PLAYER_ABILITY.HP:
+                hp += _addValue;
+                break;
+            case PLAYER_ABILITY.MP:
+                break;
+            case PLAYER_ABILITY.MOVE_SPEED:
+                move_Speed += _addValue;
+                break;
+            case PLAYER_ABILITY.CRI_CHANCE:
+                cri_Chance += _addValue;
+                break;
+            case PLAYER_ABILITY.DAMAGE_CRI:
+                damage_CRI += _addValue;
+                break;
+        }
+    }
 }
 /// <summary>
 /// 현재 적용되어있는 스킬

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\manager\\server\\save_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manager\\server\\save_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\popup\\ingamepopup_abilityshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\popup\\ingamepopup_abilityshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\savedata\\player_save.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\character\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\manager\\game_mgr\\game_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manager\\game_mgr\\game_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\manager\\object_mgr\\monster_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manager\\object_mgr\\monster_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\character\\monster\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +27,20 @@
       "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\character\\monster\\state\\monster_b\\monster_b_dead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\manager\\object_mgr\\monster_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manager\\object_mgr\\monster_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\enum\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enum\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Player_Save.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Player_Save.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\manager\\server\\save_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manager\\server\\save_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\manager\\game_mgr\\game_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manager\\game_mgr\\game_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\character\\monster\\state\\monster_b\\monster_b_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,10 +59,6 @@
       "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\manager\\lobby_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Player_Save.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Player_Save.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\character\\player\\state\\dead_state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\character\\player\\state\\dead_state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -66,7 +74,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Game_Mgr.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Game_Mgr\\Game_Mgr.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Manager\\Game_Mgr\\Game_Mgr.cs",
@@ -85,17 +93,11 @@
               "RelativeDocumentMoniker": "Assets\\Script\\SaveData\\Player_Save.cs",
               "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\SaveData\\Player_Save.cs",
               "RelativeToolTip": "Assets\\Script\\SaveData\\Player_Save.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAewF4AAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T07:18:20.234Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 315,
-          "SelectedChildIndex": 5,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -104,20 +106,52 @@
               "RelativeDocumentMoniker": "Assets\\Script\\Character\\Player\\Player.cs",
               "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Character\\Player\\Player.cs",
               "RelativeToolTip": "Assets\\Script\\Character\\Player\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAN4AAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T07:29:56.7Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 315,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InGamePopup_AbilityShop.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Popup\\InGamePopup_AbilityShop.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Popup\\InGamePopup_AbilityShop.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Popup\\InGamePopup_AbilityShop.cs",
+              "RelativeToolTip": "Assets\\Script\\Popup\\InGamePopup_AbilityShop.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T10:39:43.399Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Enum.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Enum\\Enum.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enum\\Enum.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Enum\\Enum.cs",
+              "RelativeToolTip": "Assets\\Script\\Enum\\Enum.cs",
+              "ViewState": "AQIAAOUAAAAAAAAAAAAWwAEBAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T10:37:30.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Monster_Mgr.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Object_Mgr\\Monster_Mgr.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Manager\\Object_Mgr\\Monster_Mgr.cs",
               "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Object_Mgr\\Monster_Mgr.cs",
               "RelativeToolTip": "Assets\\Script\\Manager\\Object_Mgr\\Monster_Mgr.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAASwE4AAAAyAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAASwD8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T07:27:07.23Z",
               "EditorCaption": ""
@@ -130,7 +164,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\Character\\Monster\\Monster.cs",
               "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Character\\Monster\\Monster.cs",
               "RelativeToolTip": "Assets\\Script\\Character\\Monster\\Monster.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAYwD0AAAASAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAEwBsAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T07:25:48.816Z",
               "EditorCaption": ""
@@ -150,7 +184,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Save_Mgr.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Server\\Save_Mgr.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Manager\\Server\\Save_Mgr.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Server\\Save_Mgr.cs",
+              "RelativeToolTip": "Assets\\Script\\Manager\\Server\\Save_Mgr.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAUwDEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T07:17:50.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Player_Save.json",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Player_Save.json",
+              "RelativeDocumentMoniker": "Assets\\Player_Save.json",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Player_Save.json",
+              "RelativeToolTip": "Assets\\Player_Save.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-09T07:19:02.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Monster_B_Controller.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Character\\Monster\\State\\Monster_B\\Monster_B_Controller.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Character\\Monster\\State\\Monster_B\\Monster_B_Controller.cs",
@@ -163,20 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Save_Mgr.cs",
-              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Server\\Save_Mgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Manager\\Server\\Save_Mgr.cs",
-              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Server\\Save_Mgr.cs",
-              "RelativeToolTip": "Assets\\Script\\Manager\\Server\\Save_Mgr.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAUwEkAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T07:17:50.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Object_Mgr.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Object_Mgr\\Object_Mgr.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Manager\\Object_Mgr\\Object_Mgr.cs",
@@ -189,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Lobby_Mgr.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Lobby_Mgr.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Manager\\Lobby_Mgr.cs",
@@ -202,20 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Player_Save.json",
-              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Player_Save.json",
-              "RelativeDocumentMoniker": "Assets\\Player_Save.json",
-              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Player_Save.json",
-              "RelativeToolTip": "Assets\\Player_Save.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-09T07:19:02.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "DEAD_State.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Character\\Player\\State\\DEAD_State.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Character\\Player\\State\\DEAD_State.cs",
@@ -228,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Player_Mgr.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Manager\\Object_Mgr\\Player_Mgr.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Manager\\Object_Mgr\\Player_Mgr.cs",

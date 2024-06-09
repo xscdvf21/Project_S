@@ -75,6 +75,7 @@ public class Monster_Mgr : MonoBehaviour
         foreach(var monster in monster_death)
         {
             monster_Alive.Add(monster);
+            monster.gameObject.SetActive(true);
             monster.GetComponent<Monster>().SetAlive(true);
             monster.GetComponent<Monster>().SetPos(new Vector2(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f)));
             monster.ability.hp = monster.ability.maxHp;
