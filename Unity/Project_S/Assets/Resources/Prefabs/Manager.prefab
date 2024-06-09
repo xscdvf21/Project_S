@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userData:
-    userID: 
+    userID: xscdvf22
     password: 
     userName: 
   ab_resData:
@@ -287,6 +287,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5773572289799763917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2645334289304371450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8961902237089201395}
+  m_Layer: 0
+  m_Name: ----------------------------------------------- (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8961902237089201395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2645334289304371450}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5773572289799763917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2815476508932078517
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +380,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5773572289799763917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3293420422346486576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5023099456829412214}
+  m_Layer: 0
+  m_Name: Effect_Mgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5023099456829412214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3293420422346486576}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5773572289799763917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3874405007563007800
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +458,8 @@ Transform:
   - {fileID: 7235493702620475214}
   - {fileID: 8452160943834946975}
   - {fileID: 3640088299885680751}
+  - {fileID: 8961902237089201395}
+  - {fileID: 5023099456829412214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6976645514131162784
@@ -873,6 +937,10 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 10b8726a55e1bdb44bde716bbe1c3173, type: 3}
     - {fileID: 21300000, guid: 8f378d25667093f4d8dc4b2667f68e03, type: 3}
     - {fileID: 21300000, guid: c62be704b543ed2408cbbd67d8720e2c, type: 3}
+  list_Sprites:
+  - sprite_Type: 1
+    lists:
+    - sprites: []
 --- !u!1 &5977306702247542841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,9 +1146,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPrefabs:
-  - {fileID: -5539578114810440510, guid: 50800dffd34269a4cbe8095db69e7103, type: 3}
-  - {fileID: 8236474835023884091, guid: 86681c1800578d746bddefc75f63727b, type: 3}
-  - {fileID: -2417208004945848854, guid: 16520e4c545f1a848877c68b6e829848, type: 3}
+  - {fileID: 253884058486772214, guid: 38424f333225c7e4fb6f68118191fc4c, type: 3}
+  - {fileID: 2589415668570528854, guid: 6617b6fafb7d3f74090cb160ce26a6f0, type: 3}
+  - {fileID: -1007641581164814046, guid: e64bf266978d503489997fc9bce3db90, type: 3}
+  - {fileID: -3217160650999080034, guid: 4703eafc44035fc43867be771031a648, type: 3}
+  - {fileID: -4036843867337218538, guid: 1f920a472b4ea5840b92a379377c7acb, type: 3}
+  - {fileID: -6806567913152568906, guid: aa0d1e2881a8b1b4fa79f128c166c492, type: 3}
+  - {fileID: 7218526937751898852, guid: c94c0501846bdc0419f44778876de36d, type: 3}
+  - {fileID: 5821802966760494005, guid: ff67c14138cdd7147b2917b222977163, type: 3}
+  - {fileID: -6683523876604178183, guid: 912f096b666b75f4ea4ca3210c610072, type: 3}
+  - {fileID: -6527888690938815945, guid: 8f68c235128ac7c4b96044a58ebcec79, type: 3}
+  - {fileID: -5134326660412666405, guid: 957dfe5a41d614749a4dae5d23a97450, type: 3}
+  - {fileID: -8410299249279040333, guid: 86f0c15c74ffc514c99e1e8bbdf49413, type: 3}
+  - {fileID: 212380435706084946, guid: 72ffeff37eac94e4f86f5d20b7877d1e, type: 3}
+  - {fileID: 4700356042513432374, guid: 47cbf1e705c6b144baf1f2a7d2e605c3, type: 3}
+  - {fileID: -7938630617225336301, guid: a90a7e7d0fe8aa8429a6936d115bd0a1, type: 3}
+  - {fileID: -1364345659262413956, guid: 635dcfd64c93d944da28490428069878, type: 3}
+  - {fileID: -6750245988997378111, guid: 3ffadb14c2b6d2749b7b4df5dc68d2a6, type: 3}
+  - {fileID: 716053713687060995, guid: 9a7383259369af14db8c1cdfa412cf21, type: 3}
+  - {fileID: 6298747839365985007, guid: 875eafa232aa80c4d9aa737982b7ef2d, type: 3}
+  - {fileID: 2805100399306124425, guid: 01b943e32e6210e4db0d25ea7f320d3d, type: 3}
   monster_Alive: []
   monster_death: []
 --- !u!1 &6533128399667147237
@@ -1237,6 +1322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ee3e41a874357449fc416c75ddd5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stage: 0
+  waveStep: 0
 --- !u!1 &8256239790921436879
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,10 @@ public class Monster : MonoBehaviour
         isAttacking = _b;
     }
 
+    public void SetPos(Vector2 _vPos)
+    {
+        transform.position = _vPos;
+    }
 
     public bool GetAttacking()
     {
@@ -52,6 +56,14 @@ public class Monster : MonoBehaviour
         isAlive = false;
         gameObject.SetActive(false);
         Object_Mgr.Instance.monster_Mgr.Monster_Dead(this);
+
+        if (Object_Mgr.Instance)
+        {
+            Player mainPlayer = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
+            mainPlayer.resource.Add_Resource(resource.GetExp(), resource.GetGold());
+        }
+
+
     }
     // Update is called once per frame
 
@@ -72,8 +84,8 @@ public class Monster : MonoBehaviour
     public class Monster_Resource
     {
         [Header("플레이어에게 줄 경험치량")]
-        public int exp;
-        public int gold;
+        [SerializeField] int exp;
+        [SerializeField] int gold;
 
         public int GetExp()
         {

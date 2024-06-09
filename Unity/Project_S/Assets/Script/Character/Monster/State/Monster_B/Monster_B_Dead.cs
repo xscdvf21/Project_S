@@ -27,6 +27,9 @@ public class Monster_B_Dead : BaseMonsterState
             animator.SetBool(aniName, false);
 
         animator.SetBool(aniName, true);
+
+
+
     }
 
 
