@@ -6,12 +6,11 @@ using System;
 [Serializable]
 public class Player_Save : SaveFile
 {
-    [SerializeField] Player_AbilityIndex ability = new Player_AbilityIndex();
-    [SerializeField] Player_ItemIndex items = new Player_ItemIndex();
-    [SerializeField] Player_SkillIndex skill = new Player_SkillIndex();
-    [SerializeField] Player_ResourceIndex resource = new Player_ResourceIndex();
 
-
+    Player_AbilityData ability;
+    Player_ItemData items;
+    Player_SkillData skill;
+    Player_Resource resource;
 
     public void Save()
     {
@@ -23,10 +22,10 @@ public class Player_Save : SaveFile
     {
         if (!SaveSystem.Exists("Player_Save"))
         {
-             ability = new Player_AbilityIndex();
-             items = new Player_ItemIndex();
-             skill = new Player_SkillIndex();
-             resource = new Player_ResourceIndex();
+             ability = new Player_AbilityData();
+             items = new Player_ItemData();
+             skill = new Player_SkillData();
+             resource = new Player_Resource();
 
             SaveSystem.Save("Player_Save", this);
         }
@@ -44,19 +43,19 @@ public class Player_Save : SaveFile
     }
 
 
-    private void DataLoad(Player_Save _temp)
+    private void DataLoad(Player _player)
     {
         Debug.Log("데이터 로드 및 셋팅 성공");
 
         //어빌리티
-        ability.atkIndex         = _temp.ability.atkIndex;
-        ability.atk_SpeedIndex = _temp.ability.atk_SpeedIndex;
-        ability.hpIndex = _temp.ability.hpIndex;
-        ability.mpIndex = _temp.ability.mpIndex;
-        ability.move_SpeedIndex = _temp.ability.move_SpeedIndex;
-        ability.cri_ChanceIndex = _temp.ability.cri_ChanceIndex;
-        ability.damage_CRIIndex = _temp.ability.damage_CRIIndex;
-        
+        ability.atk = _player.ability.atk;
+        ability.atk_Dis = _player.ability.atk_Dis;
+        ability.atk_Speed = _player.ability.atk_Speed;
+        ability.hp = _player.ability.hp;
+        ability.mp = _player.ability.mp;
+        ability.move_Speed = _player.ability.move_Speed;
+        ability.cri_Chance = _player.ability.cri_Chance;
+        ability.damage_CRI = _player.ability.damage_CRI;
         //장비
         items.DeepCopy(_temp.items);
 

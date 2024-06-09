@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\popup\\ingamepopup_abilityshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\popup\\ingamepopup_abilityshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\savedata\\player_save.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\savedata\\player_save.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\character\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\character\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\popup\\ingamepopup_abilityshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\popup\\ingamepopup_abilityshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99444395-614F-1522-8D53-9937C3A8D301}|Assembly-CSharp.csproj|f:\\project_s\\project_s\\project_s\\unity\\project_s\\assets\\script\\manager\\object_mgr\\monster_mgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,28 +87,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Player_Save.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\SaveData\\Player_Save.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\SaveData\\Player_Save.cs",
               "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\SaveData\\Player_Save.cs",
               "RelativeToolTip": "Assets\\Script\\SaveData\\Player_Save.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAADwvyAAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T07:18:20.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Player.cs",
-              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Character\\Player\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Character\\Player\\Player.cs",
-              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Character\\Player\\Player.cs",
-              "RelativeToolTip": "Assets\\Script\\Character\\Player\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAN4AAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T07:29:56.7Z",
               "EditorCaption": ""
             }
           ]
@@ -119,7 +106,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Character\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Character\\Player\\Player.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Character\\Player\\Player.cs",
+              "RelativeToolTip": "Assets\\Script\\Character\\Player\\Player.cs",
+              "ViewState": "AQIAAK8AAAAAAAAAAAAAwLwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T07:29:56.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "InGamePopup_AbilityShop.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Unity\\Project_S\\Assets\\Script\\Popup\\InGamePopup_AbilityShop.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Popup\\InGamePopup_AbilityShop.cs",

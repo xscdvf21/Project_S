@@ -7,8 +7,6 @@ using System;
 [Serializable]
 public class Player : MonoBehaviour
 {
-    public Player_Save saveData;
-
     public Player_AbilityData ability = new Player_AbilityData();
     public Player_ItemData items = new Player_ItemData();
     public Player_SkillData skill = new Player_SkillData();
