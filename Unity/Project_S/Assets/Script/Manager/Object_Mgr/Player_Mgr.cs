@@ -25,11 +25,9 @@ public class Player_Mgr : MonoBehaviour
 
         DontDestroyOnLoad(player);
 
-
         mainPlayer = player.GetComponent<Player>();
 
-        mainPlayer.saveData = Save_Mgr.Instance.Get_SaveData().Get_SaveData();
-        Save_Mgr.Instance.SetDataLoad(true);
+        //데이터 로드
 
     }
 
