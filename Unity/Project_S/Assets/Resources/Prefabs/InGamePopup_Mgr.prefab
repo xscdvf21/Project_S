@@ -2693,7 +2693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &6261973032577585143
@@ -4028,25 +4028,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   component:
-  - addValue: {fileID: 4093723713863088179}
+  - type: 0
+    addValue: {fileID: 4093723713863088179}
     btn: {fileID: 3237254166489883405}
     needGold: {fileID: 6626418174568165982}
-  - addValue: {fileID: 2043072864556710205}
+  - type: 1
+    addValue: {fileID: 2043072864556710205}
     btn: {fileID: 4360357298066954928}
     needGold: {fileID: 8599868517351463019}
-  - addValue: {fileID: 8141614968404413367}
+  - type: 2
+    addValue: {fileID: 8141614968404413367}
     btn: {fileID: 5906137819395596256}
     needGold: {fileID: 6484954383636918981}
-  - addValue: {fileID: 5645763869169634128}
+  - type: 3
+    addValue: {fileID: 5645763869169634128}
     btn: {fileID: 6099883098884361808}
     needGold: {fileID: 8527575351755288789}
-  - addValue: {fileID: 315352843444183218}
+  - type: 4
+    addValue: {fileID: 315352843444183218}
     btn: {fileID: 6853941202207731560}
     needGold: {fileID: 2110408526595477183}
-  - addValue: {fileID: 8145243653075272278}
+  - type: 5
+    addValue: {fileID: 8145243653075272278}
     btn: {fileID: 8065292161657523290}
     needGold: {fileID: 2230888712987105666}
-  - addValue: {fileID: 7002577370181384791}
+  - type: 6
+    addValue: {fileID: 7002577370181384791}
     btn: {fileID: 2505662751130582007}
     needGold: {fileID: 8574849649331639159}
 --- !u!1 &8982624568717570220

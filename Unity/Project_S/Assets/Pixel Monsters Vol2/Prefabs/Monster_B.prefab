@@ -131,8 +131,8 @@ MonoBehaviour:
     maxHp: 100
     moveSpeed: 1
   resource:
-    exp: 0
-    gold: 0
+    exp: 1
+    gold: 1
 --- !u!114 &-1185701683129289495
 MonoBehaviour:
   m_ObjectHideFlags: 0

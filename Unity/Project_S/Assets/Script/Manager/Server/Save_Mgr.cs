@@ -71,10 +71,8 @@ public class Save_Mgr : MonoBehaviour
         if (!Object_Mgr.Instance)
             return;
 
-        Player player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
-
-        player_save.Get_Resource().gold = player.resource.gold;
-        player_save.Get_Resource().gold = player.resource.gold;
+        Player mainPlayer = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
+        player_save.Insert_Data(ref mainPlayer);
 
     }
 

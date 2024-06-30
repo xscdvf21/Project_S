@@ -7,8 +7,6 @@ using System;
 [Serializable]
 public class Player : MonoBehaviour
 {
-    public Player_Save saveData;
-
     public Player_AbilityData ability = new Player_AbilityData();
     public Player_ItemData items = new Player_ItemData();
     public Player_SkillData skill = new Player_SkillData();
@@ -16,8 +14,6 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-
-        saveData = Save_Mgr.Instance.Get_SaveData();
     }
 
     private void OnEnable()
@@ -27,8 +23,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        ability.Init(saveData);
-        resource.Init(saveData);
 
         //items.Init(saveData);
         //skill.Init(saveData);
@@ -61,7 +55,7 @@ public class Player : MonoBehaviour
 
 public abstract class Data
 {
-    public abstract void Init(Player_Save _saveData);
+    public abstract void Load(Player_Save _saveData);
 }
 
 [Serializable]
@@ -82,25 +76,62 @@ public class Player_AbilityData : Data
 
     public float cri_Chance;
     public float damage_CRI;
-    public override void Init(Player_Save _saveData)
+
+    public Player_AbilityData()
     {
-        atk += _saveData.GetAbility().atkIndex;
-        atk_Speed += _saveData.GetAbility().atk_SpeedIndex;
+        
+    }
+    public override void Load(Player_Save _saveData)
+    {
+        var _ability = _saveData.GetAbility();
 
-        hp += _saveData.GetAbility().hpIndex;
+        if (_ability == null)
+            return;
 
-        mp += _saveData.GetAbility().mpIndex;
+        atk += _ability.atk;
+        atk_Speed += _ability.atk_Speed;
 
-        move_Speed += _saveData.GetAbility().move_SpeedIndex;
+        hp += _ability.hp;
 
-        cri_Chance += _saveData.GetAbility().cri_ChanceIndex;
-        damage_CRI += _saveData.GetAbility().damage_CRIIndex;
+        mp += _ability.mp;
+
+        move_Speed += _ability.move_Speed;
+
+        cri_Chance += _ability.cri_Chance;
+        damage_CRI += _ability.damage_CRI;
 
 
         maxHp = hp;
         maxMp = mp;
     }
 
+
+    public void Add_Ability(PLAYER_ABILITY _abilityType, int _addValue)
+    {
+        switch (_abilityType)
+        {
+            case PLAYER_ABILITY.ATTACK:
+                atk += _addValue;
+                break;
+            case PLAYER_ABILITY.ATTACK_SPEED:
+                atk_Speed += _addValue;
+                break;
+            case PLAYER_ABILITY.HP:
+                hp += _addValue;
+                break;
+            case PLAYER_ABILITY.MP:
+                break;
+            case PLAYER_ABILITY.MOVE_SPEED:
+                move_Speed += _addValue;
+                break;
+            case PLAYER_ABILITY.CRI_CHANCE:
+                cri_Chance += _addValue;
+                break;
+            case PLAYER_ABILITY.DAMAGE_CRI:
+                damage_CRI += _addValue;
+                break;
+        }
+    }
 }
 /// <summary>
 /// 현재 적용되어있는 스킬
@@ -110,7 +141,7 @@ public class Player_AbilityData : Data
 public class Player_SkillData : Data
 {
     public List<Skill> list_Skill;
-    public override void Init(Player_Save _saveData)
+    public override void Load(Player_Save _saveData)
     {
 
     }
@@ -168,26 +199,12 @@ public class Player_ItemData : Data
     public Item_Foot foot;
     public Item_Back back;
 
-    public override void Init(Player_Save _saveData)
+    public override void Load(Player_Save _saveData)
     {
 
-        Item_Init(_saveData);
         Add_ItemAbility();
     }
 
-    /// <summary>
-    /// 플레이어의 아이템을 장착시켜줌
-    /// </summary>
-    void Item_Init(Player_Save _saveData)
-    {
-        weapon = Shop_Mgr.Instance.itemShop.Get_Weapon(_saveData.GetItems().wepons.Count -1);
-        helmet = Shop_Mgr.Instance.itemShop.Get_Helmet(_saveData.GetItems().helmets.Count - 1);
-        armor = Shop_Mgr.Instance.itemShop.Get_Armor(_saveData.GetItems().armors.Count - 1);
-        gloves = Shop_Mgr.Instance.itemShop.Get_Gloves(_saveData.GetItems().goloves.Count - 1);
-        foot = Shop_Mgr.Instance.itemShop.Get_Foot(_saveData.GetItems().foots.Count - 1);
-        back = Shop_Mgr.Instance.itemShop.Get_Back(_saveData.GetItems().backs.Count - 1);
-
-    }
     /// <summary>
     /// 장착된 아이템의 능력치를 캐릭 스텟에 더해줌
     /// </summary>
@@ -222,7 +239,15 @@ public class Player_Resource : Data
     public int maxExp;
 
     public int gold;
-    public override void Init(Player_Save _saveData)
+
+    public Player_Resource()
+    {
+        level = 1;
+        exp = 0;
+        maxExp = 100;
+        gold = 0;
+    }
+    public override void Load(Player_Save _saveData)
     {
         level = _saveData.Get_Resource().level;
         exp = _saveData.Get_Resource().exp;        

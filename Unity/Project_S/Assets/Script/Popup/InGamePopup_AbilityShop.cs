@@ -5,15 +5,10 @@ using UnityEngine.UI;
 using System;
 public class InGamePopup_AbilityShop : InGamePopup_MenuComponent
 {
-    Player_AbilityIndex ability_Save;
-
     [SerializeField] AbilityComponent[] component;
 
     private void Awake()
     {
-
-        ability_Save = Save_Mgr.Instance.Get_SaveData().GetAbility();
-
         for (int i = 0; i < component.Length; ++i)
         {
             int iIndex = i;
@@ -55,12 +50,14 @@ public class InGamePopup_AbilityShop : InGamePopup_MenuComponent
 
     private void OnClickBtn(int _iIndex)
     {
+        if (!Object_Mgr.Instance) return;
 
-        //var player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
+        var player = Object_Mgr.Instance.player_Mgr.Get_MainPlayer();
 
-        //if (player == null)
-        //    return;
+        if (player == null) return;
 
+        //if(player.resource.gold >= component[_iIndex].needGold)       
+        player.ability.Add_Ability(component[_iIndex].type, 10);
         //PLAYER_ABILITY iIndex = (PLAYER_ABILITY)_iIndex;
         ////bool result = Shop_Mgr.Instance.ability_Shop.GetAbility(iIndex).BuyShop(ref player);
 
@@ -72,6 +69,7 @@ public class InGamePopup_AbilityShop : InGamePopup_MenuComponent
     [Serializable]
     public class AbilityComponent
     {
+        public PLAYER_ABILITY type;
         public Text addValue;
         public Button btn;
         public Text needGold;
