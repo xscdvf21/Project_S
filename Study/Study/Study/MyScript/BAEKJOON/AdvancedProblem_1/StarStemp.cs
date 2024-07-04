@@ -28,7 +28,7 @@ namespace Study.MyScript.BAEKJOON.AdvancedProblem_1
                     if (j < minIndex)
                         str += " ";
                     else if (j >= maxIndex)
-                        str += " ";
+                        continue;
                     else
                         str += "*";
                 }

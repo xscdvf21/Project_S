@@ -1,0 +1,111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\myscript\\baekjoon\\advancedproblem_1\\croatiaalphabet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\myscript\\baekjoon\\advancedproblem_1\\croatiaalphabet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\myscript\\baekjoon\\advancedproblem_1\\alphabetcount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\myscript\\baekjoon\\advancedproblem_1\\alphabetcount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\myscript\\baekjoon\\advancedproblem_1\\palindrome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\myscript\\baekjoon\\advancedproblem_1\\palindrome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\myscript\\baekjoon\\advancedproblem_1\\starstemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\myscript\\baekjoon\\advancedproblem_1\\starstemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 163,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\Main\\Program.cs",
+              "RelativeDocumentMoniker": "Study\\Main\\Program.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\Main\\Program.cs",
+              "RelativeToolTip": "Study\\Main\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T15:54:29.624Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 237,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CroatiaAlphabet.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\CroatiaAlphabet.cs",
+              "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\CroatiaAlphabet.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\CroatiaAlphabet.cs",
+              "RelativeToolTip": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\CroatiaAlphabet.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAswBcAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T17:08:29.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlphabetCount.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\AlphabetCount.cs",
+              "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\AlphabetCount.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\AlphabetCount.cs",
+              "RelativeToolTip": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\AlphabetCount.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAwwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T16:17:25.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Palindrome.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\Palindrome.cs",
+              "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\Palindrome.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\Palindrome.cs",
+              "RelativeToolTip": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\Palindrome.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T16:07:55.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StarStemp.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\StarStemp.cs",
+              "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\StarStemp.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\StarStemp.cs",
+              "RelativeToolTip": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\StarStemp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T15:54:26.105Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
