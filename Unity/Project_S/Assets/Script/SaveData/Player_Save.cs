@@ -56,6 +56,9 @@ public class Player_Save : SaveFile
         ability.cri_Chance = _player.ability.cri_Chance;
         ability.damage_CRI = _player.ability.damage_CRI;
 
+        //아이템
+
+        //스킬
 
         //리소스
         resource.exp = _player.resource.exp;

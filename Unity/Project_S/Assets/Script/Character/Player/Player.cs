@@ -23,10 +23,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-
-        //items.Init(saveData);
-        //skill.Init(saveData);
-
+        Load();
     }
 
     // Update is called once per frame
@@ -48,6 +45,19 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
 
+
+    }
+
+    private void Load()
+    {
+        if (!Save_Mgr.Instance) return;
+
+        var _data = Save_Mgr.Instance.Get_SaveData();
+
+        ability.Load(_data);
+        items.Load(_data);
+        skill.Load(_data);
+        resource.Load(_data);
 
     }
 }
