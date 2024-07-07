@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\myscript\\baekjoon\\double_array\\coloredpaper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\myscript\\baekjoon\\double_array\\coloredpaper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\myscript\\baekjoon\\double_array\\heightread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\myscript\\baekjoon\\double_array\\heightread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\myscript\\baekjoon\\double_array\\maxvaluefind.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\myscript\\baekjoon\\double_array\\maxvaluefind.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|solutionrelative:study\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1CD50E8-D078-4A40-800F-5195E6B40714}|Study\\Study.csproj|f:\\project_s\\project_s\\project_s\\study\\study\\study\\myscript\\baekjoon\\advancedproblem_1\\croatiaalphabet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,13 +54,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\Main\\Program.cs",
               "RelativeDocumentMoniker": "Study\\Main\\Program.cs",
               "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\Main\\Program.cs",
               "RelativeToolTip": "Study\\Main\\Program.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAuwEIAAAANAAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAQwGoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-04T15:54:29.624Z",
               "EditorCaption": ""
@@ -65,37 +69,50 @@
         },
         {
           "DockedWidth": 175,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ColoredPaper.cs",
+              "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\Double_Array\\ColoredPaper.cs",
+              "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\Double_Array\\ColoredPaper.cs",
+              "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\Double_Array\\ColoredPaper.cs",
+              "RelativeToolTip": "Study\\MyScript\\BAEKJOON\\Double_Array\\ColoredPaper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T14:07:05.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProcessionSum.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\Double_Array\\ProcessionSum.cs",
               "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\Double_Array\\ProcessionSum.cs",
               "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\Double_Array\\ProcessionSum.cs",
               "RelativeToolTip": "Study\\MyScript\\BAEKJOON\\Double_Array\\ProcessionSum.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-06T14:02:53.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HeightRead.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\Double_Array\\HeightRead.cs",
               "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\Double_Array\\HeightRead.cs",
               "ToolTip": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\Double_Array\\HeightRead.cs",
               "RelativeToolTip": "Study\\MyScript\\BAEKJOON\\Double_Array\\HeightRead.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-06T14:02:36.931Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MaxValueFind.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\Double_Array\\MaxValueFind.cs",
               "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\Double_Array\\MaxValueFind.cs",
@@ -103,12 +120,11 @@
               "RelativeToolTip": "Study\\MyScript\\BAEKJOON\\Double_Array\\MaxValueFind.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T13:44:27.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T13:44:27.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CroatiaAlphabet.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\CroatiaAlphabet.cs",
               "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\CroatiaAlphabet.cs",
@@ -121,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GroupMeanChecker.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\GroupMeanChecker.cs",
               "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\GroupMeanChecker.cs",
@@ -133,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AlphabetCount.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\AlphabetCount.cs",
               "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\AlphabetCount.cs",
@@ -146,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Palindrome.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\Palindrome.cs",
               "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\Palindrome.cs",
@@ -158,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "StarStemp.cs",
               "DocumentMoniker": "F:\\Project_S\\Project_S\\Project_S\\Study\\Study\\Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\StarStemp.cs",
               "RelativeDocumentMoniker": "Study\\MyScript\\BAEKJOON\\AdvancedProblem_1\\StarStemp.cs",

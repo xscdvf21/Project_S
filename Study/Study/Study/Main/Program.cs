@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using Study.MyScript.BAEKJOON.Double_Array;
 namespace Study
 {
@@ -61,22 +62,50 @@ namespace Study
 
             //processSum.Function(row, col, strs);
 
-           
-            int[,] values = new int[9, 9];
-            for(int i = 0; i < 9; ++i)
-            {
-                string[] str = Console.ReadLine().Split(" ");
 
-                for(int j = 0; j < str.Length; ++j)
+            //int[,] values = new int[9, 9];
+            //for(int i = 0; i < 9; ++i)
+            //{
+            //    string[] str = Console.ReadLine().Split(" ");
+
+            //    for(int j = 0; j < str.Length; ++j)
+            //    {
+            //        values[i, j] = Convert.ToInt32(str[j]);
+            //    }
+
+            //}
+
+            //MaxValueFind finds = new MaxValueFind();
+            //finds.Function(values);
+
+            ///////////////////////////////////////
+            //HeightRead height = new HeightRead();
+
+            //string[] readLines = new string[5];
+            //for(int i = 0; i < 5; ++i)
+            //{
+            //    readLines[i] = Console.ReadLine();
+
+            //}
+
+            //height.Function(readLines);
+
+            ///////////////////////////////////////
+            ColoredPaper coloredPaper = new ColoredPaper();
+
+            int count = Convert.ToInt32(Console.ReadLine());
+
+            int[,] _pos = new int[count, 2];
+            for(int i = 0; i < count; ++i)
+            {
+                string[] readLine = Console.ReadLine().Split(' ');
+                for(int j = 0; j < readLine.Length; ++j)
                 {
-                    values[i, j] = Convert.ToInt32(str[j]);
+                    _pos[i, j] = Convert.ToInt32(readLine[j]);
                 }
-                
             }
 
-            MaxValueFind finds = new MaxValueFind();
-            finds.Function(values);
-
+            coloredPaper.Function(count, _pos);
 
         }
     }
