@@ -53,7 +53,7 @@ namespace Study.MyScript.BAEKJOON.AdvancedProblem_1
 
                 for(int i = 0; i < strs.Length - 1; ++i)
                 {
-                    int value = Convert.ToInt32(str[i]) - Convert.ToInt32(str[i + 1]);
+                    int value = Convert.ToInt32(strs[i]) - Convert.ToInt32(strs[i + 1]);
                     if (MathF.Abs(value) > 1)
                         return false;
 

@@ -1,6 +1,7 @@
 ﻿using System;
-using Study.MyScript.BAEKJOON.AdvancedProblem_1;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Study.MyScript.BAEKJOON.Double_Array;
 namespace Study
 {
     class Program
@@ -13,17 +14,70 @@ namespace Study
             //star.Function(str);
 
 
-            GroupMeanChecker checker = new GroupMeanChecker();
+            //GroupMeanChecker checker = new GroupMeanChecker();
 
-            int count = Convert.ToInt32(Console.ReadLine());
+            //int count = Convert.ToInt32(Console.ReadLine());
 
-            string[] strs = new string[count];
-            for (int i = 0; i < strs.Length; ++i)
+            //string[] strs = new string[count];
+            //for (int i = 0; i < strs.Length; ++i)
+            //{
+            //    strs[i] = Console.ReadLine();
+            //}
+
+            //checker.Function(strs);
+
+            ///////////////////////////////////////
+            //YourGrade yourGrade = new YourGrade();
+
+            ////int count = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 0; i < 20; ++i)
+            //{
+            //    string read = Console.ReadLine();
+            //    var strs = read.Split(" ");
+
+            //    if (strs.Length > 3)
+            //        continue;
+
+            //    Grade grade = new Grade(strs[0], (float)Convert.ToDouble(strs[1]), strs[2]);
+            //    yourGrade.AddGrades(grade);
+            //}
+
+            //yourGrade.Function();
+
+            //////////////////////////////////////////
+            //ProcessionSum processSum = new ProcessionSum();
+
+            //string[] readStr = Console.ReadLine().Split(" ");
+
+            //int col = Convert.ToInt32(readStr[0]);
+            //int row = Convert.ToInt32(readStr[0]);
+
+            //string[] strs = new string[col * 2];
+
+            //for(int i = 0; i < col * 2; ++i)
+            //{
+            //    strs[i] = Console.ReadLine();
+            //}
+
+            //processSum.Function(row, col, strs);
+
+           
+            int[,] values = new int[9, 9];
+            for(int i = 0; i < 9; ++i)
             {
-                strs[i] = Console.ReadLine();
+                string[] str = Console.ReadLine().Split(" ");
+
+                for(int j = 0; j < str.Length; ++j)
+                {
+                    values[i, j] = Convert.ToInt32(str[j]);
+                }
+                
             }
 
-            checker.Function(strs);
+            MaxValueFind finds = new MaxValueFind();
+            finds.Function(values);
+
+
         }
     }
 }
