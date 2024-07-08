@@ -105,7 +105,7 @@ namespace Study
                 }
             }
 
-            coloredPaper.Function(count, _pos);
+            coloredPaper.Function(_pos);
 
         }
     }
