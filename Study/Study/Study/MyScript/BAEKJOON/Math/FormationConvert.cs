@@ -4,7 +4,13 @@ using System.Text;
 
 namespace Study.MyScript.BAEKJOON.Math
 {
-    class FormationConvert
+    /// <summary>
+    /// 진법 변환
+    /// 2745
+    /// </summary>
+    public class FormationConvert
     {
+            
+
     }
 }
