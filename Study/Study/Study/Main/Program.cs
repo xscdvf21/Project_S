@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
-using Study.MyScript.BAEKJOON.Double_Array;
 using Study.MyScript.BAEKJOON.Math;
 namespace Study
 {
@@ -92,22 +91,28 @@ namespace Study
             //height.Function(readLines);
 
             ///////////////////////////////////////
-            ColoredPaper coloredPaper = new ColoredPaper();
+            //ColoredPaper coloredPaper = new ColoredPaper();
 
-            int count = Convert.ToInt32(Console.ReadLine());
+            //int count = Convert.ToInt32(Console.ReadLine());
 
-            int[,] _pos = new int[count, 2];
-            for(int i = 0; i < count; ++i)
-            {
-                string[] readLine = Console.ReadLine().Split(' ');
-                for(int j = 0; j < readLine.Length; ++j)
-                {
-                    _pos[i, j] = Convert.ToInt32(readLine[j]);
-                }
-            }
+            //int[,] _pos = new int[count, 2];
+            //for(int i = 0; i < count; ++i)
+            //{
+            //    string[] readLine = Console.ReadLine().Split(' ');
+            //    for(int j = 0; j < readLine.Length; ++j)
+            //    {
+            //        _pos[i, j] = Convert.ToInt32(readLine[j]);
+            //    }
+            //}
 
-            coloredPaper.Function(_pos);
+            //coloredPaper.Function(_pos);
 
+            ////////////////////////////////////////
+            FormationConvert formationConvert = new FormationConvert();
+
+            string[] readStrs = Console.ReadLine().Split(" ");
+
+            formationConvert.Function(readStrs[0], Convert.ToInt32(readStrs[1]));
         }
     }
 }
