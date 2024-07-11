@@ -128,10 +128,15 @@ namespace Study
 
             //honeyComb.Function(count);
 
+            ///////////////////////////////////////////////
+            //FountainFind find = new FountainFind();
 
-            FountainFind find = new FountainFind();
+            //find.Function(int.Parse(Console.ReadLine()));
 
-            find.Function(int.Parse(Console.ReadLine()));
+            ///////////////////////////////////////////////
+            TreeClimb climb = new TreeClimb();
+            string[] readLine = Console.ReadLine().Split(' ');
+            climb.Function(int.Parse(readLine[0]), int.Parse(readLine[1]), int.Parse(readLine[2]));
         }
     }
 }
