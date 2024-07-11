@@ -23,22 +23,24 @@ namespace Study.MyScript.BAEKJOON.Math
         {
 
             int sum = 0;
-            for (int i = 0; i < _str.Length; ++i)
+            int power = 0;
+            for (int i = _str.Length - 1; i >= 0; i--)
             {
-                int temp = _str[_str.Length - (i + 1)];
-
-                if (temp >= '0' && temp <= '9')
+                char temp = _str[i];
+                int value;
+                if (Char.IsDigit(temp))
                 {
-                    temp = temp - '0';
+                    value = temp - '0';
                 }
                 else
-                    temp = temp + 10 - 'A';
+                    value = Char.ToUpper(temp) + 10 - 'A';
 
-
-                sum += temp * (int)(MathF.Pow(_formationValue, i));
+                sum += value * (int)MathF.Pow(_formationValue, power);
+                power++;
             }
 
             Console.WriteLine(sum);
         }
+
     }
 }

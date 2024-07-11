@@ -108,11 +108,30 @@ namespace Study
             //coloredPaper.Function(_pos);
 
             ////////////////////////////////////////
-            FormationConvert formationConvert = new FormationConvert();
+            //FormationConvert formationConvert = new FormationConvert();
 
-            string[] readStrs = Console.ReadLine().Split(" ");
+            //string[] readStrs = Console.ReadLine().Split(' ');
 
-            formationConvert.Function(readStrs[0], Convert.ToInt32(readStrs[1]));
+            //if(readStrs.Length == 2)
+            //    formationConvert.Function(readStrs[0], int.Parse(readStrs[1]));
+
+            /////////////////////////////////////////
+            //CenterMove centerMove = new CenterMove();
+            //int count = int.Parse(Console.ReadLine());
+
+            //centerMove.Function(count);
+
+
+            /////////////////////////////////////////
+            //HoneyComb honeyComb = new HoneyComb();
+            //int count = int.Parse(Console.ReadLine());
+
+            //honeyComb.Function(count);
+
+
+            FountainFind find = new FountainFind();
+
+            find.Function(int.Parse(Console.ReadLine()));
         }
     }
 }
