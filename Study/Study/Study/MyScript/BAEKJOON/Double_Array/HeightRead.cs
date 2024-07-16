@@ -34,11 +34,11 @@ namespace Study.MyScript.BAEKJOON.Double_Array
             {
                 if (_readLine[i].Length - 1 < _iIndex)
                     continue;
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
                 ouputStr += _readLine[i][_iIndex];
             }
 
             Recursion(_readLine, _iIndex + 1, _start + 1);
-        }
+         }
     }
 }

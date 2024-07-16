@@ -12,20 +12,33 @@ namespace Study.MyScript.BAEKJOON.Math
     {
         public void Function(int _a, int _b, int _v)
         {
-            int sum = 0;
-            int count = 1;
-            while(true)
+            // 2 1 5 = 4;
+            // 100 99 1000000000000000 = 999999999999901
+            // 6 1 5 = 2
+
+            int day = 0;
+            if ((_v - _b) % (_a - _b) == 0)
             {
-                sum += _a;
-
-                if (sum >= _v)
-                    break;
-
-                sum -= _b;
-                count++;
-
+                day = (_v - _b) / (_a - _b);
             }
-            Console.WriteLine(count);
+            else
+                day = (_v - _b) / (_a - _b) + 1;
+
+
+            //int sum = 0;
+            //int count = 1;
+            //while(true)
+            //{
+            //    sum += _a;
+
+            //    if (sum >= _v)
+            //        break;
+
+            //    sum -= _b;
+            //    count++;
+
+            //}
+            Console.WriteLine(day);
 
         }
     }

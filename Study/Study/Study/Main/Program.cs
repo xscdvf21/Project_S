@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
-using Study.MyScript.BAEKJOON.Math;
+//using Study.MyScript.BAEKJOON.Math;
+using Study.MyScript.BAEKJOON.CommonMultiple;
 namespace Study
 {
     class Program
@@ -134,9 +135,58 @@ namespace Study
             //find.Function(int.Parse(Console.ReadLine()));
 
             ///////////////////////////////////////////////
-            TreeClimb climb = new TreeClimb();
-            string[] readLine = Console.ReadLine().Split(' ');
-            climb.Function(int.Parse(readLine[0]), int.Parse(readLine[1]), int.Parse(readLine[2]));
+            //TreeClimb climb = new TreeClimb();
+            //string[] readLine = Console.ReadLine().Split(' ');
+            //climb.Function(int.Parse(readLine[0]), int.Parse(readLine[1]), int.Parse(readLine[2]));
+
+            ///////////////////////////////////////////////
+            //CommonMultipleFind find = new CommonMultipleFind();
+
+
+            //Queue<int> queue_A = new Queue<int>();
+            //Queue<int> queue_B = new Queue<int>();
+            //while(true)
+            //{
+            //    string[] readLine = Console.ReadLine().Split(' ');
+
+            //    int _a = int.Parse(readLine[0]);
+            //    int _b = int.Parse(readLine[1]);
+
+            //    if (_a == 0 && _b == 0)
+            //        break;
+
+            //    queue_A.Enqueue(_a);
+            //    queue_B.Enqueue(_b);
+            //}
+
+
+            //find.Function(queue_A, queue_B);
+
+            //////////////////////////////////////////////////
+            //CommonNumFind find = new CommonNumFind();
+
+            //string[] readLine = Console.ReadLine().Split(' ');
+            //find.Function(int.Parse(readLine[0]), int.Parse(readLine[1]));
+            ///////////////////////////////////////////////////
+            //CommonNumSum find = new CommonNumSum();
+            //Queue<int> queue_A = new Queue<int>();
+            //while (true)
+            //{
+            //    string readLine = Console.ReadLine();
+
+            //    int _a = int.Parse(readLine);
+
+            //    if (_a == -1)
+            //        break;
+
+            //    queue_A.Enqueue(_a);
+            //}
+
+            //find.Function(queue_A);
+
+            /////////////////////////////////////////////
+            DecimalFind find = new DecimalFind();
+
         }
     }
 }
