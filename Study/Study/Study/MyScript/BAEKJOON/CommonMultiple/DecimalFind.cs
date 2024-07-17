@@ -13,7 +13,21 @@ namespace Study.MyScript.BAEKJOON.CommonMultiple
 
         public void Function(int[] _numbers)
         {
+            int count = 0;
+            for(int i = 0; i < _numbers.Length; ++i)
+            {
+                int decimalCount = 0;
+                for(int j = 1; j <= _numbers[i]; ++j)
+                {
+                    if (_numbers[i] % j == 0)
+                        decimalCount++;
+                }
 
+                if (decimalCount == 2)
+                    count++;
+            }
+
+            Console.WriteLine(count);
         }
 
 

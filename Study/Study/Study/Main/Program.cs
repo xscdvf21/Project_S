@@ -1,192 +1,35 @@
-﻿using System;
+﻿//using Study.MyScript.BAEKJOON.Math;
+using Study.MyScript.BAEKJOON.Geometry;
+using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-//using Study.MyScript.BAEKJOON.Math;
-using Study.MyScript.BAEKJOON.CommonMultiple;
+
 namespace Study
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //CroatiaAlphabet star = new CroatiaAlphabet();
+            TriangleLength find = new TriangleLength();
 
-            //string str = Console.ReadLine();
-            //star.Function(str);
+            Queue<int[]> queue = new Queue<int[]>();
+            while (true)
+            {
+                string[] readStr = Console.ReadLine().Split(' ');
+                int[] lengths = new int[3];
 
+                lengths[0] = int.Parse(readStr[0]);
+                lengths[1] = int.Parse(readStr[1]);
+                lengths[2] = int.Parse(readStr[2]);
+                if (lengths[0] == 0 && lengths[1] == 0 && lengths[2] == 0)
+                    break;
 
-            //GroupMeanChecker checker = new GroupMeanChecker();
+                queue.Enqueue(lengths);
+         
+            }
 
-            //int count = Convert.ToInt32(Console.ReadLine());
-
-            //string[] strs = new string[count];
-            //for (int i = 0; i < strs.Length; ++i)
-            //{
-            //    strs[i] = Console.ReadLine();
-            //}
-
-            //checker.Function(strs);
-
-            ///////////////////////////////////////
-            //YourGrade yourGrade = new YourGrade();
-
-            ////int count = Convert.ToInt32(Console.ReadLine());
-            //for (int i = 0; i < 20; ++i)
-            //{
-            //    string read = Console.ReadLine();
-            //    var strs = read.Split(" ");
-
-            //    if (strs.Length > 3)
-            //        continue;
-
-            //    Grade grade = new Grade(strs[0], (float)Convert.ToDouble(strs[1]), strs[2]);
-            //    yourGrade.AddGrades(grade);
-            //}
-
-            //yourGrade.Function();
-
-            //////////////////////////////////////////
-            //ProcessionSum processSum = new ProcessionSum();
-
-            //string[] readStr = Console.ReadLine().Split(" ");
-
-            //int col = Convert.ToInt32(readStr[0]);
-            //int row = Convert.ToInt32(readStr[0]);
-
-            //string[] strs = new string[col * 2];
-
-            //for(int i = 0; i < col * 2; ++i)
-            //{
-            //    strs[i] = Console.ReadLine();
-            //}
-
-            //processSum.Function(row, col, strs);
-
-
-            //int[,] values = new int[9, 9];
-            //for(int i = 0; i < 9; ++i)
-            //{
-            //    string[] str = Console.ReadLine().Split(" ");
-
-            //    for(int j = 0; j < str.Length; ++j)
-            //    {
-            //        values[i, j] = Convert.ToInt32(str[j]);
-            //    }
-
-            //}
-
-            //MaxValueFind finds = new MaxValueFind();
-            //finds.Function(values);
-
-            ///////////////////////////////////////
-            //HeightRead height = new HeightRead();
-
-            //string[] readLines = new string[5];
-            //for(int i = 0; i < 5; ++i)
-            //{
-            //    readLines[i] = Console.ReadLine();
-
-            //}
-
-            //height.Function(readLines);
-
-            ///////////////////////////////////////
-            //ColoredPaper coloredPaper = new ColoredPaper();
-
-            //int count = Convert.ToInt32(Console.ReadLine());
-
-            //int[,] _pos = new int[count, 2];
-            //for(int i = 0; i < count; ++i)
-            //{
-            //    string[] readLine = Console.ReadLine().Split(' ');
-            //    for(int j = 0; j < readLine.Length; ++j)
-            //    {
-            //        _pos[i, j] = Convert.ToInt32(readLine[j]);
-            //    }
-            //}
-
-            //coloredPaper.Function(_pos);
-
-            ////////////////////////////////////////
-            //FormationConvert formationConvert = new FormationConvert();
-
-            //string[] readStrs = Console.ReadLine().Split(' ');
-
-            //if(readStrs.Length == 2)
-            //    formationConvert.Function(readStrs[0], int.Parse(readStrs[1]));
-
-            /////////////////////////////////////////
-            //CenterMove centerMove = new CenterMove();
-            //int count = int.Parse(Console.ReadLine());
-
-            //centerMove.Function(count);
-
-
-            /////////////////////////////////////////
-            //HoneyComb honeyComb = new HoneyComb();
-            //int count = int.Parse(Console.ReadLine());
-
-            //honeyComb.Function(count);
-
-            ///////////////////////////////////////////////
-            //FountainFind find = new FountainFind();
-
-            //find.Function(int.Parse(Console.ReadLine()));
-
-            ///////////////////////////////////////////////
-            //TreeClimb climb = new TreeClimb();
-            //string[] readLine = Console.ReadLine().Split(' ');
-            //climb.Function(int.Parse(readLine[0]), int.Parse(readLine[1]), int.Parse(readLine[2]));
-
-            ///////////////////////////////////////////////
-            //CommonMultipleFind find = new CommonMultipleFind();
-
-
-            //Queue<int> queue_A = new Queue<int>();
-            //Queue<int> queue_B = new Queue<int>();
-            //while(true)
-            //{
-            //    string[] readLine = Console.ReadLine().Split(' ');
-
-            //    int _a = int.Parse(readLine[0]);
-            //    int _b = int.Parse(readLine[1]);
-
-            //    if (_a == 0 && _b == 0)
-            //        break;
-
-            //    queue_A.Enqueue(_a);
-            //    queue_B.Enqueue(_b);
-            //}
-
-
-            //find.Function(queue_A, queue_B);
-
-            //////////////////////////////////////////////////
-            //CommonNumFind find = new CommonNumFind();
-
-            //string[] readLine = Console.ReadLine().Split(' ');
-            //find.Function(int.Parse(readLine[0]), int.Parse(readLine[1]));
-            ///////////////////////////////////////////////////
-            //CommonNumSum find = new CommonNumSum();
-            //Queue<int> queue_A = new Queue<int>();
-            //while (true)
-            //{
-            //    string readLine = Console.ReadLine();
-
-            //    int _a = int.Parse(readLine);
-
-            //    if (_a == -1)
-            //        break;
-
-            //    queue_A.Enqueue(_a);
-            //}
-
-            //find.Function(queue_A);
-
-            /////////////////////////////////////////////
-            DecimalFind find = new DecimalFind();
+            find.Function(queue);
 
         }
     }
 }
+  
