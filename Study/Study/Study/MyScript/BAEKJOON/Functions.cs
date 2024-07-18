@@ -274,7 +274,69 @@ namespace Study.MyScript.BAEKJOON
         //int c = int.Parse(Console.ReadLine());
 
         //triangle.Function(a, b, c);
+
         ////////////////////////////////////////////////
+        //TriangleLength find = new TriangleLength();
+
+        //Queue<int[]> queue = new Queue<int[]>();
+        //while (true)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+        //{
+        //    string[] readStr = Console.ReadLine().Split(' ');
+        //    int[] lengths = new int[3];
+
+        //    lengths[0] = int.Parse(readStr[0]);
+        //    lengths[1] = int.Parse(readStr[1]);
+        //    lengths[2] = int.Parse(readStr[2]);
+
+        //    if (lengths[0] == 0 && lengths[1] == 0 && lengths[2] == 0)
+        //        break;
+
+        //    queue.Enqueue(lengths);
+
+        //}
+
+        //find.Function(queue);
+
+        ////////////////////////////////////////////////
+        //ThreeBar bar = new ThreeBar();
+
+        //string[] readstr = Console.ReadLine().Split(' ');
+
+        //List<int> list = new List<int>();
+        //for(int i = 0; i < readstr.Length; ++i)
+        //{
+        //    list.Add(int.Parse(readstr[i]));
+        //}
+
+        //bar.Function(list);
+
+        ////////////////////////////////////////////////
+        //Algorithm_1 algorithm = new Algorithm_1();
+
+        //algorithm.Function();
+
+        ////////////////////////////////////////////////
+        //Algorithm_2 algorithm = new Algorithm_2();
+
+        //algorithm.Function(int.Parse(Console.ReadLine()));
+
+        ////////////////////////////////////////////////
+        //Algorithm_3 algorithm = new Algorithm_3();
+
+        //algorithm.Function(long.Parse(Console.ReadLine()));
+
+        ////////////////////////////////////////////////
+        //Algorithm_4 algorithm = new Algorithm_4();
+
+        //algorithm.Function(ulong.Parse(Console.ReadLine()));
+
+        ////////////////////////////////////////////////
+        //Algorithm_5 algorithm = new Algorithm_5();
+        //algorithm.Function(ulong.Parse(Console.ReadLine()));
+
+
+
+
 
     }
 }

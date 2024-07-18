@@ -13,16 +13,34 @@ namespace Study.MyScript.BAEKJOON.Geometry
     {
         public void Function(Queue<int[]> _queue)
         {
-            while(_queue.Count > 0)
+            while (_queue.Count > 0)
             {
                 int[] _data = _queue.Dequeue();
 
+                int maxLength = int.MinValue;
+                int sumLength = 0;
 
+                for (int i = 0; i < _data.Length; ++i)
+                {
+                    if (maxLength < _data[i])
+                        maxLength = _data[i];
+
+                    sumLength += _data[i];
+                }
+
+                if (maxLength >= sumLength - maxLength)
+                {
+                    Console.WriteLine("Invalid");
+                    continue;
+                }
 
                 if (_data[0] == _data[1] && _data[0] == _data[2] && _data[1] == _data[2])
                     Console.WriteLine("Equilateral");
-
-            }    
+                else if (_data[0] != _data[1] && _data[0] != _data[2] && _data[1] != _data[2])
+                    Console.WriteLine("Scalene");
+                else if (_data[0] == _data[1] || _data[0] == _data[2] || _data[1] == _data[2])
+                    Console.WriteLine("Isosceles");
+            }
         }
     }
 }
